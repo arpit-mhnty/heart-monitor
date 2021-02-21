@@ -46,11 +46,7 @@
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
         <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.main_menu.MainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
         <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.main_menu.launch.LaunchActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+           
         <activity android:name="com.azumio.android.argus.onboardings.CancelPopupActivity" android:screenOrientation="portrait"/>
         <activity android:name="com.azumio.android.argus.onboardings.WelcomeOnboardingActivity" android:screenOrientation="portrait"/>
         <activity android:name="com.azumio.android.argus.onboardings.HowToMeasureIHRActivity" android:screenOrientation="portrait"/>
