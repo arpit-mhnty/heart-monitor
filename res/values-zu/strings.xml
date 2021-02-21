@@ -90,11 +90,7 @@
     <string name="s1">Londoloza isithombe</string>
     <string name="s2">Vumela isikhangiso ukugcina isithombe kwigalari yesithombe?</string>
     <string name="s3">Yamukela</string>
-    <string name="s4">Yenqaba</string>
-    <string name="s5">Dala umcimbi wekhalenda</string>
-    <string name="s6">Vumela Isikhangiso ukudala umcimbi wekhalenda?</string>
-    <string name="s7">Hlola isikhangiso</string>
-    <string name="search_menu_title">Sesha</string>
+
     <string name="select_day">Khetha inyanga nosuku</string>
     <string name="select_hours">Khetha amahora</string>
     <string name="select_minutes">Khetha amaminithi</string>
