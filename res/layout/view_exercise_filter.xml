@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="8dp">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:background="@color/fitnessbuddy_toolbar_color" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.chip.ChipGroup android:theme="@style/Theme.MaterialComponents.Light" android:id="@+id/selectedTagsChipGroup" android:background="@color/fitnessbuddy_toolbar_color" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" app:chipSpacing="8dp"/>
+            <com.azumio.android.argus.view.XMLTypefaceButton android:layout_gravity="center_horizontal" android:id="@+id/filterButton" android:text="@string/fb_exercise_library_filter" android:drawableRight="@drawable/ic_arrow_drop_down_white_24dp" style="@style/fb_flat_button"/>
+        </LinearLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@+id/expandableContainer" android:background="@color/fitnessbuddy_toolbar_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.google.android.material.chip.ChipGroup android:theme="@style/Theme.MaterialComponents.Light" android:textAppearance="@style/AppTheme.ChipTextAppearance" android:id="@+id/mainCategoriesChipGroup" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="16dp" app:chipSpacingHorizontal="16dp" app:chipSpacingVertical="8dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+            <View android:layout_gravity="center" android:id="@+id/separator" android:background="#80ffffff" android:layout_width="150dp" android:layout_height="1dp" android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/mainCategoriesChipGroup"/>
+            <ScrollView android:id="@+id/subCategoriesChipGroupScrollContainer" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="16dp" app:layout_constrainedHeight="true" app:layout_constraintBottom_toTopOf="@+id/filterActionMenu" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/separator">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.google.android.material.chip.ChipGroup android:id="@+id/subCategoriesChipGroup" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" app:chipSpacing="8dp"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/exercisesByMuscleChip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="@string/fb_exercise_library_by_muscle" android:checkable="true" android:textAllCaps="true" android:layout_marginStart="16dp" android:layout_marginEnd="16dp" app:checkedIcon="@null" style="@style/CustomChipChoiceStyle"/>
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/filterActionMenu" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toBottomOf="@+id/subCategoriesChipGroupScrollContainer">
+                <Button android:textColor="@color/fitnessbuddy_cancel_button" android:id="@+id/cancelFilter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_exercise_library_cancel" style="@style/fb_flat_button"/>
+                <Button android:id="@+id/applyFilter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fb_exercise_library_apply" style="@style/fb_flat_button"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</merge>

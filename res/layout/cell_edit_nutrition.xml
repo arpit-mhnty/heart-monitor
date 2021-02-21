@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textColor="@color/calorie_color" android:id="@+id/cell_text_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Fat" android:layout_alignParentLeft="true" app:typeface="@string/font_path_roboto_medium"/>
+        <EditText android:textSize="15sp" android:textColor="@color/calories_color" android:textColorHint="@color/calories_color" android:ellipsize="end" android:gravity="right" android:id="@+id/goalValue" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="100dp" android:text="0" android:hint="0" android:maxLength="5" android:layout_toLeftOf="@+id/text_view_units" android:inputType="number"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textColor="@color/calories_color" android:id="@+id/text_view_units" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Units" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <View android:background="@color/dim_grey" android:layout_width="match_parent" android:layout_height="0.2dp" android:layout_marginLeft="20dp"/>
+</LinearLayout>

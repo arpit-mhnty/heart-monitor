@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/text_color" android:gravity="center" android:layout_gravity="center" android:id="@+id/requestText" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="100dp" android:text="You currently have no requests" app:typeface="@string/font_path_roboto_medium"/>
+    <Button android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/findFriends" android:background="@drawable/rectangle_corner_border" android:visibility="gone" android:layout_width="210dp" android:layout_height="35dp" android:layout_marginTop="20dp" android:text="Find Friends!" android:backgroundTint="@color/calories_color"/>
+    <ListView android:id="@+id/fragment_friend_request_listview" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@color/user_details_gray" android:dividerHeight="0px"/>
+</LinearLayout>

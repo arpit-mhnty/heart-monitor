@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/mealplan_bg_color" style="@style/MatchWidthWrapHeight">
+    <TextView android:textSize="30dp" android:textColor="@color/edit_calories_light_color" android:id="@+id/bullets" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="-15dp" android:text="."/>
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title_row" android:layout_marginLeft="15dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:weightSum="2" android:layout_toRightOf="@+id/bullets" style="@style/WrapWidthWrapHeight">
+        <ImageView android:textColor="@color/black" android:gravity="center" android:id="@+id/iconCode" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_alignParentLeft="true" android:layout_centerInParent="true" android:layout_centerVertical="true"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="@color/edit_calories_light_color" android:id="@+id/instructionText" android:layout_marginLeft="5dp" android:text="hello recipe" android:layout_toRightOf="@+id/iconCode" android:layout_alignParentLeft="true" android:layout_centerVertical="true" app:typeface="@string/font_path_sans_francisco_regular" style="@style/WrapWidthWrapHeight"/>
+    </RelativeLayout>
+</RelativeLayout>

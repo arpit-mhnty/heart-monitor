@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="22dp" android:textColor="@color/stat_element_darker" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="20dp" android:text="@string/add_note_fragment_header" app:typeface="@string/font_path_roboto_medium"/>
+    <TextView android:textSize="16dp" android:textColor="@color/stat_element_darker" android:id="@+id/dialog_fragment_add_tags_textview" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp"/>
+    <EditText android:gravity="top|left|center_vertical|center_horizontal|center" android:layout_gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/dialog_fragment_add_note_edittext" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="160dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="-6dp" android:hint="@string/dialog_fragment_add_note_edittext_hint" android:minLines="5" android:singleLine="false" android:inputType="textMultiLine"/>
+    <View android:background="@drawable/shadow_top" android:layout_width="match_parent" android:layout_height="6dp"/>
+    <LinearLayout android:background="@color/newsfeed_comment_background" android:layout_width="match_parent" android:layout_height="48dp">
+        <TextView android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+        <TextView android:textStyle="bold" android:textColor="#ff272e69" android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/dialog_fragment_add_tags_cancel" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="wrap_content" android:layout_height="48dp" android:text="CANCEL"/>
+        <TextView android:textStyle="bold" android:textColor="#ff272e69" android:gravity="center" android:id="@+id/dialog_fragment_add_tags_ok" android:layout_width="48dp" android:layout_height="48dp" android:text="OK"/>
+    </LinearLayout>
+</LinearLayout>

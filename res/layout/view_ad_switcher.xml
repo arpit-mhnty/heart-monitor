@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.ads.InhouseAdBanner android:layout_gravity="bottom" android:id="@+id/inhouse_banner" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <com.azumio.android.argus.ads.AdmobBanner android:layout_gravity="bottom" android:id="@+id/admob_banner" android:visibility="invisible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="50dp"/>
+</FrameLayout>

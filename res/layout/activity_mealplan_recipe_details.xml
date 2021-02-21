@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/main_layout" android:background="@color/bg_grey" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ExpandableListView android:id="@+id/recipe_detailed_list" android:background="@color/background_color" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:groupIndicator="@null" android:childDivider="@android:color/transparent" android:divider="@null" android:dividerHeight="0dp" android:choiceMode="singleChoice" android:layout_alignParentTop="true"/>
+    <include layout="@layout/mealplan_header_layout"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/bottomLayout" android:background="@color/background_color" android:layout_width="match_parent" android:layout_height="56dp" android:weightSum="4" android:layout_alignParentBottom="true">
+        <LinearLayout android:orientation="horizontal" android:background="@color/text_gray" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/bottomview" android:layout_width="match_parent" android:layout_height="56dp" android:weightSum="4" android:layout_alignParentBottom="true">
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="match_parent" android:layout_height="35dp">
+                <RelativeLayout android:layout_gravity="center_vertical" android:background="@color/label" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="0.005"/>
+                <RelativeLayout android:gravity="center" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textColor="@color/text_color" android:gravity="center_horizontal" android:id="@+id/lblTotalCalories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 " android:layout_alignParentTop="true" app:typeface="@string/font_path_helvetica_neue_medium"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="10sp" android:textColor="@color/light_gray_text_color" android:gravity="center_horizontal" android:id="@+id/caloriesBottomText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cal" android:layout_alignParentBottom="true" app:typeface="@string/font_path_helvetica_neue"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_gravity="center_vertical" android:background="@color/label" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="0.005"/>
+                <RelativeLayout android:gravity="center" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textColor="@color/text_color" android:gravity="center_horizontal" android:id="@+id/lblTotalCarbs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 g" android:layout_alignParentTop="true" app:typeface="@string/font_path_helvetica_neue_medium"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="10sp" android:textColor="@color/light_gray_text_color" android:gravity="center_horizontal" android:id="@+id/carbsBottomText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/carb" android:layout_alignParentBottom="true" app:typeface="@string/font_path_helvetica_neue"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_gravity="center_vertical" android:background="@color/label" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="0.005"/>
+                <RelativeLayout android:gravity="center" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textColor="@color/text_color" android:gravity="center_horizontal" android:id="@+id/lblTotalFat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 g" android:layout_alignParentTop="true" app:typeface="@string/font_path_helvetica_neue_medium"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="10sp" android:textColor="@color/light_gray_text_color" android:gravity="center_horizontal" android:id="@+id/fatBottomText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/fat" android:layout_alignParentBottom="true" app:typeface="@string/font_path_helvetica_neue"/>
+                </RelativeLayout>
+                <RelativeLayout android:layout_gravity="center_vertical" android:background="@color/label" android:layout_width="0dp" android:layout_height="30dp" android:layout_weight="0.005"/>
+                <RelativeLayout android:gravity="center" android:layout_width="0dp" android:layout_height="35dp" android:layout_weight="1">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textColor="@color/text_color" android:gravity="center_horizontal" android:id="@+id/lblTotalProtien" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0 g" android:layout_alignParentTop="true" app:typeface="@string/font_path_helvetica_neue_medium"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="10sp" android:textColor="@color/light_gray_text_color" android:gravity="center_horizontal" android:id="@+id/proteinBottomText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/protein" android:layout_alignParentBottom="true" app:typeface="@string/font_path_helvetica_neue"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

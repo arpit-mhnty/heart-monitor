@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/toolbar_main" android:background="@drawable/header_background" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/selected_calendar_text_color" android:id="@+id/toolbar_back_arrow" android:layout_width="50dp" android:layout_height="match_parent" android:text="←" app:fontPath="@string/font_path_material_design_set"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/selected_calendar_text_color" android:gravity="center" android:id="@+id/toolbar_text_view_title" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Previous Lessons" app:typeface="@string/font_path_roboto_medium"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <FrameLayout android:id="@+id/activity_with_fragment_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/activity_hashtag_searcher_toolbar" android:background="@drawable/activity_with_fragment_toolbar_shadow" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:elevation="@dimen/action_bar_elevation">
+        <TextView android:textSize="20dp" android:textColor="@color/newsfeed_clickable_string" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/activity_hashtag_searcher_title" android:layout_width="match_parent" android:layout_height="match_parent" android:singleLine="true"/>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <FrameLayout android:id="@+id/activity_hashtag_searcher_container" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <ListView android:id="@+id/hash_tag_searcher_listview" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </RelativeLayout>
+</LinearLayout>

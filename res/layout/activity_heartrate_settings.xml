@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:background="#fff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_main" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/settings_activity_toolbar_text_color" android:id="@+id/toolbar_done" android:visibility="gone" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_marginRight="10dp" android:text="@string/font_material_design_set_character_check" android:layout_alignParentRight="true" app:fontPath="@string/font_path_material_design_set"/>
+            <TextView android:textSize="@dimen/toolbar_text_size" android:textColor="@color/settings_activity_toolbar_text_color" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/toolbar_text_view_title" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/instant_heart_rate_settings" android:singleLine="true" android:layout_toLeftOf="@+id/toolbar_done"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <FrameLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0dp" android:layout_height="0dp"/>
+        <ViewSwitcher android:id="@+id/view_switcher_progress_settings" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <ScrollView android:id="@+id/container_settings_options" android:layout_width="match_parent" android:layout_height="match_parent" android:stackFromBottom="true" android:transcriptMode="alwaysScroll">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:background="#e7e7e7" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textAppearance="?attr/textAppearanceHeader" android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="5dp" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginTop="?attr/optionPaddingVertical" android:layout_marginRight="?attr/optionPaddingRight" android:layout_marginBottom="?attr/optionPaddingVertical" android:minHeight="?attr/optionMinimumHeight" android:text="@string/activity_settings_group_personal" app:typeface="@string/font_path_roboto_medium"/>
+                    <FrameLayout android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <fragment android:name="com.azumio.android.argus.settings.SettingsFragment" android:id="@+id/fragment_settings_general" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </FrameLayout>
+                    <Space android:layout_width="wrap_content" android:layout_height="25dp"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textAppearance="?attr/textAppearanceHeader" android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="5dp" android:paddingRight="5dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginTop="?attr/optionPaddingVertical" android:layout_marginRight="?attr/optionPaddingRight" android:layout_marginBottom="?attr/optionPaddingVertical" android:minHeight="?attr/optionMinimumHeight" android:text="@string/activity_settings_option_heartrate_calculation_title" app:typeface="@string/font_path_roboto_medium"/>
+                    <FrameLayout android:background="#ffffffff" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <fragment android:name="com.azumio.android.argus.settings.SettingsFragment" android:id="@+id/fragment_settings_heartrate" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </FrameLayout>
+                    <FrameLayout android:id="@+id/frame_bottom" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <Space android:layout_width="wrap_content" android:layout_height="20dp"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+        </ViewSwitcher>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <Space android:layout_width="wrap_content" android:layout_height="40dp"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/image_view_azumio_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginRight="?attr/optionPaddingRight" android:src="@drawable/settings_azumio_logo" android:layout_centerInParent="true"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="9sp" android:textColor="#ff757575" android:gravity="center_horizontal" android:id="@+id/text_view_version" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginRight="?attr/optionPaddingRight" android:singleLine="true" android:layout_below="@+id/image_view_azumio_logo" android:layout_centerInParent="true" app:typeface="@string/font_path_roboto_medium"/>
+            <Space android:layout_width="wrap_content" android:layout_height="40dp"/>
+        </LinearLayout>
+        <View android:id="@+id/top_shadow" android:background="@drawable/bottom_shadow" android:layout_width="match_parent" android:layout_height="6dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

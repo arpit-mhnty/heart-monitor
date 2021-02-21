@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:background="@drawable/activity_authentication_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/container_welcome" android:paddingLeft="@dimen/authentication_innerview_padding_borders" android:paddingRight="@dimen/authentication_innerview_padding_borders" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <com.azumio.android.argus.view.LockableScrollView android:enabled="false" android:gravity="top" android:layout_gravity="center" android:id="@+id/scroll_view_welcome" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:overScrollMode="never">
+            <include layout="@layout/activity_authentication_welcome"/>
+        </com.azumio.android.argus.view.LockableScrollView>
+    </FrameLayout>
+</LinearLayout>

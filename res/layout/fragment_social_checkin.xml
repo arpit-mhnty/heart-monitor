@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@+id/social_checkin_photo_note_container" android:paddingRight="@dimen/outer_margin_checkins" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:background="@color/options_divider" android:layout_width="match_parent" android:layout_height="1px"/>
+    <fragment android:name="com.azumio.android.argus.check_ins.TagsFragment" android:id="@+id/tagsFragment" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <View android:background="@color/options_divider" android:layout_width="match_parent" android:layout_height="1px" android:layout_alignParentBottom="true"/>
+    <RelativeLayout android:id="@+id/tag_friends_container" android:layout_width="match_parent" android:layout_height="48dp">
+        <View android:background="@color/options_divider" android:layout_width="match_parent" android:layout_height="1px" android:layout_alignParentBottom="true"/>
+        <com.azumio.android.argus.view.CenteredCustomFontView android:id="@+id/tag_friends_icon" android:layout_width="38dp" android:layout_height="38dp" android:text="@string/font_argus_set_tag_friends" android:layout_centerVertical="true" app:fontPath="@string/font_path_argus_set"/>
+        <TextView android:gravity="center_vertical" android:id="@+id/tag_friends" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/tag_friends_caption" android:layout_toLeftOf="@+id/tag_friends_arrow" android:layout_toRightOf="@+id/tag_friends_icon" android:layout_toEndOf="@+id/tag_friends_icon"/>
+        <ImageButton android:id="@+id/tag_friends_arrow" android:background="@null" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:src="@drawable/button_go_to_mtrl_am_alpha" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <fragment android:name="com.azumio.android.argus.check_ins.details.sections.fragments.PhotosFragment" android:id="@+id/photosFragment" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

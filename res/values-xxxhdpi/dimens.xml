@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cell_text_desc">14.3sp</dimen>
+    <dimen name="cell_text_tile">14.3sp</dimen>
+    <dimen name="getall_height">44dp</dimen>
+    <dimen name="graph_height">150dp</dimen>
+    <dimen name="icon_margin_top">5dp</dimen>
+    <dimen name="ihr_margin_top">130dp</dimen>
+    <dimen name="last_chance_margin_bottom">10dp</dimen>
+    <dimen name="last_chance_margin_top">40dp</dimen>
+    <dimen name="last_chance_margin_top_text">8.5dp</dimen>
+    <dimen name="margin_top">8.5dp</dimen>
+    <dimen name="margins">25dp</dimen>
+    <dimen name="marginstop">20dp</dimen>
+    <dimen name="recommendation_width">224dp</dimen>
+    <dimen name="spacing">20dp</dimen>
+    <dimen name="width_height">160dp</dimen>
+    <dimen name="workout_plan_text">16sp</dimen>
+</resources>

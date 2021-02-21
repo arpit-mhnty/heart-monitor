@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:paddingLeft="@dimen/comment_view_padding_outer_content" android:paddingRight="@dimen/comment_view_padding_outer_content" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textColor="#898989" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginBottom="5dp" android:text="Likes"/>
+    <com.azumio.android.argus.view.ImageContainer android:orientation="horizontal" android:id="@+id/likes_linear_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="@dimen/comment_view_padding_outer_content"/>
+</LinearLayout>

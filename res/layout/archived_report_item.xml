@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include layout="@layout/horizontal_line_separator"/>
+    <RelativeLayout android:layout_gravity="center_vertical" android:id="@+id/action_setup_calories" android:focusable="false" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginTop="?attr/optionPaddingVertical" android:layout_marginRight="?attr/optionPaddingRight" android:layout_marginBottom="?attr/optionPaddingVertical" android:minHeight="?attr/optionMinimumHeight">
+        <TextView android:textAppearance="?attr/textAppearanceTitle" android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/order_date" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp"/>
+        <ImageButton android:layout_gravity="right|center_vertical|center_horizontal|center" android:id="@+id/img_go_to" android:background="#fff" android:focusable="false" android:clickable="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginBottom="4dp" android:src="@drawable/button_go_to_mtrl_am_alpha" android:layout_alignParentRight="true"/>
+        <TextView android:textAppearance="?attr/textAppearanceTitle" android:layout_gravity="center_vertical" android:id="@+id/report_month" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="4dp" android:layout_toLeftOf="@+id/img_go_to"/>
+    </RelativeLayout>
+    <include layout="@layout/horizontal_line_separator"/>
+</LinearLayout>

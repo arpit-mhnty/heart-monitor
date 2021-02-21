@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/view_switcher_statistics" android:background="@drawable/insights_gradient" android:paddingLeft="10dp" android:paddingTop="20dp" android:paddingRight="10dp" android:paddingBottom="20dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:measureAllChildren="true" android:inAnimation="@anim/abc_fade_in" android:outAnimation="@anim/abc_fade_out">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/header" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp">
+                <TextView android:textSize="20sp" android:textColor="@color/white" android:id="@+id/graphViewButtonText" android:layout_width="140dp" android:layout_height="wrap_content" android:text="@string/graph_view" android:textAllCaps="true" android:textAlignment="center" android:layout_marginEnd="4dp" app:layout_constraintEnd_toStartOf="@+id/listViewButtonText" app:layout_constraintHorizontal_chainStyle="2" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <View android:background="@color/insights_blue" android:layout_width="0dp" android:layout_height="2dp" app:layout_constraintEnd_toEndOf="@+id/graphViewButtonText" app:layout_constraintStart_toStartOf="@+id/graphViewButtonText" app:layout_constraintTop_toBottomOf="@+id/graphViewButtonText"/>
+                <TextView android:textSize="20sp" android:textColor="@color/white" android:id="@+id/listViewButtonText" android:layout_width="140dp" android:layout_height="wrap_content" android:text="@string/list_view" android:textAllCaps="true" android:textAlignment="center" android:layout_marginStart="4dp" app:layout_constraintBottom_toBottomOf="@+id/graphViewButtonText" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/graphViewButtonText" app:layout_constraintTop_toTopOf="@+id/graphViewButtonText"/>
+                <View android:background="@color/insights_blue" android:layout_width="0dp" android:layout_height="2dp" app:layout_constraintEnd_toEndOf="@+id/listViewButtonText" app:layout_constraintStart_toStartOf="@+id/listViewButtonText" app:layout_constraintTop_toBottomOf="@+id/listViewButtonText"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <hell.layouts.CheckablesGroup android:orientation="horizontal" android:id="@+id/checkables_group_insights_statistic_spans" android:background="@drawable/insights_statistic_spans_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.azumio.android.argus.view.XMLTypefaceToggleButton android:id="@+id/checkable_span_week" android:layout_width="0dp" android:layout_height="wrap_content" android:textOn="@string/insights_span_week" android:textOff="@string/insights_span_week" android:layout_weight="1" style="@style/DefaultSpanRangeToggleButton1"/>
+                <Space android:layout_width="4dp" android:layout_height="wrap_content"/>
+                <com.azumio.android.argus.view.XMLTypefaceToggleButton android:id="@+id/checkable_span_month" android:layout_width="0dp" android:layout_height="wrap_content" android:textOn="@string/insights_span_month" android:textOff="@string/insights_span_month" android:layout_weight="1" style="@style/DefaultSpanRangeToggleButton1"/>
+                <Space android:layout_width="4dp" android:layout_height="wrap_content"/>
+                <com.azumio.android.argus.view.XMLTypefaceToggleButton android:id="@+id/checkable_span_year" android:layout_width="0dp" android:layout_height="wrap_content" android:textOn="@string/insights_span_year" android:textOff="@string/insights_span_year" android:layout_weight="1" style="@style/DefaultSpanRangeToggleButton1"/>
+                <Space android:layout_width="4dp" android:layout_height="wrap_content"/>
+                <com.azumio.android.argus.view.XMLTypefaceToggleButton android:id="@+id/checkable_span_all" android:layout_width="0dp" android:layout_height="wrap_content" android:checked="true" android:textOn="@string/insights_span_all" android:textOff="@string/insights_span_all" android:layout_weight="1" style="@style/DefaultSpanRangeToggleButton1"/>
+            </hell.layouts.CheckablesGroup>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/container_span_range" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <ImageButton android:id="@+id/image_button_prev_span_range" android:background="@null" android:layout_width="64dp" android:layout_height="64dp"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:id="@+id/text_view_displayed_span_range" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/DefaultSpanRangeTextView"/>
+                <ImageButton android:id="@+id/image_button_next_span_range" android:background="@null" android:layout_width="64dp" android:layout_height="64dp"/>
+            </LinearLayout>
+            <org.apmem.tools.layouts.FlowLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/flow_layout_statistics" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+</ViewSwitcher>

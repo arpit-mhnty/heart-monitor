@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="64dp">
+    <RelativeLayout android:gravity="center" android:id="@+id/progressLayout" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/progressView" android:layout_width="50dp" android:layout_height="50dp" android:indeterminate="true" style="?android:attr/progressBarStyle"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@+id/no_result" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="64dp">
+        <TextView android:textColor="@color/black_50_alpha" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/no_result" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/foodLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="64dp">
+        <CheckBox android:id="@+id/select_medicine" android:paddingLeft="15dp" android:paddingTop="10dp" android:paddingRight="15dp" android:paddingBottom="15dp" android:focusable="false" android:focusableInTouchMode="false" android:visibility="visible" android:descendantFocusability="blocksDescendants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:button="@null"/>
+        <RelativeLayout android:gravity="center_vertical" android:id="@+id/layout_right" android:layout_width="wrap_content" android:layout_height="64dp" android:layout_toRightOf="@+id/select_medicine">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30dp" android:layout_gravity="center" android:id="@+id/next" android:clickable="true" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="15dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="0dp" android:layout_marginRight="10dp" android:layout_alignParentLeft="true">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/setup_text_color" android:id="@+id/cell_medicine_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="80dp" android:text="Coffee with 2% Milk" android:singleLine="true" app:typeface="@string/font_path_roboto_medium"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="12sp" android:textColor="#6c7379" android:layout_gravity="center_vertical" android:id="@+id/cell_medicine_units" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12 oz, 62 calories" app:typeface="@string/font_path_roboto_regular"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

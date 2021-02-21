@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <TextView android:textStyle="bold" android:id="@+id/txt_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:textAllCaps="true"/>
+    <TextView android:textColor="@color/text_gray" android:id="@+id/txt_right_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:text="&gt;" android:layout_alignParentRight="true"/>
+    <TextView android:textColor="@color/text_gray" android:id="@+id/txt_total_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/txt_right_arrow"/>
+    <include android:id="@+id/separator" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="4dp" android:layout_marginBottom="4dp" android:layout_below="@+id/txt_caption" layout="@layout/insights_totals_horizontal_line_separator"/>
+</RelativeLayout>

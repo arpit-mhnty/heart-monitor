@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ampm_label_size">21sp</dimen>
+    <dimen name="ampm_left_padding">7dp</dimen>
+    <dimen name="footer_height">48dp</dimen>
+    <dimen name="header_height">96dp</dimen>
+    <dimen name="inapp_button_height">42dp</dimen>
+    <dimen name="left_side_width">315dp</dimen>
+    <dimen name="time_label_right_padding">16sp</dimen>
+    <dimen name="time_label_size">64sp</dimen>
+    <dimen name="txt_size_inapp_button">16sp</dimen>
+    <dimen name="txt_size_inapp_half_button">16sp</dimen>
+    <dimen name="txt_size_inapp_half_message">16sp</dimen>
+    <dimen name="txt_size_inapp_half_title">21sp</dimen>
+    <dimen name="txt_size_inapp_message">18sp</dimen>
+    <dimen name="txt_size_inapp_title">22sp</dimen>
+</resources>

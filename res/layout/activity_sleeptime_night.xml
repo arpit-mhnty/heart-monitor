@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/sleep_time_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <SurfaceView android:layout_gravity="top|right|center_vertical|center_horizontal|center" android:id="@+id/surface_view_camera" android:layout_width="1px" android:layout_height="1px"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@+id/container_a_night_clock" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <Space android:id="@+id/space_clock_top_spacing" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <Space android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"/>
+            <FrameLayout android:id="@+id/f_clock_layout" android:layout_width="match_parent" android:layout_height="match_parent">
+                <com.azumio.android.argus.view.Clock android:gravity="center" android:layout_gravity="center" android:id="@+id/a_night_clock" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:orientation="vertical" android:id="@+id/container_clock_bottom" android:layout_width="match_parent" android:layout_height="@dimen/clock_bottom_height">
+            <hell.views.ExtendedViewSwitcher android:gravity="center" android:orientation="vertical" android:id="@+id/view_switcher_timer_and_snooze" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:id="@+id/a_night_timer" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15dp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/a_night_description" android:layout_width="match_parent" android:layout_height="0dp" android:text="@string/activity_sleep_time_wakeup" android:layout_weight="25" app:typeface="@string/font_path_roboto_light"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="40dp" android:textStyle="bold" android:textColor="#fff" android:gravity="center" android:id="@+id/a_night_time" android:layout_width="match_parent" android:layout_height="0dp" android:text="11:46" android:layout_weight="75" app:typeface="@string/font_bebas_regular"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@+id/container_snooze" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15dp" android:textColor="@android:color/white" android:gravity="right|center_vertical|center_horizontal|center" android:layout_width="0dp" android:layout_height="55dp" android:text="@string/activity_sleep_time_not_ready_yet" android:layout_weight="0.5" app:typeface="@string/font_path_roboto_light"/>
+                    <Space android:layout_width="10dp" android:layout_height="match_parent"/>
+                    <FrameLayout android:layout_width="0dp" android:layout_height="55dp" android:layout_weight="0.5">
+                        <com.azumio.android.argus.view.XMLTypefaceButton android:textSize="29dp" android:textColor="#272e69" android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/action_snooze" android:background="@drawable/button_mtrl_am_alpha" android:paddingLeft="20dp" android:paddingRight="20dp" android:layout_width="wrap_content" android:layout_height="55dp" android:text="@string/action_snooze" app:typeface="@string/font_bebas_regular"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </hell.views.ExtendedViewSwitcher>
+            <com.azumio.android.argus.view.XMLTypefaceButton android:textSize="29dp" android:textColor="#272e69" android:layout_gravity="bottom" android:id="@+id/a_night_done" android:background="#fff" android:layout_width="match_parent" android:layout_height="55dp" android:text="@string/activity_sleep_time_night_button" app:typeface="@string/font_bebas_regular"/>
+        </LinearLayout>
+    </LinearLayout>
+    <include android:layout_gravity="top" android:id="@+id/attach_charger_prompt" android:layout_width="match_parent" android:layout_height="wrap_content" layout="@layout/attach_charger_prompt"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_below="@+id/attach_charger_prompt" android:layout_alignParentLeft="true">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/play_pause_btn" android:visibility="visible" android:layout_width="48dp" android:layout_height="48dp" android:minWidth="48dp" android:minHeight="48dp"/>
+        <TextView android:textSize="15sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/musicName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Choose Soundscape"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/attach_charger_prompt" android:layout_alignParentRight="true">
+        <hell.views.ImageToggleButton android:id="@+id/checkable_flash_light" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_flashlight_stateful" android:minWidth="48dp" android:minHeight="48dp"/>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/a_night_countdown_overlay" android:background="#bb211664" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="false" android:longClickable="false" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16dp" android:textColor="#fff" android:gravity="center_horizontal" android:id="@+id/hold" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_night_countdown_hondfor" app:typeface="@string/font_path_roboto_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="140dp" android:textStyle="bold" android:textColor="#fff" android:gravity="center_horizontal" android:id="@+id/a_night_countdown" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_night_countdown_default" app:typeface="@string/font_bebas_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16dp" android:textColor="#fff" android:gravity="center_horizontal" android:id="@+id/a_night_seconds" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_night_countdown_seconds" app:typeface="@string/font_path_roboto_regular"/>
+        </LinearLayout>
+        <com.azumio.android.argus.view.XMLTypefaceButton android:textSize="29dp" android:textColor="#272e69" android:id="@+id/btnHold" android:background="#fff" android:layout_width="match_parent" android:layout_height="55dp" android:text="@string/activity_sleep_time_hold_button" app:typeface="@string/font_bebas_regular"/>
+    </LinearLayout>
+    <ViewStub android:id="@+id/a_night_instructions_stub" android:layout="@layout/instructions_activity" android:inflatedId="@+id/a_night_instructions" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/custom_gps_background" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/container_gps_status" android:layout_width="match_parent" android:layout_height="10dp" android:layout_marginLeft="10dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:alpha="0.6">
+        <ImageView android:id="@+id/image_view_gps_status_bar0" android:background="@color/white_50_alpha" android:layout_width="3dp" android:layout_height="match_parent"/>
+        <ImageView android:id="@+id/image_view_gps_status_bar1" android:background="@color/white_50_alpha" android:layout_width="3dp" android:layout_height="match_parent" android:layout_marginLeft="2dp"/>
+        <ImageView android:id="@+id/image_view_gps_status_bar2" android:background="@color/white_50_alpha" android:layout_width="3dp" android:layout_height="match_parent" android:layout_marginLeft="2dp"/>
+        <ImageView android:id="@+id/image_view_gps_status_bar3" android:background="@color/white_50_alpha" android:layout_width="3dp" android:layout_height="match_parent" android:layout_marginLeft="2dp"/>
+        <TextView android:textSize="8sp" android:textColor="@color/white" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/text_view_gps_status" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="4dp" android:text="GPS"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/abstract_dynamic_gps_inflater_fragment_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/container_bottom_buttons" android:padding="10dp" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:alpha="0.6"/>
+</LinearLayout>

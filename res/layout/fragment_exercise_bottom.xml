@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/transparentLayout" android:background="#d8000000" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true"/>
+    <FrameLayout android:id="@+id/activity_with_fragment_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/bottomView" android:background="#d8eeeeee" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:animateLayoutChanges="true">
+        <RelativeLayout android:id="@+id/bottomLayout" android:background="#d8eeeeee" android:layout_width="match_parent" android:layout_height="56dp" android:animateLayoutChanges="true">
+            <RelativeLayout android:id="@+id/separater" android:background="#e0e0e0" android:layout_width="match_parent" android:layout_height="1dp"/>
+            <TextView android:textSize="30dp" android:textColor="@color/grey_colortxt" android:id="@+id/expandedView" android:background="@drawable/ic_keyboard_arrow_up_black_24dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="20dp" android:layout_centerHorizontal="true" android:backgroundTint="@color/grey_colortxt"/>
+            <RelativeLayout android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/expandedView">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/calorie_color" android:gravity="center_horizontal" android:id="@+id/lblTotalItems" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0 exercise added" app:typeface="@string/font_path_roboto_medium"/>
+            </RelativeLayout>
+            <ImageView android:gravity="center" android:id="@+id/closeBtn" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:layout_alignParentRight="true" android:layout_centerInParent="true" android:backgroundTint="@color/workout"/>
+        </RelativeLayout>
+        <LinearLayout android:id="@+id/parentView" android:background="@color/exercise_list_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar" android:layout_alignParentLeft="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:animateLayoutChanges="true" android:layout_alignParentStart="true" android:layout_alignParentEnd="true">
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/selectedRecyclerView" android:background="@color/exercise_list_color" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

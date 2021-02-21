@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/list_view_menu_element_root" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/listview_goal_element_selected_goal_container" android:layout_width="match_parent" android:layout_height="25dp" android:layout_below="@+id/frameLayout2" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_centerInParent="true">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="12dp" android:textColor="@android:color/white" android:id="@+id/listview_goal_element_trophy" android:layout_width="10dp" android:layout_height="10dp" android:text="@string/font_material_design_set_character_trophy" android:layout_centerVertical="true" app:fontPath="@string/font_path_material_design_set"/>
+            <TextView android:textSize="12dp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/listview_goal_element_selected_goal_textview" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="15dp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/frameLayout2" android:background="@drawable/goal_element_background" android:paddingBottom="23dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="17dp">
+        <FrameLayout android:id="@+id/frameLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="69dp" android:id="@+id/listview_goal_element_icon_background" android:layout_width="48dp" android:layout_height="48dp"/>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="34dp" android:textColor="#fff" android:id="@+id/listview_goal_element_icon" android:layout_width="48dp" android:layout_height="48dp"/>
+        </FrameLayout>
+        <TextView android:textSize="14dp" android:textColor="#323748" android:gravity="center" android:id="@+id/listview_goal_element_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="13dp" android:layout_marginBottom="13dp" android:layout_below="@+id/frameLayout" android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
+        <TextView android:textSize="12.67dp" android:textColor="#7f8390" android:gravity="center" android:id="@+id/listview_goal_element_subtitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_below="@+id/listview_goal_element_title" android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+</RelativeLayout>

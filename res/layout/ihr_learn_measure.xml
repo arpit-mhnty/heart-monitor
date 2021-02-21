@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="bottom" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@color/instant_heart_rate_navigation_color" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:layout_alignParentBottom="true">
+        <com.azumio.android.argus.view.XMLTypefaceButton android:textSize="16sp" android:textColor="@color/white" android:id="@+id/learnMeasurement" android:background="@color/instant_heart_rate_navigation_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:text="@string/learn_how_to_measure" app:typeface="@string/font_path_roboto_regular"/>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/main_layout" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <VideoView android:id="@+id/videoView" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/progressView" android:layout_width="match_parent" android:layout_height="5dp" android:layout_alignParentBottom="true"/>
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/grey_colortxt" android:id="@+id/lblCountDown" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginRight="30dp" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+        <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/grey_colortxt" android:id="@+id/lblTime" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginBottom="10dp" android:text="00:00" android:layout_above="@+id/progressView" android:layout_alignParentLeft="true"/>
+        <ImageView android:id="@+id/btnMute" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginRight="20dp" android:layout_marginBottom="10dp" android:src="@drawable/button_sound_on" android:scaleType="centerInside" android:layout_above="@+id/progressView" android:layout_alignParentRight="true"/>
+        <RelativeLayout android:orientation="vertical" android:id="@+id/mainlayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="25dp" android:layout_alignParentTop="true">
+            <RelativeLayout android:id="@+id/playinglayout" android:layout_width="77dp" android:layout_height="40dp" android:layout_marginLeft="20dp" android:layout_alignParentLeft="true">
+                <TextView android:textColor="@color/white" android:id="@+id/txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:text="@string/exit" android:layout_toRightOf="@+id/exitbtn" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                <ImageView android:id="@+id/exitbtn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/program_player_exit" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <TextView android:id="@+id/lblExerciseName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exer_name" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

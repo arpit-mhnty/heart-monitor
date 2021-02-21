@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/mainView" android:background="@color/background_grey_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@+id/cardOne" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:id="@+id/headerView" android:background="@color/header_orange_color" android:layout_width="match_parent" android:layout_height="200dp" android:layout_alignParentTop="true">
+                    <RelativeLayout android:id="@+id/relativelayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="200dp" android:textColor="@color/white" android:id="@+id/crownIcon" android:layout_width="220dp" android:layout_height="220dp" android:layout_centerInParent="true" android:layout_centerVertical="true"/>
+                        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="24sp" android:textColor="@color/orange" android:gravity="center" android:id="@+id/premiumText" android:paddingTop="30dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="1dp" android:layout_alignLeft="@+id/crownIcon" android:layout_alignTop="@+id/crownIcon" android:layout_alignRight="@+id/crownIcon" android:layout_alignBottom="@+id/crownIcon" android:layout_centerInParent="true" android:layout_centerVertical="true" android:textAllCaps="true" app:typeface="@string/font_path_league_gothic_regular"/>
+                    </RelativeLayout>
+                    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/white" android:id="@+id/azumioIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-80dp" android:text="azumio" android:layout_below="@+id/relativelayout" android:layout_centerInParent="true"/>
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:id="@+id/cardOneView" android:background="@drawable/rectangle_corner_border" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+                        <View android:background="@color/light_bluish" android:layout_width="40dp" android:layout_height="0.5dp" android:layout_marginRight="10dp"/>
+                        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/ppp_light_bluish_color" android:id="@+id/cardOneTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/live_better" android:textAllCaps="true" app:typeface="@string/font_path_raleway_medium"/>
+                        <View android:background="@color/light_bluish" android:layout_width="40dp" android:layout_height="0.5dp"/>
+                    </LinearLayout>
+                    <ListView android:layout_gravity="center" android:id="@+id/listView" android:visibility="visible" android:clickable="false" android:layout_width="match_parent" android:layout_height="255dp" android:layout_marginTop="10dp" android:divider="@android:color/transparent"/>
+                    <LinearLayout android:orientation="vertical" android:id="@+id/takemeToHRView" android:background="@drawable/rounded_blue" android:clickable="true" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:layout_marginBottom="25dp" android:layout_below="@+id/listView" android:layout_alignParentBottom="true">
+                        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/takemeToHR" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/heart_rate_insights" android:textAllCaps="true" app:typeface="@string/font_path_roboto_regular"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/cardTwoView" android:background="@drawable/rectangle_corner_border" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="10dp" android:layout_below="@+id/cardOne">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+                    <View android:background="@color/light_bluish" android:layout_width="40dp" android:layout_height="0.5dp" android:layout_marginRight="10dp"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/ppp_light_bluish_color" android:id="@+id/cardTwoTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/eat_healthier" android:textAllCaps="true" app:typeface="@string/font_path_raleway_medium"/>
+                    <View android:background="@color/light_bluish" android:layout_width="40dp" android:layout_height="0.5dp"/>
+                </LinearLayout>
+                <ListView android:layout_gravity="center" android:id="@+id/listViewCardTwo" android:visibility="visible" android:clickable="false" android:layout_width="match_parent" android:layout_height="255dp" android:layout_marginTop="10dp" android:divider="@android:color/transparent"/>
+                <LinearLayout android:orientation="vertical" android:id="@+id/enrollMealPlanView" android:background="@drawable/rounded_blue" android:clickable="true" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="30dp" android:layout_marginRight="30dp" android:layout_marginBottom="25dp" android:layout_alignParentBottom="true">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/enrollMealPlan" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/enroll_meal_plan" android:textAllCaps="true" app:typeface="@string/font_path_roboto_regular"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

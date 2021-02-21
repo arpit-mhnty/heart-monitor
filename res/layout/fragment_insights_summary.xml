@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" android:keepScreenOn="true">
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14dp" android:textColor="@color/grey_colortxt" android:layout_gravity="center" android:id="@+id/txt_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" app:typeface="@string/font_path_roboto_medium"/>
+    <RelativeLayout android:paddingLeft="16dp" android:paddingTop="19dp" android:paddingRight="16dp" android:paddingBottom="16dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.azumio.android.argus.view.CircleProgress android:id="@+id/center" android:layout_width="178dp" android:layout_height="178dp" android:layout_centerHorizontal="true" app:thicknessFraction="15"/>
+        <com.azumio.android.argus.view.HexImageView android:id="@+id/user_details_avatar" android:layout_width="34dp" android:layout_height="39dp" android:layout_marginTop="-19dp" android:src="@drawable/avatar_take_photo_85x98" android:scaleType="center" android:layout_centerHorizontal="true" app:border_size="2dp"/>
+        <com.azumio.android.argus.view.CircleProgress android:id="@+id/left" android:layout_width="96dp" android:layout_height="96dp" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:layout_alignParentStart="true" app:thicknessFraction="25"/>
+        <com.azumio.android.argus.view.CircleProgress android:id="@+id/right" android:layout_width="96dp" android:layout_height="96dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_alignParentEnd="true" app:thicknessFraction="25"/>
+    </RelativeLayout>
+</LinearLayout>

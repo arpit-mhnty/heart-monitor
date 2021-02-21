@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/nav_graph" app:startDestination="@+id/permissions_fragment">
+    <fragment android:label="PermissionsFragment" android:name="com.azumio.android.foodlenslibrary.fragment.PermissionsFragment" android:id="@+id/permissions_fragment">
+        <action android:id="@+id/action_permissions_to_camera" app:destination="@+id/camera_fragment" app:popUpTo="@+id/permissions_fragment" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:label="CameraFragment" android:name="com.azumio.android.foodlenslibrary.fragment.CameraFragment" android:id="@+id/camera_fragment">
+        <argument android:name="meal" android:defaultValue="@null" app:argType="string" app:nullable="true"/>
+        <action android:id="@+id/action_camera_to_permissions" app:destination="@+id/permissions_fragment" app:popUpTo="@+id/camera_fragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_camera_to_result" app:destination="@+id/result_fragment" app:popUpTo="@+id/camera_fragment" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:label="ResultFragment" android:name="com.azumio.android.foodlenslibrary.fragment.ResultFragment" android:id="@+id/result_fragment">
+        <action android:id="@+id/action_result_to_camera" app:destination="@+id/camera_fragment" app:popUpTo="@+id/result_fragment" app:popUpToInclusive="true"/>
+        <action android:id="@+id/action_result_to_review" app:destination="@+id/review_fragment" app:popUpTo="@+id/result_fragment" app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment android:label="ReviewFragment" android:name="com.azumio.android.foodlenslibrary.fragment.ReviewFragment" android:id="@+id/review_fragment">
+        <action android:id="@+id/action_review_to_result" app:destination="@+id/result_fragment" app:popUpTo="@+id/review_fragment" app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>

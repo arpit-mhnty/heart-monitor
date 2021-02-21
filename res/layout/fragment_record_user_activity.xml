@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/options_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </ScrollView>
+    <Button android:textAppearance="?android:attr/textAppearanceMedium" android:textColor="@color/white" android:id="@+id/action_record" android:background="@drawable/button_mask_with_shadows" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginRight="?attr/optionPaddingRight" android:text="@string/activity_launcher_record_action_text"/>
+</LinearLayout>

@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "background-girl-image-url": "http://static.fitnessbuddyapp.com/assets/fb/fb-premium-landing-female2.jpg",
+      "plan-btn": {
+        "analytics": {
+          "Selection Screen": "Premium Page - Landing Page",
+          "Premium selected": true,
+          "backButton": true,
+          "Get My Plan Button url": "Premium Page",
+          "ProductID": "",
+          "Cancel Anytime": "true - long text",
+          "Test Type": "Premium Page 20180308",
+          "event": "Application Premium Select"
+        },
+        "productId": "premium page",
+        "background": "2DC17D",
+        "text-color": "#FFFFFF",
+        "text": "GET MY PLAN NOW",
+        "url": "/asset/purchase"
+      },
+      "background-image-female": "fb-premium-landing-female.jpg",
+      "description": [
+        "Training plans to help you achieve your\nhealth goals",
+        "Customizable workout schedule to fit\neasily into your busy lifestyle",
+        "You can cancel your subscription at any time"
+      ],
+      "banner": {
+        "hidden": false,
+        "background": "#1B78C0",
+        "text-color": "#FFFFFF",
+        "text": "YOUR 12-WEEK TRAINING PLAN"
+      },
+      "details": [],
+      "background-image": "premium_shirtless.jpg",
+      "title": "",
+      "type": "AZPlanTableViewCell"
+    }
+  ]
+}

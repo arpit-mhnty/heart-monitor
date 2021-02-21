@@ -1,0 +1,10 @@
+INSERT INTO "health_trackers" VALUES(1,'Nutrition & Exercise Tracker',1,1295892459,1295892459,0,'NE','log_nutrition_quick_tracker,log_nutrition_search_tracker,log_exercise_search_tracker,log_exercise_quick_tracker',0);
+INSERT INTO "health_trackers" VALUES(2,'Weight Tracker',1,1295892459,1295892459,0,'WT','log_weight_tracker',0);
+INSERT INTO "health_trackers" VALUES(3,'Blood Sugar Tracker',1,1295892459,1295892459,0,'BS','log_bs_tracker',0);
+INSERT INTO "health_trackers" VALUES(4,'Blood Pressure Tracker',1,1295892459,1295892459,0,'BP','log_bp_tracker',0);
+INSERT INTO "health_trackers" VALUES(5,'Cholesterol Tracker',1,1295892459,1295892459,0,'Chol','log_chol_tracker',0);
+INSERT INTO "health_trackers" VALUES(6,'Asthma Tracker',1,1295892459,1295892459,0,'Asthma','log_asthma_tracker',0);
+INSERT INTO "health_trackers" VALUES(7,'Temperature Tracker',1,1295892459,1295892459,0,'Temp','log_temp_tracker',0);
+INSERT INTO "health_trackers" VALUES(8,'Water Tracker',1,1295892459,1295892459,0,'Water','log_water_tracker',0);
+INSERT INTO "health_trackers" VALUES(9,'Body Fitness',1,1295892459,1295892459,0,'Fitness','log_fitness_tracker',0);
+INSERT INTO "health_trackers" VALUES(10,'Complete Blood Count Tracker',1,1295892459,1295892459,0,'CBC','log_cbc_tracker',0);

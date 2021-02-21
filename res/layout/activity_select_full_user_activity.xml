@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/select_activity_root" android:background="@color/white" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar" android:background="@drawable/activity_with_fragment_toolbar_shadow" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:elevation="@dimen/action_bar_elevation">
+        <TextView android:textSize="20dp" android:textColor="@color/settings_activity_toolbar_text_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/toolbar_title" android:layout_width="match_parent" android:layout_height="match_parent" android:singleLine="true"/>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <com.azumio.android.argus.view.ActivityDefinitionViewGroup android:id="@+id/content" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </ScrollView>
+    <com.azumio.android.argus.view.FloatingActionButton android:id="@+id/fragment_select_activity_fab" android:layout_width="@dimen/fab_size" android:layout_height="@dimen/fab_size" android:layout_marginRight="@dimen/fab_margin_right" android:layout_marginBottom="@dimen/fab_margin_bottom" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" app:fab_background_color="@android:color/white" app:fab_background_color_pressed="@color/colorPrimaryDark" app:fab_icon="@drawable/abc_ic_clear_material" app:fab_icon_color="@color/main_menu_page_indicator_color" app:fab_icon_scale="0.3"/>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="left" android:id="@+id/action_settings" android:layout_width="100dp" android:layout_height="50dp" android:layout_marginLeft="25dp" android:layout_marginTop="0dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+        <ImageView android:id="@+id/img_settings" android:layout_width="50dp" android:layout_height="20dp" android:layout_marginTop="0dp" android:src="@drawable/icon_settings_small" android:scaleType="centerInside"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="right" android:id="@+id/action_info" android:layout_width="100dp" android:layout_height="50dp" android:layout_marginTop="0dp" android:layout_marginRight="25dp" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+        <ImageView android:id="@+id/img_info" android:layout_width="50dp" android:layout_height="20dp" android:layout_marginTop="0dp" android:src="@drawable/setalarm_info" android:scaleType="centerInside"/>
+    </RelativeLayout>
+    <com.azumio.android.argus.view.CenteredCustomFontView android:id="@+id/image_go_premium" android:layout_marginTop="15dp" android:layout_marginRight="22dp" android:layout_alignParentRight="true" style="@style/GoPremiumIcon"/>
+    <RelativeLayout android:id="@+id/circleLayout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="110dp" android:layout_marginBottom="65dp" android:layout_above="@+id/button_placeholder" android:layout_centerHorizontal="true">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/circleView" android:layout_width="match_parent" android:layout_height="110dp" android:weightSum="3">
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <com.azumio.android.instantheartrate.view.CircularView android:layout_gravity="center_horizontal" android:id="@+id/circleviewCalories" android:layout_width="95dp" android:layout_height="95dp" app:cpv_barWidth="4dp" app:cpv_fillColor="@color/fill_grey_color" app:cpv_maxValue="100" app:cpv_rimWidth="4dp" app:cpv_spinColor="@color/go_premium" app:cpv_textColor="@color/grey_colortxt" app:cpv_textTypeface="@string/font_path_league_gothic_regular" app:cpv_value="0"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textColor="@color/grey_colortxt" android:layout_gravity="center_horizontal" android:id="@+id/caloriesText" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5dp" android:text="CALORIES"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <com.azumio.android.instantheartrate.view.CircularView android:layout_gravity="center_horizontal" android:id="@+id/circleviewSleep" android:layout_width="95dp" android:layout_height="95dp" app:cpv_barWidth="4dp" app:cpv_fillColor="@color/fill_grey_color" app:cpv_maxValue="100" app:cpv_rimWidth="4dp" app:cpv_spinColor="@color/user_details_button_selected" app:cpv_textColor="@color/grey_colortxt" app:cpv_textTypeface="@string/font_path_league_gothic_regular" app:cpv_value="0"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textColor="@color/grey_colortxt" android:layout_gravity="center_horizontal" android:id="@+id/sleepText" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5dp" android:text="SLEEP"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                <com.azumio.android.instantheartrate.view.CircularView android:layout_gravity="center_horizontal" android:id="@+id/circleviewSteps" android:layout_width="95dp" android:layout_height="95dp" app:cpv_barWidth="4dp" app:cpv_fillColor="@color/fill_grey_color" app:cpv_maxValue="100" app:cpv_rimWidth="4dp" app:cpv_spinColor="@color/radio_color" app:cpv_textColor="@color/grey_colortxt" app:cpv_textTypeface="@string/font_path_league_gothic_regular" app:cpv_value="0"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textColor="@color/grey_colortxt" android:layout_gravity="center_horizontal" android:id="@+id/stepsText" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5dp" android:text="STEPS"/>
+            </LinearLayout>
+        </LinearLayout>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/setupHealthProgram" android:background="#9024272c" android:visibility="visible" android:layout_width="match_parent" android:layout_height="110dp" android:layout_marginTop="0dp" android:text="@string/choose_health_program" app:typeface="@string/font_path_roboto_regular"/>
+        <ProgressBar android:id="@+id/progressView" android:visibility="gone" android:layout_width="25dp" android:layout_height="25dp" android:indeterminate="true" android:layout_centerInParent="true" style="@style/Widget.Holo.ProgressBar"/>
+    </RelativeLayout>
+    <View android:id="@+id/button_placeholder" android:clickable="false" android:layout_width="0dp" android:layout_height="60dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

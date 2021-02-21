@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" android:keepScreenOn="true">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_main" android:padding="0dp" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:layout_margin="0dp" android:minHeight="?attr/actionBarSize" app:contentInsetLeft="0dp" app:contentInsetStart="0dp">
+        <LinearLayout android:orientation="horizontal" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.google.android.material.tabs.TabLayout android:id="@+id/activity_motion_processor_tab_layout" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" app:tabIndicatorColor="@color/white"/>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="34dp" android:id="@+id/activity_motion_processor_settings" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true" app:fontPath="@string/font_path_argus_set"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar_main">
+        <FrameLayout android:id="@+id/container_map_fragment" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <com.azumio.android.argus.view.SelectedFragmentEventPassingViewPager android:id="@+id/activity_main_view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </FrameLayout>
+</RelativeLayout>

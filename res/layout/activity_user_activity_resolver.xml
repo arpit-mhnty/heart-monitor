@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" android:keepScreenOn="true">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/activity_with_fragment_toolbar_shadow" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="@dimen/action_bar_elevation">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_main" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="@dimen/toolbar_text_size" android:textColor="@color/white" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/toolbar_text_view_title" android:layout_width="match_parent" android:layout_height="match_parent" android:singleLine="true"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <com.azumio.android.argus.view.ViewPagerTabView android:id="@+id/view_pager_tab_view_motion_processor_launcher" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" app:indicator_color="@color/user_activity_resolver_tab_indicator" app:indicator_height="2dp" app:tab_text_color="@color/white" app:tab_text_size="16sp"/>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager_motion_processor_launcher" android:paddingLeft="0dp" android:paddingTop="0dp" android:paddingRight="0dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>

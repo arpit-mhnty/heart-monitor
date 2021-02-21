@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.azumio.android.argus.view.DetailedValue android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginTop="22dp" android:layout_marginRight="2dp" android:layout_marginBottom="20dp" app:descriptionViewTextSize="12dp" app:valueViewTextSize="102dp"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" android:weightSum="2">
+        <com.azumio.android.argus.view.DetailedValue android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:descriptionViewTextSize="12dp" app:displayDivider="true" app:valueViewTextSize="40dp"/>
+        <com.azumio.android.argus.view.DetailedValue android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:descriptionViewTextSize="12dp" app:valueViewTextSize="40dp"/>
+    </LinearLayout>
+</LinearLayout>

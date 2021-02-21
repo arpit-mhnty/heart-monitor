@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:left="@dimen/exercise_item_background_horizontal_padding" android:top="@dimen/exercise_item_background_vertical_padding" android:right="@dimen/exercise_item_background_horizontal_padding" android:bottom="@dimen/exercise_item_background_vertical_padding">
+        <shape>
+            <solid android:color="@color/exercise_item_background_color"/>
+            <corners android:radius="@dimen/exercise_item_background_radius"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center_horizontal" android:orientation="vertical" android:paddingTop="20dp" android:layout_width="320dp" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/calorie_color" android:gravity="center" android:id="@+id/providerCodeText" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Provider Code" app:typeface="@string/font_path_roboto_regular"/>
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/calorie_color" android:gravity="center" android:id="@+id/textView" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:text="Please enter your provider code " app:typeface="@string/font_path_roboto_regular"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <EditText android:textColor="@color/black" android:gravity="center" android:layout_gravity="center" android:id="@+id/editText" android:background="@null" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Enter your redeem code" android:lines="1" android:singleLine="true" android:inputType="text" android:imeOptions="actionDone" android:imeActionLabel="Done">
+            <requestFocus/>
+        </EditText>
+    </LinearLayout>
+    <TextView android:background="@color/black" android:layout_width="match_parent" android:layout_height="0.5dp" style="?android:attr/listSeparatorTextViewStyle"/>
+    <LinearLayout android:orientation="horizontal" android:background="@color/grey_color" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="20dp">
+        <TextView android:textColor="@color/calorie_color" android:gravity="center" android:id="@+id/cancel" android:paddingLeft="10dp" android:paddingRight="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="20dp" android:text="Cancel" android:layout_weight="1" android:layout_toLeftOf="@+id/redeemCode" android:textAllCaps="true"/>
+        <TextView android:textColor="@color/calorie_color" android:gravity="center" android:id="@+id/redeemCode" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginRight="25dp" android:text="Redeem " android:layout_weight="1" android:layout_alignParentRight="true" android:textAllCaps="true"/>
+    </LinearLayout>
+</LinearLayout>

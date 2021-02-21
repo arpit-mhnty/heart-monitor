@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/activity_with_mealplan_fragment_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <FrameLayout android:id="@+id/activity_with_recipe_fragment_container" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/layout" android:background="@drawable/extra_rounded_border_btn" android:layout_width="200dp" android:layout_height="30dp" android:layout_marginTop="20dp" android:layout_centerHorizontal="true">
+        <RelativeLayout android:id="@+id/mealPlansView" android:background="@drawable/extra_rounded_premium_btn" android:layout_width="100dp" android:layout_height="30dp">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/mealPlansButton" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Meal Plan" app:typeface="@string/font_path_roboto_regular"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/recipesView" android:background="@color/transparent" android:layout_width="100dp" android:layout_height="30dp">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/recipesButton" android:visibility="visible" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Recipe" app:typeface="@string/font_path_roboto_regular"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30dp" android:id="@+id/recipes" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginLeft="10dp" android:layout_marginTop="20dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

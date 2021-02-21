@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.FillingView android:id="@+id/main_menu_toolbars" android:background="?attr/colorPrimary" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/white" android:id="@+id/toolbar_back_arrow" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginRight="15dp" android:text="←" android:layout_alignParentLeft="true" app:fontPath="@string/font_path_material_design_set"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="17dp" android:textColor="@android:color/white" android:id="@+id/activity_with_fragment_toolbar_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Glucose Buddy FAQ" android:layout_toRightOf="@+id/toolbar_back_arrow" android:layout_centerInParent="true" app:typeface="@string/font_path_roboto_regular"/>
+        </RelativeLayout>
+    </com.azumio.android.argus.view.FillingView>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/progressView" android:visibility="gone" android:layout_width="50dp" android:layout_height="50dp" android:indeterminate="true" style="?android:attr/progressBarStyle"/>
+    <WebView android:id="@+id/webView" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

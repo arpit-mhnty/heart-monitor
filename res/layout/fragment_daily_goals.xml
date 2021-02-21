@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="#f5f4ff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:background="@drawable/goals_img" android:layout_width="wrap_content" android:layout_height="178dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="20sp" android:textColor="@color/text_color" android:gravity="center_vertical" android:layout_gravity="left" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:text="Setting your goals" app:typeface="@string/font_path_roboto_medium"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textColor="@color/text_color" android:gravity="left|center_vertical|center_horizontal|center" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:text="As part of your program, we&apos;re going to ask you to log some important activities that will help you keep track of your progress.Let&apos;s set some daily goals!" app:typeface="@string/font_path_roboto_light"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

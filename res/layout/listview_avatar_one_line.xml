@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="58dp">
+    <com.azumio.android.argus.view.HexImageView android:id="@+id/listview_avatar_one_line_element_avatar" android:layout_width="47dp" android:layout_height="47dp" android:layout_marginLeft="@dimen/global_left_right_padding" android:layout_centerVertical="true"/>
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="@dimen/listview_top_textview_size" android:gravity="center_vertical" android:id="@+id/listview_avatar_one_line_element_textview" android:paddingLeft="@dimen/inner_margin_checkins" android:paddingRight="@dimen/global_left_right_padding" android:layout_width="match_parent" android:layout_height="match_parent" app:typeface="@string/font_path_roboto_regular"/>
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:background="@color/split_black_alpha" android:layout_width="match_parent" android:layout_height="match_parent" android:keepScreenOn="true">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_main" android:background="@android:color/black" android:padding="0dp" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:layout_margin="0dp" android:minHeight="?attr/actionBarSize" app:contentInsetLeft="0dp" app:contentInsetStart="0dp">
+        <LinearLayout android:orientation="horizontal" android:background="@android:color/black" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="0dp" android:layout_height="match_parent" android:text="CUSTOMIZE" android:layout_weight="1"/>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="34dp" android:id="@+id/activity_motion_processor_settings" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" app:fontPath="@string/font_path_material_design_set"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/abstract_dynamic_gps_inflater_fragment_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/toolbar_main"/>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/activity_customize_gps_layout_view_pager" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="210dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

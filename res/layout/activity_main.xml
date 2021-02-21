@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/root" android:background="@color/activity_main_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.ClockIgnoringViewPager android:id="@+id/activity_main_view_pager" android:paddingBottom="56dp" android:layout_width="match_parent" android:layout_height="match_parent" android:foreground="?android:attr/windowContentOverlay"/>
+    <com.azumio.android.argus.ads.AdsContainer android:id="@+id/my_ads_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="45dp"/>
+    <com.azumio.android.argus.view.FillingView android:layout_gravity="bottom" android:id="@+id/toolbar_main" android:background="@android:color/black" android:visibility="visible" android:layout_width="match_parent" android:layout_height="56dp" android:minHeight="?attr/actionBarSize">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+            <com.google.android.material.tabs.TabLayout android:id="@+id/toolbar_tab_view" android:layout_width="match_parent" android:layout_height="match_parent" app:indicator_color="@android:color/white" app:tabGravity="0" app:tabIndicatorColor="@android:color/transparent" app:tabMode="1" app:tabSelectedTextColor="@android:color/white" app:tabTextColor="@color/bottom_bar_normal_icon_color" app:tab_text_color="@android:color/white"/>
+        </LinearLayout>
+    </com.azumio.android.argus.view.FillingView>
+</FrameLayout>

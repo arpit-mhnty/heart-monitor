@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/white" android:layout_width="305dp" android:layout_height="match_parent">
+    <TextView android:gravity="center" android:id="@+id/fragment_right_drawer_emptylist" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Notification list is empty"/>
+    <ListView android:id="@+id/fragment_right_drawer_listview" android:background="@color/background_floating_material_light" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="#bfbfbf" android:dividerHeight="1px"/>
+</RelativeLayout>

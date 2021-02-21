@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:hapticFeedbackEnabled="true">
+    <com.azumio.android.argus.view.FixedSizeImageView android:id="@+id/image_view" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="100">
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="22"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/weather_container" android:layout_width="match_parent" android:layout_height="0dp" android:weightSum="100" android:layout_weight="50">
+            <LinearLayout android:orientation="vertical" android:id="@+id/weather_icon_container" android:layout_width="0dp" android:layout_height="match_parent" android:weightSum="100" android:layout_weight="44">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/text_view_weather_icon" android:layout_width="match_parent" android:layout_height="0dp" android:singleLine="true" android:layout_weight="72" app:typeface="@string/font_path_argus_set"/>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@+id/weather_temperatures_container" android:layout_width="0dp" android:layout_height="match_parent" android:weightSum="100" android:layout_weight="56">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:ellipsize="none" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/text_view_title" android:layout_width="match_parent" android:layout_height="0dp" android:singleLine="true" android:layout_weight="70" app:typeface="@string/font_path_league_gothic_regular"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/text_view_subtitle" android:layout_width="match_parent" android:layout_height="0dp" android:singleLine="true" android:layout_weight="30" app:typeface="@string/font_path_league_gothic_regular"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="28"/>
+    </LinearLayout>
+</FrameLayout>

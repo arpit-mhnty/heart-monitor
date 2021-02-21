@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/main_layout" android:background="@drawable/rounded_white" android:layout_width="match_parent" android:layout_height="60dp" android:layout_margin="16dp" android:minHeight="70dp">
+    <include android:id="@+id/cell0" android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintWidth_percent="0.25" layout="@layout/gb_calories_header_input_cell"/>
+    <View android:id="@+id/separator1" android:background="@color/grey_color" android:layout_width="0.3dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/cell0"/>
+    <include android:id="@+id/cell1" android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/separator1" app:layout_constraintWidth_percent="0.25" layout="@layout/gb_calories_header_input_cell"/>
+    <View android:id="@+id/separater2" android:background="@color/grey_color" android:layout_width="0.3dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/cell1"/>
+    <include android:id="@+id/cell2" android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/separater2" app:layout_constraintWidth_percent="0.25" layout="@layout/gb_calories_header_input_cell"/>
+    <View android:id="@+id/separater3" android:background="@color/grey_color" android:layout_width="0.3dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/cell2"/>
+    <include android:id="@+id/cell3" android:layout_width="0dp" android:layout_height="match_parent" app:layout_constraintStart_toEndOf="@+id/separater3" app:layout_constraintWidth_percent="0.25" layout="@layout/gb_calories_header_input_cell"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

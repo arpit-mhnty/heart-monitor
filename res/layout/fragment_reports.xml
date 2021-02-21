@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include android:id="@+id/toolbar" android:visibility="gone" layout="@layout/settings_toolbar"/>
+    <Button android:textColor="@color/white" android:id="@+id/btn_generate_report" android:background="#ff0da6ea" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/generate_report" android:layout_alignParentBottom="true" android:textAllCaps="true"/>
+    <com.azumio.android.argus.view.EdgeDetectingScrollView android:id="@+id/container_settings_options" android:paddingBottom="@dimen/activity_vertical_margin" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/btn_generate_report" android:layout_below="@+id/toolbar">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="@dimen/activity_horizontal_margin" android:paddingRight="@dimen/activity_horizontal_margin" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textAppearance="?attr/textAppearanceHeader" android:gravity="left|center_vertical|center_horizontal|center" android:paddingLeft="4dp" android:paddingRight="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginTop="?attr/optionPaddingVertical" android:layout_marginRight="?attr/optionPaddingRight" android:layout_marginBottom="?attr/optionPaddingVertical" android:minHeight="?attr/optionMinimumHeight" android:text="@string/activity_settings_group_personal" app:typeface="@string/font_path_roboto_medium"/>
+            <FrameLayout android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <fragment android:name="com.azumio.android.argus.settings.SettingsFragment" android:id="@+id/fragment_settings_personal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <Space android:layout_width="wrap_content" android:layout_height="20dp"/>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textAppearance="?attr/textAppearanceHeader" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12dp" android:text="@string/report_order_date" android:layout_alignParentLeft="true" app:typeface="@string/font_path_roboto_medium"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textAppearance="?attr/textAppearanceHeader" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:text="@string/month" android:layout_alignParentRight="true" app:typeface="@string/font_path_roboto_medium"/>
+            </RelativeLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/previous_reports" android:layout_width="match_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false"/>
+            <TextView android:textColor="@color/grey_colortxt" android:layout_gravity="center_horizontal" android:id="@+id/txt_no_archived_reports" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32dp" android:text="@string/no_prior_reports_generated"/>
+        </LinearLayout>
+    </com.azumio.android.argus.view.EdgeDetectingScrollView>
+</RelativeLayout>

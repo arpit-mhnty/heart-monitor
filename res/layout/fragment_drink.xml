@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.MaskFrameLayout android:id="@+id/fragment_drink_mask_frame_layout" android:background="@android:color/white" android:layout_width="@dimen/drink_mask_size" android:layout_height="@dimen/drink_mask_size" android:layout_marginTop="100dp" android:layout_centerHorizontal="true" app:mask="@drawable/beverage_mask_water" app:maskTouches="false">
+        <View android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/fragment_drink_progress" android:background="@android:color/holo_blue_light" android:layout_width="match_parent" android:layout_height="0dp"/>
+    </com.azumio.android.argus.view.MaskFrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-10dp" android:layout_marginTop="-20dp" android:layout_alignLeft="@+id/fragment_drink_mask_frame_layout" android:layout_alignTop="@+id/fragment_drink_mask_frame_layout" android:layout_alignStart="@+id/fragment_drink_mask_frame_layout">
+        <TextView android:textSize="32dp" android:id="@+id/fragment_drink_goal_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-6dp" android:text="Test"/>
+        <TextView android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Max intake"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="-10dp" android:layout_alignRight="@+id/fragment_drink_mask_frame_layout" android:layout_alignBottom="@+id/fragment_drink_mask_frame_layout" android:layout_alignEnd="@+id/fragment_drink_mask_frame_layout">
+        <TextView android:textSize="32dp" android:id="@+id/fragment_drink_current_amount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="-6dp"/>
+        <TextView android:textColor="@android:color/white" android:id="@+id/fragment_drink_current_timestamp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Today"/>
+    </LinearLayout>
+</RelativeLayout>

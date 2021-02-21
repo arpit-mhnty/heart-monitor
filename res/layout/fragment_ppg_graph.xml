@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/graph_view_upgrade" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="@dimen/graph_height" android:layout_marginTop="30dp" android:layout_marginBottom="30dp">
+        <ImageView android:id="@+id/graph_view_upgrade_image" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ppg_no_text" android:layout_centerInParent="true"/>
+        <TextView android:textSize="20dp" android:textColor="#ffffff" android:gravity="center" android:id="@+id/graph_view_upgrade_text" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <com.azumio.android.argus.view.charts.heartrate.NestedScrollableGraphView android:id="@+id/graph_view" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/graph_height" android:layout_marginTop="30dp" android:layout_marginBottom="30dp"/>
+</FrameLayout>

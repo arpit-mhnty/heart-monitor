@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout android:id="@+id/swipe_container" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ListView android:id="@+id/list_view_devices" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="@drawable/devices_and_applications_list_view_divider" android:dividerHeight="1px"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/container_retry_initial_loading_data" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/prompt_loading_data_failed"/>
+        <Button android:layout_gravity="center_horizontal" android:id="@+id/action_retry_initial_loading_data" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="@string/action_retry"/>
+    </LinearLayout>
+</RelativeLayout>

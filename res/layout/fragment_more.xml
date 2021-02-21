@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <fragment android:name="com.azumio.android.argus.settings.UserProfileFragment" android:id="@+id/fragment_user_profile" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Space android:id="@+id/spacer" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="40dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="left" android:orientation="vertical" android:id="@+id/list_slidermenu_left" android:paddingTop="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <Space android:layout_width="wrap_content" android:layout_height="40dp"/>
+            <ImageView android:layout_gravity="center_horizontal" android:id="@+id/image_view_azumio_logo" android:layout_width="110dp" android:layout_height="42dp" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginRight="?attr/optionPaddingRight" android:src="@drawable/fitness_buddy_logo"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textAppearance="?android:attr/textAppearanceSmall" android:textSize="9sp" android:textColor="#ff757575" android:gravity="center_horizontal" android:id="@+id/text_view_version" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginRight="?attr/optionPaddingRight" app:typeface="@string/font_path_roboto_medium"/>
+            <Space android:layout_width="wrap_content" android:layout_height="40dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

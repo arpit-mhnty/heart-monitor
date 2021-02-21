@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/parent_layout" android:background="?attr/Argus_backgroundColor" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.FillingView android:id="@+id/main_menu_toolbars" android:background="?attr/toolbarColor" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:elevation="@dimen/action_bar_elevation">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/white" android:id="@+id/toolbar_back_arrow" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginRight="15dp" android:text="←" android:layout_alignParentLeft="true" app:fontPath="@string/font_path_material_design_set"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18dp" android:textColor="@android:color/white" android:id="@+id/activity_with_fragment_toolbar_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_toRightOf="@+id/toolbar_back_arrow" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:typeface="@string/font_path_roboto_regular"/>
+        </RelativeLayout>
+    </com.azumio.android.argus.view.FillingView>
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/bottomlayout" android:layout_below="@+id/main_menu_toolbars">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textStyle="normal" android:textColor="?attr/setupColor" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/message" android:padding="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/goal_setup_message" android:maxLines="4" android:lines="4" android:singleLine="false" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" app:typeface="@string/font_path_roboto_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textStyle="normal" android:textColor="?attr/textColor" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/current_wight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="5dp" android:text="@string/how_much_weigh" android:maxLines="2" android:lines="2" android:singleLine="false" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" app:typeface="@string/font_path_roboto_regular"/>
+            <include layout="@layout/horizontal_line_separator_hr"/>
+            <FrameLayout android:id="@+id/setup_weight_frame" android:background="?attr/Argus_backgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <fragment android:name="com.azumio.android.argus.calories.fragment.OnBoardingFragment" android:id="@+id/fragment_setup_weight" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <include layout="@layout/horizontal_line_separator_hr"/>
+            <RelativeLayout android:id="@+id/ideal_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textStyle="normal" android:textColor="?attr/textColor" android:gravity="center" android:id="@+id/weight_required" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:layout_marginBottom="20dp" android:text="@string/how_much_you_want_weigh" android:maxLines="1" android:lines="1" android:singleLine="true" app:typeface="@string/font_path_roboto_regular"/>
+            </RelativeLayout>
+            <include layout="@layout/horizontal_line_separator_hr"/>
+            <FrameLayout android:id="@+id/setup_new_weight_frame" android:background="?attr/Argus_backgroundColor" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <fragment android:name="com.azumio.android.argus.calories.fragment.OnBoardingFragment" android:id="@+id/fragment_setup_new_weight" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </FrameLayout>
+            <include layout="@layout/horizontal_line_separator"/>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@+id/bottomlayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/white" android:id="@+id/setup_next" android:background="@drawable/rectangle_corner_border" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:text="@string/next" android:layout_above="@+id/pagging_layout" android:layout_centerHorizontal="true" android:textAllCaps="false" android:backgroundTint="@color/calories_color" style="?android:attr/borderlessButtonStyle"/>
+        <RelativeLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/pagging_layout" android:layout_width="36dp" android:layout_height="wrap_content" android:layout_marginTop="10dp">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="12sp" android:textColor="@color/light_grey_color" android:id="@+id/paging" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1" android:layout_alignParentLeft="true" app:typeface="@string/font_path_roboto_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="12sp" android:textColor="@color/light_grey_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="of 4" android:layout_alignParentRight="true" app:typeface="@string/font_path_roboto_regular"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/background_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:id="@+id/pagerView" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="25sp" android:textColor="@color/calorie_color" android:gravity="center" android:id="@+id/samplePlanText" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="25dp" android:layout_marginTop="25dp" android:layout_marginRight="25dp" android:text="Sample Plan" app:typeface="@string/font_path_sans_francisco_regular"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealFavLabel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35dp" android:layout_marginTop="20dp" android:text="Favorite" app:typeface="@string/font_path_sans_francisco_medium"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/mealDay1Layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+            <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginRight="15dp"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealDay1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 1" app:typeface="@string/font_path_sans_francisco_medium"/>
+            <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+        <com.azumio.android.argus.mealplans.MealViewPager android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/pagerDay1" android:layout_width="match_parent" android:layout_height="255dp"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealBreakfastLabel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35dp" android:layout_marginTop="20dp" android:text="Breakfast" app:typeface="@string/font_path_sans_francisco_medium"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/mealDay2Layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+            <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginRight="15dp"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealDay2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 2" app:typeface="@string/font_path_sans_francisco_medium"/>
+            <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+        <com.azumio.android.argus.mealplans.MealViewPager android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/pagerDay2" android:layout_width="match_parent" android:layout_height="255dp"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/mealdayPagerView3" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealLunchLabel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35dp" android:layout_marginTop="20dp" android:text="Lunch" app:typeface="@string/font_path_sans_francisco_medium"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/mealDay3Layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginRight="15dp"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealDay3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 3" app:typeface="@string/font_path_sans_francisco_medium"/>
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <com.azumio.android.argus.mealplans.MealViewPager android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/pagerDay3" android:layout_width="match_parent" android:layout_height="255dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/mealdayPagerView4" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealDinnerLabel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35dp" android:layout_marginTop="20dp" android:text="Dinner" app:typeface="@string/font_path_sans_francisco_medium"/>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/mealDay4Layout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginRight="15dp"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealDay4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 4" app:typeface="@string/font_path_sans_francisco_medium"/>
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <com.azumio.android.argus.mealplans.MealViewPager android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/pagerDay4" android:layout_width="match_parent" android:layout_height="255dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/mealdayPagerView5" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginRight="15dp"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealDay5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 5" app:typeface="@string/font_path_sans_francisco_medium"/>
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <com.azumio.android.argus.mealplans.MealViewPager android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/pagerDay5" android:layout_width="match_parent" android:layout_height="255dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/mealdayPagerView6" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginRight="15dp"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealDay6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 6" app:typeface="@string/font_path_sans_francisco_medium"/>
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <com.azumio.android.argus.mealplans.MealViewPager android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/pagerDay6" android:layout_width="match_parent" android:layout_height="255dp"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/mealdayPagerView7" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginRight="15dp"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/mealDay7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 7" app:typeface="@string/font_path_sans_francisco_medium"/>
+                <RelativeLayout android:background="@color/text_color" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginLeft="15dp"/>
+            </LinearLayout>
+            <com.azumio.android.argus.mealplans.MealViewPager android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/pagerDay7" android:layout_width="match_parent" android:layout_height="255dp"/>
+        </LinearLayout>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="#5f6374" android:gravity="center" android:id="@+id/manymore" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginBottom="20dp" android:text="and many more..." app:typeface="@string/font_path_sans_francisco_regular"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="25sp" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/whatToDo" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="25dp" android:layout_marginTop="25dp" android:layout_marginRight="25dp" android:text="What to do" app:typeface="@string/font_path_sans_francisco_regular"/>
+    </LinearLayout>
+</LinearLayout>

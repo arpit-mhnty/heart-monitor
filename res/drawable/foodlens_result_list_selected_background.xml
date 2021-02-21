@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@color/foodlens_result_list_header_item_gradient_start_color" android:endColor="@color/foodlens_result_list_header_item_gradient_end_color" android:angle="0" android:type="linear"/>
+        </shape>
+    </item>
+</selector>

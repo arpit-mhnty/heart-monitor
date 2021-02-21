@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/fragment_like_and_comments_details_toolbar" android:background="@drawable/activity_with_fragment_toolbar_shadow" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:elevation="@dimen/action_bar_elevation">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/toolbar_text_size" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/activity_with_fragment_toolbar_textview" android:layout_width="match_parent" android:layout_height="match_parent" android:singleLine="true" android:layout_toLeftOf="@+id/fragment_check_in_details_likes" android:layout_toStartOf="@+id/fragment_check_in_details_likes"/>
+            <com.azumio.android.argus.view.CenteredCustomFontViewWithText android:id="@+id/fragment_check_in_details_likes" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="15dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" app:wt_icon_color="@android:color/white" app:wt_icon_color_checked="@android:color/white" app:wt_icon_font_path="@string/font_path_argus_set" app:wt_icon_size="@dimen/toolbar_icon_size" app:wt_text_color="@android:color/white" app:wt_text_color_checked="@android:color/white" app:wt_text_size="@dimen/toolbar_text_size"/>
+            <ProgressBar android:id="@+id/activity_with_fragment_progressbar" android:layout_width="36dp" android:layout_height="36dp" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/Widget.Holo.ProgressBar"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <View android:background="@drawable/bottom_shadow" android:layout_width="match_parent" android:layout_height="6dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+        <ListView android:id="@+id/fragment_like_and_comments_details_listview" android:layout_width="match_parent" android:layout_height="match_parent" android:divider="#bfbfbf" android:dividerHeight="1px">
+            <requestFocus/>
+        </ListView>
+        <ListView android:id="@+id/fragment_newsfeed_hint" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="100dp" android:divider="@null" android:dividerHeight="0dp"/>
+        <View android:id="@+id/hint_shadow" android:background="@drawable/bottom_shadow" android:layout_width="match_parent" android:layout_height="6dp" android:layout_below="@+id/fragment_newsfeed_hint" android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+    <View android:background="#bfbfbf" android:layout_width="match_parent" android:layout_height="1px"/>
+    <FrameLayout android:id="@+id/fragment_like_and_comments_details_edittext" android:background="#fafafa" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

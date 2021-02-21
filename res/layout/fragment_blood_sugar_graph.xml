@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textStyle="bold" android:textColor="@color/chart_title" android:id="@+id/blood_sugar_char_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginBottom="10dp" android:text="@string/blood_sugar_chart_title_format"/>
+    <com.github.mikephil.charting.charts.CombinedChart android:id="@+id/scatter_chart" android:layout_width="match_parent" android:layout_height="220dp" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:layout_below="@+id/blood_sugar_char_title"/>
+    <TextView android:id="@+id/current_month" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="-20dp" android:text="MONTH!" android:layout_below="@+id/scatter_chart" android:layout_alignParentLeft="true" android:elevation="1dp"/>
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.azumio.android.argus.view.ExpandableHeightGridView android:orientation="vertical" android:id="@+id/fragment_detail_grid_flow_layout" android:paddingTop="10dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inner_margin_checkins" android:layout_marginRight="@dimen/outer_margin_checkins" android:horizontalSpacing="15dp" android:verticalSpacing="10dp" android:stretchMode="columnWidth" android:numColumns="2"/>
+    <View android:id="@+id/fragment_detail_grid_divider" android:background="#bfbfbf" android:layout_width="wrap_content" android:layout_height="1px"/>
+</LinearLayout>

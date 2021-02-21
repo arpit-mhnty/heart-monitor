@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/select_activity_root" android:background="@drawable/background" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/search_layout" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginLeft="9dp" android:layout_marginTop="36dp" android:layout_marginRight="7dp" android:layout_marginBottom="9dp">
+        <LinearLayout android:id="@+id/fragment_select_activity_search_linear" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_toLeftOf="@+id/clear_button" android:layout_centerInParent="true" android:layout_toStartOf="@+id/clear_button">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="26dp" android:textColor="@color/activity_select_icon_color" android:id="@+id/fragment_select_activity_magnify" android:layout_width="40dp" android:layout_height="match_parent" app:fontPath="@string/font_path_material_design_set"/>
+            <com.azumio.android.argus.view.FilterableEditText android:textColor="@color/activity_select_font_color" android:textColorHint="@color/activity_select_divider" android:id="@+id/fragment_select_activity_edittext" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="@string/what_are_you_doing" android:maxLines="1" android:singleLine="true" android:textCursorDrawable="@null"/>
+        </LinearLayout>
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="28dp" android:textColor="@color/activity_select_icon_color" android:id="@+id/clear_button" android:visibility="gone" android:layout_width="40dp" android:layout_height="40dp" android:layout_alignParentRight="true" app:fontPath="@string/font_path_material_design_set"/>
+    </RelativeLayout>
+    <ScrollView android:id="@+id/scrollView" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/search_layout">
+        <LinearLayout android:orientation="vertical" android:paddingTop="@dimen/select_activity_section_margin_top" android:paddingBottom="@dimen/select_activity_section_margin_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+            <RelativeLayout android:id="@+id/small_container" android:paddingLeft="7dp" android:paddingRight="7dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/activity_select_user_activity_first_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+                    <com.azumio.android.argus.view.IrregularButton android:id="@+id/eat_button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="7dp" android:src="@drawable/plusmenu_eat_text" android:layout_weight="1"/>
+                    <com.azumio.android.argus.view.IrregularButton android:id="@+id/move_button" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/plusmenu_move_text" android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_below="@+id/activity_select_user_activity_first_group" android:layout_centerHorizontal="true">
+                    <com.azumio.android.argus.view.IrregularButton android:id="@+id/workout_button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="7dp" android:src="@drawable/plusmenu_workout_text" android:layout_weight="1"/>
+                    <com.azumio.android.argus.view.IrregularButton android:id="@+id/sleep_button" android:layout_width="0dp" android:layout_height="wrap_content" android:src="@drawable/plusmenu_sleep_text" android:layout_weight="1"/>
+                </LinearLayout>
+                <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                    <com.azumio.android.argus.view.IrregularButton android:id="@+id/status_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2px" android:src="@drawable/plusmenu_status_text"/>
+                </FrameLayout>
+            </RelativeLayout>
+            <Space android:layout_width="match_parent" android:layout_height="20dp"/>
+            <com.azumio.android.argus.view.ActivityDefinitionViewGroup android:id="@+id/search_view_group" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:orientation="vertical" android:id="@+id/content" android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.azumio.android.argus.view.ActivityDefinitionViewGroup android:id="@+id/popular_view_group" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <com.azumio.android.argus.view.ActivityDefinitionViewGroup android:id="@+id/user_select_view_group" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <com.azumio.android.argus.view.FloatingActionButton android:id="@+id/fragment_select_activity_fab" android:layout_width="@dimen/fab_size" android:layout_height="@dimen/fab_size" android:layout_marginRight="@dimen/fab_margin_right" android:layout_marginBottom="@dimen/fab_margin_bottom" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" app:fab_background_color="@android:color/white" app:fab_background_color_pressed="@color/colorPrimaryDark" app:fab_icon="@drawable/abc_ic_clear_material" app:fab_icon_color="@color/main_menu_page_indicator_color" app:fab_icon_scale="0.3"/>
+</RelativeLayout>

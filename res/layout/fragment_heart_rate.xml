@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="50dp" android:textColor="@android:color/white" android:id="@+id/fragment_heart_rate_icon" android:layout_width="@dimen/inner_margin_checkins" android:layout_height="43dp" android:layout_marginBottom="25dp" android:layout_alignBottom="@+id/heart_rate_fragment_textview" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" app:fontPath="@string/font_path_argus_set"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="80dp" android:textColor="@android:color/white" android:gravity="bottom" android:id="@+id/heart_rate_fragment_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0dp" android:layout_toRightOf="@+id/fragment_heart_rate_icon" android:layout_toEndOf="@+id/fragment_heart_rate_icon" app:typeface="@string/font_path_league_gothic_regular"/>
+            <TextView android:textColor="@android:color/white" android:id="@+id/textView" android:layout_width="match_parent" android:layout_height="18dp" android:layout_marginTop="0dp" android:layout_marginBottom="15dp" android:layout_toRightOf="@+id/fragment_heart_rate_icon" android:layout_below="@+id/heart_rate_fragment_textview"/>
+            <com.azumio.android.argus.view.RainbowView android:id="@+id/rainbow_view" android:layout_width="272dp" android:layout_height="30dp" android:layout_below="@+id/textView" android:layout_alignLeft="@+id/textView" android:layout_alignStart="@+id/textView"/>
+            <ImageView android:id="@+id/showEmptyZone" android:visibility="gone" android:layout_width="272dp" android:layout_height="30dp" android:src="@drawable/zones" android:layout_below="@+id/textView" android:layout_alignLeft="@+id/textView" android:layout_alignStart="@+id/textView"/>
+        </RelativeLayout>
+        <Space android:layout_width="match_parent" android:layout_height="15dp"/>
+        <View android:id="@+id/fragment_heart_rate_divider" android:background="#bfbfbf" android:layout_width="wrap_content" android:layout_height="1px"/>
+    </LinearLayout>
+</FrameLayout>

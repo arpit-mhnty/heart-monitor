@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#99000000"/>
+            <stroke android:width="@dimen/foodlens_stroke_small" android:color="@color/foodlens_icPressed"/>
+            <size android:height="@dimen/foodlens_round_button_medium" android:width="@dimen/foodlens_round_button_medium"/>
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape android:shape="oval">
+            <solid android:color="#99000000"/>
+            <stroke android:width="@dimen/foodlens_stroke_small" android:color="@color/foodlens_icFocused"/>
+            <size android:height="@dimen/foodlens_round_button_medium" android:width="@dimen/foodlens_round_button_medium"/>
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#99000000"/>
+            <stroke android:width="@dimen/foodlens_stroke_small" android:color="@color/foodlens_icActive"/>
+            <size android:height="@dimen/foodlens_round_button_medium" android:width="@dimen/foodlens_round_button_medium"/>
+        </shape>
+    </item>
+</selector>

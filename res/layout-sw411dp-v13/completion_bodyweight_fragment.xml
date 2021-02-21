@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" android:keepScreenOn="true">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_main" android:padding="0dp" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:layout_margin="0dp" android:minHeight="?attr/actionBarSize" app:contentInsetLeft="0dp" app:contentInsetStart="0dp">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="18dp" android:textColor="@color/white" android:gravity="left|center_vertical|center_horizontal|center" android:layout_gravity="center" android:id="@+id/toolbar_text_view_title" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1"/>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="34dp" android:textColor="@color/white" android:id="@+id/toolbar_accept_button" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="15dp" android:text="@string/font_material_design_set_character_check" app:fontPath="@string/font_path_material_design_set"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout android:id="@+id/tabsView" android:visibility="visible" android:layout_width="match_parent" android:layout_height="55dp">
+        <hell.layouts.CheckablesGroup android:orientation="horizontal" android:id="@+id/completion_fragment_buttons" android:layout_width="match_parent" android:layout_height="match_parent">
+            <Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.7"/>
+            <com.azumio.android.argus.view.XMLTypefaceToggleButton android:textSize="14sp" android:id="@+id/completion_fragment_private_settings_private" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="2dp" android:textOn="@string/friends_caption" android:textOff="@string/friends_caption" android:layout_weight="2" style="@style/DefaultSpanRangeToggleButton"/>
+            <Space android:layout_width="5dp" android:layout_height="match_parent"/>
+            <com.azumio.android.argus.view.XMLTypefaceToggleButton android:textSize="14sp" android:id="@+id/completion_fragment_private_settings_public" android:layout_width="0dp" android:layout_height="wrap_content" android:textOn="@string/public_caption" android:textOff="@string/public_caption" android:layout_weight="2" style="@style/DefaultSpanRangeToggleButton"/>
+            <Space android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="0.25"/>
+        </hell.layouts.CheckablesGroup>
+    </RelativeLayout>
+    <ScrollView android:background="@color/grey_color" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager_motion_processor_launcher" android:background="@color/white" android:paddingLeft="0dp" android:paddingTop="0dp" android:paddingRight="0dp" android:paddingBottom="0dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="191dp"/>
+            <View android:background="@color/options_divider" android:visibility="visible" android:layout_width="match_parent" android:layout_height="1px"/>
+            <LinearLayout android:background="@color/grey_color" android:layout_width="match_parent" android:layout_height="40dp"/>
+            <View android:background="@color/options_divider" android:layout_width="match_parent" android:layout_height="1px"/>
+            <LinearLayout android:background="@color/grey_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp"/>
+            <View android:background="@color/options_divider" android:layout_width="match_parent" android:layout_height="1px"/>
+            <LinearLayout android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/outer_margin_checkins">
+                    <com.azumio.android.argus.view.HexImageView android:id="@+id/fragment_note_with_photo_avatar" android:layout_width="35dp" android:layout_height="41dp" android:layout_marginLeft="@dimen/outer_margin_checkins"/>
+                    <FrameLayout android:orientation="vertical" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inner_margin_checkins" android:minHeight="41dp">
+                        <TextView android:textColor="#414967" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/fragment_note_add_note" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="#414967" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@+id/fragment_note_with_photo_textview" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="ADD NOTE" app:typeface="@string/font_path_roboto_regular"/>
+                    </FrameLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <View android:background="@color/options_divider" android:layout_width="match_parent" android:layout_height="1px"/>
+            <RelativeLayout android:id="@+id/completion_activity_tag_container" android:background="@color/white" android:paddingRight="20dp" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="40dp" android:textColor="#9ba5b0" android:id="@+id/completion_activity_tag_icon" android:duplicateParentState="true" android:layout_width="27dp" android:layout_height="27dp" android:layout_marginLeft="@dimen/outer_margin_checkins" android:layout_marginTop="23dp" android:layout_marginBottom="23dp" app:fontPath="@string/font_path_argus_set" app:textAlign="1"/>
+                <ViewSwitcher android:id="@+id/tag_completion_view_switcher" android:paddingTop="10dp" android:paddingBottom="13dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_toLeftOf="@+id/completion_activity_tag_arrow" android:layout_toRightOf="@+id/completion_activity_tag_icon" android:layout_toEndOf="@+id/completion_activity_tag_icon">
+                    <TextView android:id="@+id/completion_activity_tag_textview" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginTop="16dp" android:text="@string/Add_tagging"/>
+                    <org.apmem.tools.layouts.FlowLayout android:gravity="left" android:orientation="horizontal" android:id="@+id/completion_tag_gridview" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </ViewSwitcher>
+            </RelativeLayout>
+            <View android:background="@color/options_divider" android:layout_width="match_parent" android:layout_height="1px"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

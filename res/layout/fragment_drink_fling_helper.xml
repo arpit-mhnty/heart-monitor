@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/fragment_drink_fling_helper_root" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="100dp">
+        <TextView android:textColor="@color/white" android:gravity="center" android:id="@+id/fragment_drink_fling_helper_textview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="80dp" android:layout_above="@+id/fragment_drink_fling_helper_hand" android:layout_alignParentLeft="true" android:layout_alignParentStart="true"/>
+        <ImageView android:id="@+id/fragment_drink_fling_helper_hand" android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/hand" android:layout_centerInParent="true"/>
+        <ImageView android:layout_width="22dp" android:layout_height="22dp" android:layout_marginLeft="26dp" android:layout_marginTop="-8dp" android:src="@drawable/touch" android:layout_alignLeft="@+id/fragment_drink_fling_helper_hand" android:layout_alignTop="@+id/fragment_drink_fling_helper_hand" android:layout_marginStart="26dp" android:layout_alignStart="@+id/fragment_drink_fling_helper_hand"/>
+    </RelativeLayout>
+</RelativeLayout>

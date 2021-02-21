@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/mainView" android:background="@color/workout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+    <fragment android:id="@+id/mapview" android:layout_width="match_parent" android:layout_height="match_parent" class="com.google.android.gms.maps.SupportMapFragment"/>
+    <FrameLayout android:id="@+id/container_map_fragment" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <ProgressBar android:layout_gravity="center" android:id="@+id/fragment_map_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyleLarge"/>
+    <Button android:id="@+id/action_show_big_map" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <RelativeLayout android:orientation="vertical" android:id="@+id/mapView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:id="@+id/map" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/map_cropped" android:scaleType="fitXY"/>
+        <ImageView android:layout_gravity="center" android:id="@+id/tagLocation" android:paddingLeft="15dp" android:layout_width="70dp" android:layout_height="70dp" android:src="@drawable/tag_location" android:layout_centerHorizontal="true" android:layout_centerVertical="true"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/tag_locations" android:background="@drawable/extra_rounded_premium_btn" android:paddingLeft="10dp" android:paddingTop="2dp" android:paddingRight="10dp" android:paddingBottom="2dp" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add Location" android:layout_below="@+id/tagLocation" android:layout_centerHorizontal="true" android:alpha="0.5" android:backgroundTint="@color/grey_colortxt"/>
+    </RelativeLayout>
+</FrameLayout>

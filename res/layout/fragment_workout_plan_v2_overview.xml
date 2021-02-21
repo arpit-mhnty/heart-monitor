@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.FillingView android:id="@+id/main_menu_toolbars" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:elevation="@dimen/action_bar_elevation">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:gravity="center_vertical" android:clickable="true" android:layout_width="50dp" android:layout_height="match_parent" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30sp" android:textColor="#2675c2" android:id="@+id/setting_btn" android:clickable="true" android:layout_width="50dp" android:layout_height="50dp" android:text="" android:layout_marginEnd="10dp" app:fontPath="@string/font_path_argus_set"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </com.azumio.android.argus.view.FillingView>
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="30sp" android:textStyle="bold" android:textColor="#2675c2" android:id="@+id/userName" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Hello" android:layout_marginStart="15dp"/>
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="12sp" android:textStyle="bold" android:textColor="#2675c2" android:id="@+id/dateMonth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="December 2018" android:layout_marginStart="15dp"/>
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView android:id="@+id/overivew__calendar_view" android:layout_width="match_parent" android:layout_height="wrap_content" app:mcv_dateTextAppearance="@style/WorkoutPlanCalendarTextAppearance" app:mcv_selectionColor="@color/white" app:mcv_selectionMode="0" app:mcv_showOtherDates="7" app:mcv_tileHeight="40dp" app:mcv_tileWidth="50dp" app:mcv_weekDayTextAppearance="@style/WorkoutPlanCalendarWeekTextAppearance"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/progressContainer" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginStart="15dp" android:layout_marginEnd="15dp">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:id="@+id/progressPercentage" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0%" style="@style/WorkoutPlanProgressTextAppearance"/>
+        <ProgressBar android:id="@+id/progressBar" android:layout_width="match_parent" android:layout_height="wrap_content" android:progress="0" style="@style/CustomWorkoutPlanProgressBar"/>
+        <ImageButton android:layout_gravity="center" android:id="@+id/expandIcon" android:background="@null" android:layout_width="70dp" android:layout_height="40dp" android:src="@drawable/calendar_more_arrow" android:scaleType="centerInside" android:rotation="180"/>
+    </LinearLayout>
+    <androidx.legacy.widget.Space android:id="@+id/space_extra" android:visibility="gone" android:layout_width="match_parent" android:layout_height="10dp"/>
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/overviewList" android:layout_width="match_parent" android:layout_height="0dp"/>
+    </ScrollView>
+</LinearLayout>

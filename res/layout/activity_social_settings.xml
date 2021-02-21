@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_main" android:background="?attr/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/toolbar_text_size" android:textColor="@color/settings_activity_toolbar_text_color" android:gravity="center" android:id="@+id/toolbar_done" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_marginRight="10dp" android:text="@string/next" android:singleLine="true" android:layout_alignParentRight="true"/>
+            <TextView android:textSize="@dimen/toolbar_text_size" android:textColor="@color/settings_activity_toolbar_text_color" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/toolbar_text_view_title" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/activity_title_settings" android:singleLine="true" android:layout_toLeftOf="@+id/toolbar_done"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <FrameLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0dp" android:layout_height="0dp"/>
+        <ScrollView android:id="@+id/container_settings_options" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <include layout="@layout/layout_edit_profile_basic_info"/>
+                <include android:layout_width="match_parent" android:layout_height="1px" android:layout_marginLeft="10dp" android:layout_marginTop="20dp" android:layout_marginRight="10dp" layout="@layout/horizontal_line_separator"/>
+                <TextView android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="60dp" android:layout_marginTop="60dp" android:layout_marginRight="60dp" android:layout_marginBottom="60dp" android:text="@string/activity_settings_option_social_setup_hint"/>
+            </LinearLayout>
+        </ScrollView>
+        <View android:id="@+id/top_shadow" android:background="@drawable/bottom_shadow" android:layout_width="match_parent" android:layout_height="6dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

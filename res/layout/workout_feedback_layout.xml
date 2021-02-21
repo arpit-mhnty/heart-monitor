@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:background="#cc000000" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/toplayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentTop="true">
+        <RelativeLayout android:id="@+id/continuelayout" android:layout_width="150dp" android:layout_height="50dp" android:layout_alignParentRight="true">
+            <TextView android:textSize="18sp" android:textColor="@color/white" android:gravity="center_vertical" android:id="@+id/btnContinue" android:layout_width="100dp" android:layout_height="50dp" android:layout_marginRight="10dp" android:text="Continue" android:layout_toLeftOf="@+id/imgcontinue" android:layout_alignParentRight="true" android:layout_centerInParent="true"/>
+            <ImageView android:id="@+id/imgcontinue" android:layout_width="50dp" android:layout_height="50dp" android:src="@drawable/program_player_audio" android:scaleType="centerInside" android:layout_alignParentRight="true" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:id="@+id/reps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_weight="1">
+            <TextView android:textSize="20sp" android:textColor="@color/white" android:id="@+id/repscount" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="How many reps did\10you complete?" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>
+            <Spinner android:id="@+id/repsspinner" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginLeft="10dp" android:prompt="@string/reps_count" android:layout_toRightOf="@+id/repscount" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/secondlayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:layout_weight="1">
+            <TextView android:textSize="20sp" android:textColor="@color/white" android:id="@+id/hardtxt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="How hard\10was that?" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>
+            <Spinner android:id="@+id/spinner" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_marginLeft="10dp" android:prompt="@string/reps_title" android:layout_toRightOf="@+id/hardtxt" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

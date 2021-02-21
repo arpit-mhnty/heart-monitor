@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/topSeparater" android:background="@color/prompt_sheet_border_background" android:layout_width="match_parent" android:layout_height="1px"/>
+    <LinearLayout android:orientation="horizontal" android:id="@+id/unsyncedLayout" android:background="@color/prompt_sheet_background" android:paddingLeft="20dp" android:paddingTop="4dp" android:paddingRight="10dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="64dp">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="#ffffffff" android:id="@+id/text_view_unsynced_items" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" app:typeface="@string/font_path_roboto_light"/>
+            <Space android:layout_width="wrap_content" android:layout_height="4dp"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="#ffbfbfbf" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/header_insights_log_in_to_sync_your_data" android:singleLine="true" app:typeface="@string/font_path_roboto_light"/>
+        </LinearLayout>
+        <Space android:layout_width="8dp" android:layout_height="wrap_content"/>
+        <com.azumio.android.argus.view.XMLTypefaceButton android:textSize="16sp" android:textColor="#ffffffff" android:layout_gravity="center_vertical" android:id="@+id/action_sign_in" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/action_sign_in" android:textAllCaps="true" app:typeface="@string/font_path_roboto_regular"/>
+    </LinearLayout>
+    <View android:id="@+id/bottomSeparater" android:background="@color/prompt_sheet_border_background" android:layout_width="match_parent" android:layout_height="1px"/>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/chart_orange" android:layout_width="match_parent" android:layout_height="400dp">
+    <RelativeLayout android:id="@+id/toplayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:layout_alignParentTop="true">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30dp" android:id="@+id/left_button" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="40dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textStyle="normal" android:textColor="@color/white" android:id="@+id/txt_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:typeface="@string/font_path_roboto_medium"/>
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30dp" android:id="@+id/right_button" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="40dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="300dp" android:layout_marginTop="0dp" android:layout_below="@+id/toplayout"/>
+    <LinearLayout android:gravity="center_horizontal" android:id="@+id/layoutdots" android:layout_width="match_parent" android:layout_height="20dp" android:layout_below="@+id/viewpager" android:layout_centerInParent="true">
+        <LinearLayout android:layout_gravity="top|center_vertical|center_horizontal|center" android:orientation="horizontal" android:id="@+id/pagging" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <View android:id="@+id/view1" android:tag="1" android:background="@drawable/pageing_indicator_circle" android:layout_width="5dp" android:layout_height="5dp" android:layout_marginRight="20dp" android:layout_weight="1"/>
+            <View android:id="@+id/view2" android:tag="2" android:background="@drawable/holo_circle" android:layout_width="5dp" android:layout_height="5dp" android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

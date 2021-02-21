@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="horizontal" android:id="@+id/expandable_child_row_newsfeed_edittext_layout" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="40dp" android:textColor="@color/newsfeed_divider" android:gravity="center" android:layout_gravity="center" android:id="@+id/expandable_child_row_newsfeed_icon" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="40dp" android:layout_height="match_parent" android:layout_marginLeft="6dp" android:layout_marginRight="12dp">
+        <requestFocus/>
+    </com.azumio.android.argus.view.CenteredCustomFontView>
+    <FrameLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <EditText android:id="@+id/expandable_child_row_newsfeed_edit_text" android:background="@drawable/newsfeed_edittext_background" android:focusable="true" android:focusableInTouchMode="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="54dp" android:singleLine="false"/>
+    </FrameLayout>
+    <Button android:textSize="16dp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/button" android:background="@color/newsfeed_bottom_bar" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="POST"/>
+</LinearLayout>

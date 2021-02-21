@@ -1,0 +1,14 @@
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (1,'weight','float');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (2,'reps','integer');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (3,'sets','integer');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (5,'avg HR','integer');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (6,'calories','integer');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (7,'distance','float');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (8,'duration','float');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (9,'elevation','float');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (10,'incline','float');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (11,'jumps','integer');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (12,'laps','float');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (13,'resistance','float');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (14,'speed','float');
+INSERT INTO `param_details` (param_id,param_name,param_data_type) VALUES (15,'steps','integer');

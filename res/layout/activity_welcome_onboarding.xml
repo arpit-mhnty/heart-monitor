@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/image_view" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/ihr_blurred_background" android:scaleType="centerCrop"/>
+    <ImageView android:id="@+id/image_powered_by_azumio" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="80dp" android:src="@drawable/ihr_powered_by_azumio" android:layout_above="@+id/viewPagerLayout" android:layout_alignParentTop="true" android:layout_centerInParent="true" android:layout_centerVertical="true"/>
+    <RelativeLayout android:id="@+id/viewPagerLayout" android:layout_width="match_parent" android:layout_height="450dp" android:layout_centerVertical="true">
+        <androidx.viewpager.widget.ViewPager android:id="@+id/pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </RelativeLayout>
+    <LinearLayout android:id="@+id/llDots" android:layout_width="wrap_content" android:layout_height="8dp" android:layout_marginTop="20dp" android:layout_marginBottom="0dp" android:layout_below="@+id/viewPagerLayout" android:layout_centerHorizontal="true"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:id="@+id/bottomlayout" android:background="@drawable/rounded_blue" android:layout_width="300dp" android:layout_height="wrap_content" android:layout_marginBottom="30dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:backgroundTint="@color/buttonColor">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16.32sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/startMeasuringBtn" android:layout_width="match_parent" android:layout_height="42dp" android:text="Start Measuring" android:layout_centerHorizontal="true" android:textAllCaps="true" app:typeface="@string/font_path_roboto_regular"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

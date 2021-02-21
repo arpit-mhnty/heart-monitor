@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/featuresList" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    <com.kingfisher.easyviewindicator.RecyclerViewIndicator android:id="@+id/pageIndicator" android:paddingTop="1dp" android:layout_width="wrap_content" android:layout_height="150dp" android:layout_marginTop="5dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true" app:avi_animation_enable="false" app:avi_drawable="@drawable/dot_icon_pageselected" app:avi_drawable_unselected="@drawable/dot_icon_white_pageunselected" app:avi_height="8dp" app:avi_margin="5dp" app:avi_orientation="1" app:avi_width="8dp"/>
+</RelativeLayout>

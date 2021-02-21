@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/background_asset" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/onboarding_background"/>
+    <com.azumio.android.argus.view.FillingView android:id="@+id/main_menu_toolbars" android:visibility="visible" android:layout_width="match_parent" android:layout_height="60dp" android:minHeight="?attr/actionBarSize" android:elevation="@dimen/action_bar_elevation">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/white" android:id="@+id/toolbar_back_arrow" android:layout_width="30dp" android:layout_height="match_parent" android:text="←" android:layout_alignParentLeft="true" app:fontPath="@string/font_path_material_design_set"/>
+            <TextView android:textSize="20dp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/activity_with_fragment_toolbar_textview" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Sync"/>
+        </RelativeLayout>
+    </com.azumio.android.argus.view.FillingView>
+    <RelativeLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="270dp" android:layout_marginTop="66dp" android:layout_below="@+id/main_menu_toolbars" android:layout_alignParentLeft="true" android:layout_alignParentStart="true">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+            <RelativeLayout android:id="@+id/mainView" android:layout_width="match_parent" android:layout_height="75dp" android:layout_centerVertical="true">
+                <ImageView android:layout_width="75dp" android:layout_height="75dp" android:layout_marginLeft="55dp" android:src="@mipmap/ic_launcher" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/gfit_arrow" android:layout_centerInParent="true"/>
+                <ImageView android:layout_width="75dp" android:layout_height="75dp" android:layout_marginRight="55dp" android:src="@drawable/gfit_icon" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            </RelativeLayout>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="@color/blue_color" android:gravity="bottom|center_vertical|center_horizontal|center" android:visibility="gone" android:layout_width="match_parent" android:layout_height="42dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:text="Optional" android:layout_below="@+id/mainView" android:textAllCaps="false" app:typeface="@string/font_path_roboto_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="@color/blue_color" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/googleFitText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:layout_marginRight="20dp" android:text="Use Google Fit to count your steps within Argus. You can change this later in Settings." android:layout_below="@+id/mainView" android:textAllCaps="false" app:typeface="@string/font_path_roboto_regular"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/bottomlayout" android:background="@drawable/rounded_rectangle_ripple" android:layout_width="match_parent" android:layout_height="42dp" android:layout_marginLeft="25dp" android:layout_marginTop="20dp" android:layout_marginRight="25dp" android:layout_marginBottom="10dp" android:layout_above="@+id/skip" android:backgroundTint="@color/white">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="@color/blue_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@+id/syncGoogleFit" android:layout_width="match_parent" android:layout_height="42dp" android:text="Sync with Google Fit" android:textAllCaps="true" app:typeface="@string/font_path_roboto_regular"/>
+    </LinearLayout>
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textColor="@color/white" android:gravity="center" android:id="@+id/skip" android:layout_width="200dp" android:layout_height="40dp" android:text="SKIP" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+</RelativeLayout>

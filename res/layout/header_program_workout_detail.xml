@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+    <LinearLayout android:orientation="vertical" android:id="@+id/toplayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:id="@+id/innerLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/cell_header_grey_text" android:gravity="center_vertical" android:id="@+id/cell_workout_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="Body Builder" android:layout_weight="0.9"/>
+            <TextView android:textSize="13sp" android:textStyle="bold" android:textColor="#4fa5d5" android:ellipsize="end" android:gravity="center" android:id="@+id/cell_exercise_count" android:background="@drawable/border" android:padding="3dp" android:layout_width="60dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:text="" android:layout_weight="0.1"/>
+        </LinearLayout>
+        <ImageView android:layout_gravity="right" android:id="@+id/image_workout_edit" android:background="@null" android:visibility="gone" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="5dp" android:src="@drawable/icon_pencil" android:scaleType="centerInside"/>
+        <TextView android:textSize="15sp" android:textColor="@color/cell_header_grey_text" android:id="@+id/cell_workout_description" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:text="Want to get extra help in sculpting your dream body? This is the perfect workout to suppliment your current exercise program. The body builder places an emphasis on the chest and back to help you strengthen your upper body "/>
+    </LinearLayout>
+    <View android:id="@+id/line" android:background="#cbcbcb" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/toplayout"/>
+</RelativeLayout>

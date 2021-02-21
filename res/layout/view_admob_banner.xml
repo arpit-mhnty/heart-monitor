@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/ad_container" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.google.android.gms.ads.AdView android:id="@+id/ad_view_banner" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" app:adSize="SMART_BANNER" app:adUnitId="@string/ad_banner_id_measurement_ihr_fragment"/>
+</RelativeLayout>

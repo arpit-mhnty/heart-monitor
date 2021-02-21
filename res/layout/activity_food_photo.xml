@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/image_container" android:layout_width="match_parent" android:layout_height="240dp" android:layout_alignParentTop="true">
+        <include layout="@layout/view_food_preview"/>
+        <RelativeLayout android:background="@android:color/transparent" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/white" android:id="@+id/toolbar_back_arrow" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp" android:fitsSystemWindows="true" android:layout_width="30dp" android:layout_height="56dp" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:text="←" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" app:fontPath="@string/font_path_material_design_set"/>
+            <TextView android:textSize="19sp" android:textColor="@color/white" android:id="@+id/selected_items" android:padding="14dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"/>
+            <Button android:theme="@style/Theme.FlatButton.Primary" android:id="@+id/done_button" android:visibility="gone" android:fitsSystemWindows="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:text="@string/action_done" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="40dp" android:textColor="@color/white" android:id="@+id/magnify_glass" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp" android:layout_width="30dp" android:layout_height="56dp" android:layout_marginRight="8dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true"/>
+        </RelativeLayout>
+    </FrameLayout>
+    <ViewSwitcher android:id="@+id/view_switcher" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/image_container" android:layout_alignParentBottom="true">
+        <ProgressBar android:layout_gravity="center" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyle"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <com.azumio.android.argus.calories.p010ui.MaterialSpinner android:id="@+id/meal_type_spinner" android:paddingLeft="8dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="50dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true" style="@style/cmSpinner"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/spinner_text" android:gravity="center_vertical" android:id="@+id/total_meal_calories_count" android:layout_width="wrap_content" android:layout_height="56dp" android:layout_marginRight="16dp" android:minHeight="50dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/selected_food_recycler_view" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <View android:id="@+id/selected_food_separator" android:background="@drawable/list_item_bg" android:layout_width="match_parent" android:layout_height="7dp"/>
+                <HorizontalScrollView android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/group_bubbles_container" android:paddingLeft="8dp" android:paddingRight="8dp" android:paddingBottom="8dp" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </HorizontalScrollView>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/food_recycler_view" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textSize="15sp" android:textColor="@color/colorPrimary" android:gravity="center_vertical" android:id="@+id/more_button" android:background="@drawable/list_item_bg_ripple" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="@dimen/list_item_height" android:text="@string/food_recognized_more"/>
+                <TextView android:textSize="15sp" android:textColor="@color/colorPrimary" android:gravity="center_vertical" android:id="@+id/package_goods" android:background="@drawable/list_item_bg_ripple" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="@dimen/list_item_height" android:text="@string/food_package_goods"/>
+                <TextView android:textSize="15sp" android:textColor="@color/colorPrimary" android:gravity="center_vertical" android:id="@+id/manual_search" android:background="@drawable/list_item_bg_ripple" android:paddingLeft="16dp" android:paddingTop="12dp" android:paddingRight="16dp" android:paddingBottom="12dp" android:scrollbars="vertical" android:layout_width="match_parent" android:layout_height="@dimen/list_item_height" android:text="@string/food_manual_search"/>
+                <View android:background="@drawable/list_item_bg" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+                <HorizontalScrollView android:id="@+id/location_view" android:background="@drawable/list_item_bg" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="52dp">
+                        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="42sp" android:textColor="@color/mid_gray" android:layout_gravity="center_vertical" android:id="@+id/location_icon" android:padding="4dp" android:layout_width="32dp" android:layout_height="56dp" android:layout_marginLeft="4dp" android:text="LOCATION"/>
+                        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@+id/location_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </ScrollView>
+    </ViewSwitcher>
+    <FrameLayout android:id="@+id/ftue_view" android:background="@color/semi_transparent_black" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16dp" android:layout_marginTop="220dp" android:alpha="0.92" android:backgroundTint="@color/white" app:cardBackgroundColor="@color/white" app:cardUseCompatPadding="true" app:contentPadding="16dp">
+            <TextView android:textSize="15sp" android:textColor="@color/food_group_bubble_selected" android:id="@+id/ftue_text" android:background="@drawable/select_food_ftue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="220dp"/>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</RelativeLayout>

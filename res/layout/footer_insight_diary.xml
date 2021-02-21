@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/emptyTextMessage" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/dumbellImage" android:visibility="visible" android:layout_width="200dp" android:layout_height="180dp" android:src="@drawable/fb_dumbell" android:layout_centerHorizontal="true"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textStyle="bold" android:textColor="#dedede" android:gravity="center_horizontal" android:id="@+id/dumbelText" android:paddingLeft="10dp" android:paddingTop="30dp" android:paddingRight="10dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Your workout logs\10will appear here" android:layout_below="@+id/dumbellImage" app:typeface="@string/font_path_roboto_medium"/>
+    </RelativeLayout>
+</LinearLayout>

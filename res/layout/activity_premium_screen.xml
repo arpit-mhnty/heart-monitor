@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/premium_color" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="2">
+        <RelativeLayout android:orientation="vertical" android:background="@color/premium_color" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.9">
+            <RelativeLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <ImageView android:id="@+id/imageview" android:background="@color/premium_color" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/nutrition_info" android:scaleType="fitXY"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.9"/>
+                    <androidx.viewpager.widget.ViewPager android:id="@+id/viewpager" android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="0.7"/>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/pagerLayout" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginBottom="48dp" android:layout_weight="0.015">
+                        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/pagerIndicatorView" android:layout_width="match_parent" android:layout_height="match_parent"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30sp" android:textColor="@color/white" android:id="@+id/cross" android:visibility="visible" android:layout_width="40dp" android:layout_height="30dp" android:layout_marginLeft="5dp" android:layout_marginTop="25dp" android:layout_alignParentTop="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="center" android:id="@+id/getPremiumView" android:background="@drawable/extra_rounded_premium_btn" android:visibility="visible" android:layout_width="240dp" android:layout_height="wrap_content" android:layout_marginTop="-40dp" android:backgroundTint="@color/white">
+            <TextView android:textSize="16sp" android:textColor="#414c5d" android:gravity="center" android:id="@+id/getpremiumtext" android:visibility="invisible" android:layout_width="180dp" android:layout_height="50dp" android:text="Get Premium" android:textAllCaps="true"/>
+            <RelativeLayout android:gravity="center" android:id="@+id/yearlyview" android:background="@drawable/extra_rounded_premium_btn" android:visibility="visible" android:layout_width="match_parent" android:layout_height="50dp">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="13sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/yearlytext" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="1dp" android:text="12 months $4.16 / month" android:textAllCaps="false" app:typeface="@string/font_path_roboto_medium"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="12sp" android:textColor="#414c5d" android:gravity="center" android:id="@+id/yearlytext2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:text="BILLED ANNUALLY $49.99" android:layout_below="@+id/yearlytext" android:textAllCaps="false" app:typeface="@string/font_path_roboto_regular"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:gravity="bottom|center_vertical|center_horizontal|center" android:layout_gravity="center" android:id="@+id/premiumViewMonthly" android:visibility="visible" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="10dp">
+            <RelativeLayout android:gravity="center" android:id="@+id/monthlyView" android:background="@drawable/extra_rounded_premium_btn" android:visibility="visible" android:layout_width="240dp" android:layout_height="50dp" android:backgroundTint="@color/white">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="13sp" android:textColor="@color/black" android:gravity="center" android:id="@+id/monthtext" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="1dp" android:text="1 month $19.99 / month" android:textAllCaps="false" app:typeface="@string/font_path_roboto_medium"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="12sp" android:textColor="#414c5d" android:gravity="center" android:id="@+id/monthtext2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="1dp" android:text="BILLED MONTHLY $19.99" android:layout_below="@+id/monthtext" android:textAllCaps="false" app:typeface="@string/font_path_roboto_regular"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

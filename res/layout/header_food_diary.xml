@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/header_container" android:background="@drawable/cell_top_rounded_with_stoke" android:layout_width="match_parent" android:layout_height="87dp" android:layout_marginTop="10dp">
+        <ImageView android:id="@+id/header_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:src="@drawable/cm_breakfast" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/header_title_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_toRightOf="@+id/header_icon" android:layout_centerVertical="true">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textStyle="normal" android:textColor="#1e2442" android:id="@+id/header_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Breakfast" app:typeface="@string/font_path_roboto_light"/>
+                <LinearLayout android:paddingLeft="-8dp" android:paddingTop="5dp" android:paddingRight="0dp" android:paddingBottom="5dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@+id/header_title">
+                    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="26dp" android:textColor="@color/calories_color" android:layout_gravity="center_vertical" android:id="@+id/header_import" android:layout_width="45dp" android:layout_height="40dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="13sp" android:textStyle="normal" android:textColor="@color/calories_label" android:id="@+id/header_Subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="serving" app:typeface="@string/font_path_roboto_light"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/header_emoticon" android:layout_width="20dp" android:layout_height="20dp" android:layout_marginTop="17dp" android:layout_marginRight="12dp" android:src="@drawable/cm_emoticon_over" android:layout_alignTop="@+id/header_title_container" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <ImageButton android:id="@+id/header_add" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="12dp" android:src="@drawable/cm_add" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="11sp" android:textStyle="normal" android:textColor="@color/calories_label" android:id="@+id/header_calories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:layout_marginRight="12dp" android:text="O KCAL" android:layout_alignBottom="@+id/header_title_container" android:layout_alignParentRight="true" app:typeface="@string/font_path_roboto_light"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/image_container" android:background="@drawable/cell_top_rounded_with_stoke" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_below="@+id/header_container">
+        <HorizontalScrollView android:id="@+id/hsv" android:padding="10dp" android:scrollbars="none" android:layout_width="match_parent" android:layout_height="wrap_content" android:measureAllChildren="false" android:fillViewport="true" android:layout_alignParentTop="true">
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/thumnail_container" android:layout_width="wrap_content" android:layout_height="125dp"/>
+        </HorizontalScrollView>
+    </RelativeLayout>
+</RelativeLayout>

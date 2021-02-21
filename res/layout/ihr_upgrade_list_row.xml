@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" style="@style/MatchWidthWrapHeight">
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="horizontal" android:id="@+id/title_row" android:paddingTop="@dimen/margin_top" android:paddingBottom="@dimen/margin_top" android:layout_marginLeft="25dp" style="@style/MatchWidthWrapHeight">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="35sp" android:textColor="@color/icon_blue" android:id="@+id/icon_code" android:layout_width="40dp" android:layout_height="35dp" android:layout_marginRight="20dp"/>
+        <TextView android:textSize="@dimen/cell_text_tile" android:textStyle="bold" android:textColor="@android:color/black" android:id="@+id/text_title" android:paddingTop="5dp" android:layout_marginLeft="40dp" android:layout_marginRight="25dp" android:layout_marginBottom="2dp" app:layout_constraintStart_toEndOf="@+id/icon_code" style="@style/MatchWidthWrapHeight"/>
+        <TextView android:textSize="@dimen/cell_text_desc" android:textColor="@android:color/black" android:id="@+id/text_descreption" android:layout_marginLeft="40dp" android:layout_marginRight="25dp" app:layout_constraintStart_toEndOf="@+id/icon_code" app:layout_constraintTop_toBottomOf="@+id/text_title" style="@style/MatchWidthWrapHeight"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="40dp" android:layout_height="40dp">
+    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="14dp" android:textColor="@color/white" android:id="@+id/addExercise" android:background="@drawable/fitness_buddy_accent_blue_circle_with_padding" android:layout_width="40dp" android:layout_height="40dp" android:backgroundTint="@color/light_grey_color" app:argusIconMapKey="@string/icon_map_key_add_activity"/>
+    <TextView android:textAppearance="@style/BaseExerciseItem.TextAppearance.CircleText" android:gravity="center" android:id="@+id/selectedCount" android:background="@drawable/fitness_buddy_accent_blue_circle_with_padding" android:padding="10dp" android:visibility="gone" android:layout_width="40dp" android:layout_height="40dp" android:layout_alignParentRight="true" android:layout_alignParentEnd="true" android:backgroundTint="@color/fitness_buddy_accent_blue"/>
+</RelativeLayout>

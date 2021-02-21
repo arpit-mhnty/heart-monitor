@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/main_menu_toolbar" android:background="@drawable/activity_with_fragment_toolbar_shadow" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:elevation="@dimen/action_bar_elevation">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <TextView android:textSize="@dimen/toolbar_text_size" android:textColor="@color/newsfeed_clickable_string" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/activity_friends_and_followers_toolbar_text_view" android:layout_width="match_parent" android:layout_height="match_parent" android:singleLine="true" android:layout_toLeftOf="@+id/main_menu_toolbar_notification" android:layout_toStartOf="@+id/main_menu_toolbar_notification"/>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:enabled="true" android:textSize="30dp" android:textColor="@color/newsfeed_clickable_string" android:id="@+id/main_menu_toolbar_notification" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_alignParentRight="true" app:fontPath="@string/font_path_material_design_set"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/main_menu_toolbar">
+        <TextView android:textSize="20dp" android:gravity="center" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:text="Add"/>
+        <EditText android:id="@+id/fragment_add_tag_custom_edit_text" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Type your tag here" android:maxLines="1" android:singleLine="true"/>
+    </LinearLayout>
+</RelativeLayout>

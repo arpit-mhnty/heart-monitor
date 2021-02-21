@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/text_color" android:id="@+id/googleFitIntegrationText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:text="@string/connect_google_fit_to_track_steps" app:typeface="@string/font_path_roboto_regular"/>
+    <include android:id="@+id/googleFitIntegrationButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginTop="20dp" android:layout_marginRight="40dp" layout="@layout/view_google_fit_integration_button"/>
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="#008d7d" android:id="@+id/googleFitAlreadyIntegratedText" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginRight="40dp" android:text="@string/google_fit_is_connected_and_tracking_steps" app:typeface="@string/font_path_roboto_regular"/>
+</merge>

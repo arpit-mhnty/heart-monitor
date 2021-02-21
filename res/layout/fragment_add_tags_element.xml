@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.azumio.android.argus.view.KeepRatioRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/fragment_add_tags_element_parent" android:layout_width="match_parent" android:layout_height="match_parent" android:soundEffectsEnabled="false">
+        <LinearLayout android:orientation="vertical" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:soundEffectsEnabled="false">
+            <com.azumio.android.argus.view.CenteredCustomFontViewWithText android:layout_gravity="center" android:id="@+id/fragment_add_tags_element_icon" android:paddingLeft="6dp" android:duplicateParentState="true" android:layout_width="40dp" android:layout_height="40dp" app:wt_icon_color="@color/newsfeed_clickable_string" app:wt_icon_color_checked="@android:color/white" app:wt_icon_size="34dp"/>
+            <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@+id/fragment_add_tags_element_name" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8dp" android:layout_marginRight="8dp" android:text="Just woke up" android:maxLines="2"/>
+        </LinearLayout>
+    </RelativeLayout>
+</com.azumio.android.argus.view.KeepRatioRelativeLayout>

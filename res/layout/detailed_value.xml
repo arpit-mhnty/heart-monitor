@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/linearLayout6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true">
+            <LinearLayout android:layout_gravity="center" android:id="@+id/detailed_value_container" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="38sp" android:textColor="@android:color/white" android:gravity="left" android:id="@+id/detailed_value_text_view_details_value" android:layout_width="wrap_content" android:layout_height="wrap_content" app:typeface="@string/font_path_league_gothic_regular"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="19sp" android:textColor="@android:color/white" android:gravity="left" android:id="@+id/detailed_value_text_view_details_units" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_alignBaseline="@+id/detailed_value_text_view_details_value" app:typeface="@string/font_path_league_gothic_regular"/>
+            </LinearLayout>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="12sp" android:textColor="@color/text_gray" android:gravity="center" android:id="@+id/detailed_value_text_view_details_label" android:padding="0dp" android:paddingBottom="5dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="-10dp" app:typeface="@string/font_path_roboto_regular"/>
+        </LinearLayout>
+        <View android:id="@+id/detailed_value_view_details_divider" android:background="#ffff" android:layout_width="1dp" android:layout_height="match_parent" android:layout_alignTop="@+id/linearLayout6" android:layout_alignBottom="@+id/linearLayout6" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</merge>

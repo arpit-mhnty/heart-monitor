@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:weightSum="2">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/text_color" android:id="@+id/membershipText" android:layout_marginTop="10dp" android:layout_marginBottom="5dp" android:layout_alignParentLeft="true" android:layout_centerInParent="true" app:typeface="@string/font_path_sans_francisco_regular" style="@style/MatchWidthWrapHeight"/>
+        <LinearLayout android:gravity="center" android:id="@+id/activateView" android:background="@drawable/extra_rounded_premium_btn" android:layout_width="80dp" android:layout_height="25dp" android:layout_alignParentRight="true" android:layout_centerInParent="true" android:layout_centerVertical="true">
+            <TextView android:textColor="@color/white" android:gravity="center" android:layout_width="match_parent" android:layout_height="match_parent" android:text="Activate" android:textAllCaps="false"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:background="@color/divider_color" android:layout_width="match_parent" android:layout_height="0.5dp"/>
+</RelativeLayout>

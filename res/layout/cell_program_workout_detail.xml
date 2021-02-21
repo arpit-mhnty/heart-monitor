@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/cell_gradient_Category" android:background="@android:color/transparent" android:paddingRight="5dp" android:layout_width="match_parent" android:layout_height="54dp">
+    <RelativeLayout android:id="@+id/cell_thumbnail_holder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/cell_gradient_exercise_icon_image" android:layout_width="30dp" android:layout_height="30dp" android:layout_margin="0.5dp" android:scaleType="fitXY" android:layout_centerInParent="true"/>
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="0.5dp" android:src="@drawable/workout_frame_empty" android:scaleType="fitXY" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/topLayout" android:layout_width="wrap_content" android:layout_height="54dp" android:layout_marginLeft="5dp" android:layout_marginTop="2dp" android:layout_marginBottom="2dp" android:layout_toRightOf="@+id/cell_thumbnail_holder" android:layout_centerInParent="true">
+        <TextView android:textSize="13sp" android:textColor="@color/label" android:textColorHighlight="@android:color/white" android:ellipsize="end" android:id="@+id/cell_gradient_exercise_title" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:maxLines="2"/>
+        <TextView android:textSize="11sp" android:textColor="@color/label" android:textColorHighlight="@android:color/white" android:ellipsize="end" android:id="@+id/cell_gradient_exercise_sets" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true"/>
+    </LinearLayout>
+</RelativeLayout>

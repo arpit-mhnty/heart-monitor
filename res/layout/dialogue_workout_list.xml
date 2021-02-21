@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <include android:id="@+id/toolbar" layout="@layout/settings_toolbar"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="300dp">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/workoutsList" android:padding="8dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="match_parent"/>
+        <include layout="@layout/view_progress"/>
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="52dp">
+        <Button android:textColor="@color/white" android:gravity="center" android:id="@+id/btnCancel" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="0.5dp" android:layout_marginRight="0.5dp" android:text="@string/action_cancel" android:layout_weight="0.5" android:backgroundTint="#ff2675c2"/>
+        <Button android:textColor="@color/white" android:gravity="center" android:id="@+id/btnAdd" android:layout_width="0dp" android:layout_height="match_parent" android:layout_marginTop="0.5dp" android:text="@string/action_add" android:layout_weight="0.5" android:backgroundTint="#ff2675c2"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@+id/main_layout" android:background="@drawable/rectangle_less_corner_radius" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="13dp" android:layout_marginTop="10dp" android:layout_marginRight="13dp">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/yourmealLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2.35">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="45sp" android:textColor="#333b5c" android:gravity="center" android:id="@+id/name" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="INTERMITTENT FASTING" app:typeface="@string/font_path_league_gothic_regular"/>
+        </LinearLayout>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="#7e8088" android:gravity="center" android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="Mindful Eating" android:lines="1" android:singleLine="true" android:layout_below="@+id/yourmealLayout" app:typeface="@string/font_path_sans_francisco_regular"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="10dp">
+            <RelativeLayout android:gravity="center" android:background="#7e8088" android:layout_width="40dp" android:layout_height="0.2dp" android:layout_centerInParent="true"/>
+        </RelativeLayout>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="13sp" android:textColor="#283154" android:gravity="center" android:id="@+id/description" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:text="Ideal if you want to eat foods that don&apos;t come from animals." android:layout_weight="1.05" android:layout_below="@+id/mealPlanLayout" app:typeface="@string/font_path_sans_francisco_regular"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp">
+            <RelativeLayout android:background="#283154" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginRight="15dp"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="#283154" android:gravity="center" android:id="@+id/mealDay" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Day 1" app:typeface="@string/font_path_sans_francisco_medium"/>
+            <RelativeLayout android:background="#283154" android:layout_width="30dp" android:layout_height="0.2dp" android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+        <com.azumio.android.argus.mealplans.MealViewPager android:layout_gravity="left|center_vertical|center_horizontal|center" android:id="@+id/viewpager" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2" android:nestedScrollingEnabled="true"/>
+        <LinearLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.5">
+            <LinearLayout android:id="@+id/learnMore" android:background="@drawable/gradient_extra_rounded_premium_btn" android:layout_width="140dp" android:layout_height="40dp" android:layout_marginTop="15dp" android:layout_marginBottom="15dp" android:backgroundTint="@color/calorie_mama">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:layout_width="140dp" android:layout_height="40dp" android:text="learn more" android:textAllCaps="true" app:typeface="@string/font_path_sans_francisco_medium"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@+id/suggestionIcon" android:visibility="visible" android:layout_width="111dp" android:layout_height="65dp" android:layout_marginLeft="-15dp" android:layout_marginTop="-12dp" android:src="@drawable/suggested_tag" android:layout_alignParentLeft="true" android:layout_alignParentTop="true"/>
+</RelativeLayout>

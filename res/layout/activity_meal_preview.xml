@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:fitsSystemWindows="false" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="240dp">
+        <include layout="@layout/view_food_preview"/>
+        <RelativeLayout android:background="@color/transparent" android:fitsSystemWindows="true" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/white" android:id="@+id/toolbar_back_arrow" android:background="?attr/selectableItemBackgroundBorderless" android:padding="4dp" android:fitsSystemWindows="true" android:layout_width="40dp" android:layout_height="56dp" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:text="←" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" app:fontPath="@string/font_path_material_design_set"/>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="50dp" android:textColor="@color/white" android:id="@+id/menu_button" android:background="?attr/selectableItemBackgroundBorderless" android:fitsSystemWindows="true" android:layout_width="40dp" android:layout_height="56dp" android:layout_marginTop="8dp" android:layout_marginRight="8dp" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </FrameLayout>
+    <ViewSwitcher android:id="@+id/view_switcher" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <ProgressBar android:layout_gravity="center" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminate="true" style="?android:attr/progressBarStyle"/>
+        <ScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <TextView android:textSize="15sp" android:textColor="@color/spinner_text" android:gravity="center_vertical" android:id="@+id/meal_type_text" android:paddingLeft="16dp" android:paddingTop="2dp" android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minHeight="52dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+                    <TextView android:textSize="12sp" android:textColor="@color/spinner_text" android:id="@+id/total_meal_calories_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="16dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+                </RelativeLayout>
+                <androidx.recyclerview.widget.RecyclerView android:id="@+id/food_recycler_view" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <View android:id="@+id/selected_food_separator" android:background="@drawable/list_item_bg" android:layout_width="match_parent" android:layout_height="7dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </ViewSwitcher>
+</LinearLayout>

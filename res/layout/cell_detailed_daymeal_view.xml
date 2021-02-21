@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@+id/mainView" android:layout_width="match_parent" android:layout_height="170dp" android:layout_marginLeft="7dp" android:layout_marginTop="10dp" android:layout_marginRight="7dp" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true">
+        <RelativeLayout android:background="@color/transparent" android:layout_width="match_parent" android:layout_height="match_parent">
+            <ImageView android:id="@+id/breakfast" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop"/>
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textColor="@color/white" android:id="@+id/favView" android:background="?attr/selectableItemBackgroundBorderless" android:visibility="gone" android:layout_width="45dp" android:layout_height="45dp" android:layout_marginTop="10dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <ImageView android:id="@+id/lunch" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:scaleType="centerCrop" android:layout_weight="1"/>
+        <ImageView android:id="@+id/dinner" android:visibility="gone" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:scaleType="centerCrop" android:layout_weight="1"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@+id/mealDetailView" android:background="@color/white" android:paddingLeft="5dp" android:layout_width="match_parent" android:layout_height="85dp" android:layout_marginLeft="7dp" android:layout_marginRight="7dp" android:layout_below="@+id/mainView">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="10dp">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="11sp" android:textColor="#9699a6" android:id="@+id/mealType" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BREAKFAST" app:typeface="@string/font_path_sans_francisco_medium"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="19sp" android:textColor="@color/text_color" android:id="@+id/mealRecipe" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bacon and eggs" app:typeface="@string/font_path_sans_francisco_medium"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

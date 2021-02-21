@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:layout_centerHorizontal="true"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="20sp" android:textStyle="bold" android:textColor="#222" android:gravity="center" android:id="@+id/textTitle" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15dp" android:text="Connected Accounts" android:layout_below="@+id/image" android:layout_centerHorizontal="true" app:typeface="@string/font_path_roboto_medium"/>
+        <TextView android:textSize="15sp" android:textColor="#000" android:id="@+id/textMessage" android:paddingLeft="20dp" android:paddingTop="10dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/login_using_ihr" android:layout_below="@+id/textTitle"/>
+        <View android:id="@+id/separator" android:background="@drawable/shadow" android:layout_width="match_parent" android:layout_height="2dp" android:layout_below="@+id/textMessage"/>
+        <RelativeLayout android:background="@color/progress_circumference_blank" android:layout_width="match_parent" android:layout_height="50dp" android:layout_below="@+id/separator">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textStyle="bold" android:textColor="#222" android:gravity="center_vertical" android:id="@+id/dialogButtonNo" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="50dp" android:text="@string/action_no" android:layout_toLeftOf="@+id/dialogButtonOK" app:typeface="@string/font_path_roboto_medium"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textStyle="bold" android:textColor="#222" android:gravity="center_vertical" android:id="@+id/dialogButtonOK" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="40dp" android:text="@string/action_yes" android:layout_alignParentRight="true" app:typeface="@string/font_path_roboto_medium"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

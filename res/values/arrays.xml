@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="custom_weekdays">
+        <item>MON</item>
+        <item>TUE</item>
+        <item>WED</item>
+        <item>THU</item>
+        <item>FRI</item>
+        <item>SAT</item>
+        <item>SUN</item>
+    </array>
+    <array name="descreption">
+        <item>@string/item1_descre</item>
+        <item>@string/item2_descre</item>
+        <item>@string/item3_descre</item>
+    </array>
+    <array name="goal_consumed_calories_values">
+    </array>
+    <array name="goal_drink_values">
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </array>
+    <array name="goal_sleep_values">
+        <item>5</item>
+        <item>5.5</item>
+        <item>6</item>
+        <item>6.5</item>
+        <item>7</item>
+        <item>7.5</item>
+        <item>8</item>
+        <item>8.5</item>
+        <item>9</item>
+    </array>
+    <array name="goal_steps_values">
+        <item>4000</item>
+        <item>5000</item>
+        <item>6000</item>
+        <item>7000</item>
+        <item>8000</item>
+        <item>9000</item>
+        <item>10000</item>
+        <item>11000</item>
+        <item>12000</item>
+    </array>
+    <array name="goal_weight_values">
+    </array>
+    <array name="goal_workout_values">
+        <item>5</item>
+        <item>15</item>
+        <item>30</item>
+        <item>45</item>
+        <item>60</item>
+    </array>
+    <array name="meal_types">
+        <item>@string/breakfast_label</item>
+        <item>@string/lunch_label</item>
+        <item>@string/dinner_label</item>
+        <item>@string/snack_label</item>
+    </array>
+    <array name="st_descreption">
+        <item>@string/st_item1_descre</item>
+        <item>@string/st_item2_descre</item>
+        <item>@string/st_item3_descre</item>
+    </array>
+    <array name="st_title_text">
+        <item>@string/st_list_item1_title</item>
+        <item>@string/st_list_item2_title</item>
+        <item>@string/st_list_item3_title</item>
+    </array>
+    <array name="title_text">
+        <item>@string/list_item1_title</item>
+        <item>@string/list_item2_title</item>
+        <item>@string/list_item3_title</item>
+    </array>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="20dp" app:cardElevation="4dp" app:cardUseCompatPadding="true">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textColor="@color/fitnessbuddy_default_text" android:layout_gravity="center_vertical" android:layout_width="20dp" android:layout_height="20dp" app:argusIconMapKey="@string/icon_map_key_add_activity"/>
+        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/fitnessbuddy_default_text" android:gravity="center_vertical" android:id="@+id/workoutLoggerAddExercise" android:layout_width="wrap_content" android:layout_height="40dp" android:layout_marginLeft="8dp" android:text="@string/fb_workout_logger_add_exercise" android:textAllCaps="true" android:layout_marginStart="8dp"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center_vertical" android:orientation="horizontal" android:background="@android:color/white" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="84dp">
+    <Space android:layout_gravity="center_vertical" android:layout_width="8dp" android:layout_height="wrap_content"/>
+    <FrameLayout android:layout_gravity="center" android:id="@+id/sleeptime_icons_container" android:layout_width="35dp" android:layout_height="35dp">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="45dp" android:id="@+id/listview_insights_sleep_report_hex_icon" android:layout_width="match_parent" android:layout_height="match_parent" app:fontPath="@string/font_path_argus_set"/>
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="22dp" android:textColor="#fff" android:id="@+id/listview_insights_sleep_report_activity_icon" android:layout_width="match_parent" android:layout_height="match_parent" app:fontPath="@string/font_path_argus_set"/>
+    </FrameLayout>
+    <Space android:layout_gravity="center_vertical" android:layout_width="8dp" android:layout_height="wrap_content"/>
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="@dimen/insights_list_item_caption_size" android:textColor="#ff283154" android:id="@+id/text_view_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="76dp" app:typeface="@string/font_path_roboto_medium"/>
+            <Space android:layout_width="4dp" android:layout_height="wrap_content"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="#ff757575" android:id="@+id/space" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" app:typeface="@string/font_path_roboto_medium"/>
+            <Space android:layout_width="8dp" android:layout_height="wrap_content"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="#ff283154" android:id="@+id/text_view_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" app:typeface="@string/font_path_roboto_medium"/>
+        </LinearLayout>
+        <Space android:layout_width="wrap_content" android:layout_height="4dp"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="12sp" android:textColor="#ff757575" android:id="@+id/text_view_description" android:layout_width="wrap_content" android:layout_height="wrap_content" app:typeface="@string/font_path_roboto_regular"/>
+        <Space android:layout_width="wrap_content" android:layout_height="4dp"/>
+        <RelativeLayout android:id="@+id/tagsView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <com.azumio.android.argus.view.CenteredCustomFontViewWithText android:gravity="left" android:id="@+id/tag_element1" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_marginLeft="-5dp" android:layout_alignParentLeft="true" app:wt_icon_color="#ff283154" app:wt_icon_font_path="@string/font_path_argus_set" app:wt_icon_size="24dp" app:wt_text_color="#ff283154" app:wt_text_size="12dp"/>
+            <com.azumio.android.argus.view.CenteredCustomFontViewWithText android:gravity="left" android:id="@+id/tag_element2" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_toRightOf="@+id/tag_element1" app:wt_icon_color="#ff283154" app:wt_icon_font_path="@string/font_path_argus_set" app:wt_icon_size="24dp" app:wt_text_color="#ff283154" app:wt_text_size="12dp"/>
+            <com.azumio.android.argus.view.CenteredCustomFontViewWithText android:gravity="left" android:id="@+id/tag_element_more" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="30dp" android:layout_toRightOf="@+id/tag_element2" app:wt_icon_color="#ff283154" app:wt_icon_font_path="@string/font_path_argus_set" app:wt_icon_size="24dp" app:wt_text_color="#ff283154" app:wt_text_size="12dp"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <Space android:layout_gravity="center_vertical" android:layout_width="10dp" android:layout_height="wrap_content"/>
+    <ImageButton android:layout_gravity="center_vertical" android:id="@+id/checkable_note" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="20dp" android:layout_height="25.5dp" android:src="@drawable/icon_note_off"/>
+    <Space android:layout_gravity="center_vertical" android:layout_width="20dp" android:layout_height="wrap_content"/>
+    <ImageButton android:layout_gravity="center_vertical" android:id="@+id/img_go_to" android:background="@null" android:focusable="false" android:focusableInTouchMode="false" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+    <Space android:layout_gravity="center_vertical" android:layout_width="10dp" android:layout_height="wrap_content"/>
+</LinearLayout>

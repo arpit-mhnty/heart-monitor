@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/ihr_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="200dp" android:layout_centerInParent="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="20dp" android:weightSum="4" android:layout_above="@+id/circleView" android:layout_alignParentTop="true" style="@style/MatchWidthWrapHeight">
+                <View android:layout_gravity="center" android:background="@color/whitish_grey" android:layout_width="0dp" android:layout_height="1dp" android:layout_marginLeft="10dp" android:layout_marginRight="0dp" android:layout_weight="0.5"/>
+                <TextView android:textSize="12dp" android:textColor="@color/whitish_grey" android:gravity="center" android:layout_width="0dp" android:text="@string/recommended_activities" android:lines="1" android:layout_weight="2.8" style="@style/MatchWidthWrapHeight"/>
+                <View android:layout_gravity="center" android:background="@color/whitish_grey" android:layout_width="0dp" android:layout_height="1dp" android:layout_marginLeft="0dp" android:layout_marginRight="10dp" android:layout_weight="0.5"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/circleView" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <FrameLayout android:layout_gravity="center_horizontal" android:id="@+id/hydrationFrame" android:background="@drawable/circle_shape" android:layout_width="80dp" android:layout_height="80dp">
+                        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="50sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/hydration" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1"/>
+                    </FrameLayout>
+                    <TextView android:textColor="@color/white" android:layout_gravity="center_horizontal" android:id="@+id/hydrationText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/ihr_hydration"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <FrameLayout android:layout_gravity="center_horizontal" android:id="@+id/stepsFrame" android:background="@drawable/circle_shape" android:layout_width="80dp" android:layout_height="80dp">
+                        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="50sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/steps" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1"/>
+                    </FrameLayout>
+                    <TextView android:textColor="@color/white" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/ihr_steps"/>
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1">
+                    <FrameLayout android:layout_gravity="center_horizontal" android:id="@+id/workoutFrame" android:background="@drawable/circle_shape" android:layout_width="80dp" android:layout_height="80dp">
+                        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="50sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/workout" android:layout_width="50dp" android:layout_height="50dp" android:layout_weight="1"/>
+                    </FrameLayout>
+                    <TextView android:textColor="@color/white" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="@string/ihr_workout"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

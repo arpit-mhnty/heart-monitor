@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/mainlayout" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ExpandableListView android:id="@+id/dairy_list_view" android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:groupIndicator="@null" android:divider="#b6b6b6" android:choiceMode="singleChoice" android:layout_below="@+id/headerView"/>
+</RelativeLayout>

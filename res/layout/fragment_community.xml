@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/outer_margin_checkins">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="27dp" android:textColor="#bfbfbf" android:id="@+id/fragment_location_icon" android:layout_width="27dp" android:layout_height="27dp" android:layout_marginLeft="@dimen/outer_margin_checkins" android:layout_marginTop="5dp" android:layout_centerVertical="true" app:fontPath="@string/font_path_material_design_set" app:textAlign="1"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16dp" android:id="@+id/fragment_location_textview" android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inner_margin_checkins" app:typeface="@string/font_path_roboto_regular"/>
+    </RelativeLayout>
+    <View android:id="@+id/fragment_community_divider" android:background="#bfbfbf" android:layout_width="wrap_content" android:layout_height="1px"/>
+</LinearLayout>

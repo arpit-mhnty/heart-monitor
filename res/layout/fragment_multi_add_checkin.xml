@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/view_privacy_header"/>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <LinearLayout android:orientation="vertical" android:id="@+id/form_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/foods_recycler_view" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/add_food_view" android:background="?attr/selectableItemBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="56dp">
+                <TextView android:id="@+id/item_add_food" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:text="@string/add_food" android:layout_marginStart="56dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toEndOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <View android:background="@color/graybg" android:layout_width="0dp" android:layout_height="1dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/meds_recycler_view" android:clipChildren="false" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/add_med_view" android:background="?attr/selectableItemBackground" android:visibility="gone" android:layout_width="match_parent" android:layout_height="56dp">
+                <TextView android:id="@+id/item_add_meds" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56dp" android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:text="@string/add_meds" android:layout_marginStart="56dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0"/>
+                <View android:background="@color/graybg" android:layout_width="0dp" android:layout_height="1dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toStartOf="0"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <fragment android:name="com.azumio.android.argus.addmulticheckin.fragment.TimeAndTagsFragment" android:id="@+id/timeAndTagsFragment" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <View android:background="@color/separater_mid_grey_color" android:focusable="true" android:focusableInTouchMode="true" android:visibility="gone" android:layout_width="match_parent" android:layout_height="30dp"/>
+            <fragment android:name="com.azumio.android.argus.check_ins.details.SocialCheckinFragment" android:id="@+id/social_fragment" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

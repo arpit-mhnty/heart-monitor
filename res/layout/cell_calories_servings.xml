@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:orientation="horizontal" android:background="@color/text_gray" android:layout_width="match_parent" android:layout_height="0.3dp" android:layout_marginLeft="0dp" android:layout_above="@+id/servingLayout"/>
+    <RelativeLayout android:id="@+id/servingLayout" android:layout_width="match_parent" android:layout_height="129dp">
+        <LinearLayout android:id="@+id/servingview" android:layout_width="match_parent" android:layout_height="55dp">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/cell_serving_size" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="17dp" android:text="@string/serving_size" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerInParent="true" app:typeface="@string/font_path_roboto_medium"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textStyle="normal" android:textColor="@color/calories_color" android:gravity="center" android:id="@+id/cell_serving_count" android:paddingRight="20dp" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17dp" android:text="serving size" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerInParent="true"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView android:layout_gravity="top" android:id="@+id/horizontal_recycler_view" android:layout_width="match_parent" android:layout_height="85dp" android:layout_below="@+id/servingview"/>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/text_gray" android:layout_width="match_parent" android:layout_height="0.3dp" android:layout_marginLeft="0dp" android:layout_below="@+id/proteinLayout"/>
+    <RelativeLayout android:id="@+id/numberservingLayout" android:layout_width="match_parent" android:layout_height="63dp">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15sp" android:textStyle="bold" android:textColor="@color/text_color" android:gravity="center" android:id="@+id/cell_servings_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17dp" android:text="@string/number_of_servings" android:singleLine="true" android:layout_alignParentLeft="true" android:layout_centerInParent="true" app:typeface="@string/font_path_roboto_medium"/>
+        <EditText android:textStyle="normal" android:textColor="@color/calories_color" android:gravity="center" android:id="@+id/cell_numberserving_count" android:background="@android:color/transparent" android:paddingRight="24dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="17dp" android:minWidth="56dp" android:minHeight="48dp" android:text="1" android:singleLine="true" android:maxLength="6" android:layout_alignParentRight="true" android:layout_centerInParent="true" android:inputType="numberDecimal"/>
+    </RelativeLayout>
+    <RelativeLayout android:visibility="gone" android:layout_width="match_parent" android:layout_height="40dp">
+        <LinearLayout android:gravity="left" android:orientation="horizontal" android:id="@+id/layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_marginBottom="5dp" android:layout_alignParentRight="true" android:layout_centerInParent="true">
+            <Button android:textSize="14sp" android:textColor="@color/white" android:id="@+id/fractionBtn" android:background="@drawable/rounded_leftcorner_background" android:visibility="visible" android:clickable="true" android:layout_width="100dp" android:layout_height="30dp" android:text="Fractions"/>
+            <Button android:textSize="14sp" android:textColor="@color/white" android:id="@+id/decimalBtn" android:background="@drawable/rounded_rightcorner_background" android:visibility="visible" android:clickable="true" android:layout_width="100dp" android:layout_height="30dp" android:text="Decimal"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:orientation="horizontal" android:background="@color/text_gray" android:layout_width="match_parent" android:layout_height="0.3dp"/>
+    <RelativeLayout android:id="@+id/emptyview" android:background="@color/background_color" android:layout_width="match_parent" android:layout_height="46dp"/>
+    <LinearLayout android:orientation="horizontal" android:background="@color/text_gray" android:layout_width="match_parent" android:layout_height="0.3dp"/>
+</LinearLayout>

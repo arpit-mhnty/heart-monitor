@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/footerLayout" android:paddingLeft="25dp" android:paddingTop="10dp" android:paddingRight="25dp" android:layout_width="match_parent" android:layout_height="95dp" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/white" android:id="@+id/do_workout" android:background="@drawable/rounded_workout_blue" android:layout_width="match_parent" android:layout_height="41dp" android:text="@string/do_workout" android:layout_alignParentTop="true"/>
+    </RelativeLayout>
+</RelativeLayout>

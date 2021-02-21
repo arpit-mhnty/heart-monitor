@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.FillingView android:id="@+id/main_menu_toolbars" android:background="?attr/colorPrimary" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:elevation="@dimen/action_bar_elevation">
+        <com.azumio.android.argus.view.ViewPagerTabView android:id="@+id/view_pager_tab_view" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" app:indicator_color="@color/white" app:indicator_height="2dp" app:tab_text_color="@color/white" app:tab_text_size="14sp" app:typeface="@string/font_path_roboto_regular"/>
+    </com.azumio.android.argus.view.FillingView>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/view_pager" android:paddingLeft="0dp" android:paddingTop="0dp" android:paddingRight="0dp" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+</LinearLayout>

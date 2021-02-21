@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <LinearLayout android:orientation="horizontal" android:background="@color/graybg" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/lv_select"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="60dp">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/black" android:id="@+id/dosageTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="5dp" android:text="@string/medicine_dosage_title" android:layout_marginStart="20dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/dosage" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:typeface="@string/font_path_roboto_medium"/>
+        <EditText android:textSize="16sp" android:gravity="end" android:id="@+id/dosage" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="@string/medicine_dosage_amount" android:inputType="numberDecimal" android:layout_marginEnd="20dp" android:importantForAutofill="2" app:layout_constraintBottom_toBottomOf="@+id/dosageTitle" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/dosageTitle" app:layout_constraintTop_toTopOf="@+id/dosageTitle"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

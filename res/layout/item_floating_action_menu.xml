@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:clickable="true" android:layout_width="94dp" android:layout_height="wrap_content">
+    <FrameLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <com.azumio.android.argus.view.FloatingActionButton android:layout_gravity="center" android:id="@+id/fab_bg" android:layout_width="58dp" android:layout_height="58dp" app:fab_icon="@null" app:fab_icon_scale="0"/>
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/fab_icon" android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="56dp" android:layout_height="56dp"/>
+    </FrameLayout>
+    <TextView android:textSize="10sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center" android:id="@+id/fab_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-5dp" android:maxLines="1" android:singleLine="true"/>
+</LinearLayout>

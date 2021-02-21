@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true" android:layout_alignParentBottom="true">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="4" android:layout_alignParentTop="true" android:layout_alignParentBottom="true">
+        <RelativeLayout android:id="@+id/headerView" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="2.3" android:layout_alignParentTop="true">
+            <ImageView android:id="@+id/header_image" android:layout_width="match_parent" android:layout_height="320dp" android:src="@drawable/ihrpremium" android:scaleType="centerCrop" android:layout_alignParentTop="true"/>
+            <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="40dp" android:layout_alignParentBottom="true">
+                <TextView android:textSize="32sp" android:textColor="@color/white" android:gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/headerTitle" android:visibility="gone" android:layout_width="match_parent" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:text="@string/ready_to_improve" android:lines="2" android:layout_centerHorizontal="true" style="@style/text_design_premium"/>
+                <TextView android:textSize="15sp" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/headersSubTitle" android:paddingBottom="0dp" android:visibility="gone" android:layout_width="match_parent" android:layout_marginBottom="20dp" android:text="@string/get_all_tools" android:maxLines="3" android:lines="3" android:layout_below="@+id/headerTitle" android:layout_centerHorizontal="true" style="@style/today_text_design"/>
+                <TextView android:textSize="16sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/banner" android:background="@color/red_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="35dp" android:layout_marginBottom="10dp" android:text="@string/heart_health_bundle" android:layout_below="@+id/headerTitle"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@+id/rowLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginTop="5dp" android:weightSum="1.32" android:layout_weight="1.32" android:layout_above="@+id/bottom_view">
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/row1" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:layout_weight="0.44" style="@style/MatchWidthWrapHeight">
+                <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="35sp" android:textColor="@color/icon_blue" android:id="@+id/iconCode1" android:layout_width="25dp" android:layout_height="20dp" android:layout_marginLeft="15dp" android:layout_marginRight="7dp" android:layout_marginBottom="5dp"/>
+                <TextView android:textSize="11.8sp" android:textColor="@android:color/black" android:id="@+id/description1" android:layout_toRightOf="@+id/iconCode1" style="@style/WrapWidthWrapHeight"/>
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/row2" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:layout_weight="0.44" style="@style/MatchWidthWrapHeight">
+                <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="35sp" android:textColor="@color/icon_blue" android:id="@+id/iconCode2" android:layout_width="25dp" android:layout_height="20dp" android:layout_marginLeft="15dp" android:layout_marginRight="7dp" android:layout_marginBottom="5dp"/>
+                <TextView android:textSize="11.8sp" android:textColor="@android:color/black" android:id="@+id/description2" android:layout_toRightOf="@+id/iconCode2" style="@style/WrapWidthWrapHeight"/>
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/row3" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:layout_weight="0.44" style="@style/MatchWidthWrapHeight">
+                <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="35sp" android:textColor="@color/icon_blue" android:id="@+id/iconCode3" android:layout_width="25dp" android:layout_height="20dp" android:layout_marginLeft="15dp" android:layout_marginRight="7dp" android:layout_marginBottom="5dp"/>
+                <TextView android:textSize="11.8sp" android:textColor="@android:color/black" android:id="@+id/description3" android:layout_toRightOf="@+id/iconCode3" android:layout_below="@+id/text_title" style="@style/WrapWidthWrapHeight"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@+id/multitabView" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1.7" android:layout_above="@+id/bottom_view">
+            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.85">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/premiumbtnYearly" android:background="@drawable/rounded_blue" android:visibility="visible" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginLeft="40dp" android:layout_marginTop="30dp" android:layout_marginRight="40dp">
+                    <TextView android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/yeartext" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <TextView android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/yeartext2" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <FrameLayout android:layout_gravity="center_horizontal" android:id="@+id/discountImg" android:background="@drawable/border_circle_shape" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true">
+                    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/discountext" android:layout_width="50dp" android:layout_height="50dp" android:text="75%" android:layout_weight="1"/>
+                </FrameLayout>
+            </RelativeLayout>
+            <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="0.85">
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/premiumbtnMonthly" android:background="@drawable/rounded_blue" android:visibility="visible" android:layout_width="match_parent" android:layout_height="70dp" android:layout_marginLeft="40dp" android:layout_marginRight="40dp">
+                    <TextView android:textStyle="bold" android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/monthtext" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    <TextView android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/monthtext2" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                </LinearLayout>
+                <FrameLayout android:layout_gravity="center_horizontal" android:id="@+id/yearlyDiscount" android:background="@drawable/border_circle_shape" android:visibility="gone" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginTop="20dp" android:layout_marginRight="20dp" android:layout_alignParentRight="true">
+                    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="16sp" android:textColor="@color/white" android:layout_gravity="center" android:id="@+id/discounValue" android:layout_width="50dp" android:layout_height="50dp" android:text="75%" android:layout_weight="1"/>
+                </FrameLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:orientation="vertical" android:id="@+id/bottomView" android:background="@color/white" android:layout_width="match_parent" android:layout_height="0dp" android:layout_marginBottom="20dp" android:layout_weight="0.65" android:layout_alignParentBottom="true">
+            <Button android:textSize="14.7sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/learnPremium" android:background="@drawable/rounded_blue" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginTop="10dp" android:layout_marginRight="30dp" android:layout_marginBottom="20dp" android:text="@string/get_my_heart_health" android:textAllCaps="false"/>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/premiumbtnView" android:background="@drawable/rounded_blue" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginLeft="30dp" android:layout_marginTop="10dp" android:layout_marginRight="30dp">
+                <TextView android:gravity="center_horizontal" android:id="@+id/text" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                <TextView android:textColor="@color/white" android:gravity="center_horizontal" android:id="@+id/text2" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

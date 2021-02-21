@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:id="@+id/f_clock_layout" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <com.azumio.android.argus.view.Clock android:layout_gravity="bottom|center_vertical|center_horizontal|center" android:id="@+id/f_clock_clock" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <include layout="@layout/fragment_clock_overlay"/>
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textColor="@color/white" android:layout_gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/soundscapeIcon" android:background="?attr/selectableItemBackground" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="20dp"/>
+    </FrameLayout>
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/bottom_layout" android:layout_width="match_parent" android:layout_height="@dimen/clock_bottom_height" android:layout_marginBottom="40dp">
+        <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="3">
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/f_clocktime_layout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_weight="1">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15dp" android:textColor="@android:color/white" android:gravity="left" android:id="@+id/text_view_clock_alarmTimeDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_alarmtime" app:typeface="@string/font_path_roboto_light"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="40dp" android:textColor="@android:color/white" android:gravity="left" android:id="@+id/text_view_clock_alarmTime" android:layout_width="70dp" android:layout_height="wrap_content" app:typeface="@string/font_bebas_regular"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="25dp" android:textColor="@android:color/white" android:id="@+id/text_view_clock_pm" android:visibility="visible" android:layout_width="25dp" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:text="@string/activity_sleep_time_textPM" android:layout_toRightOf="@+id/text_view_clock_alarmTime" android:layout_alignBottom="@+id/text_view_clock_alarmTime" app:typeface="@string/font_bebas_regular"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@+id/f_waketime_layout" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_weight="1">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="15dp" android:textColor="@android:color/white" android:gravity="left" android:id="@+id/text_view_clock_wakeupDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_wakeup" app:typeface="@string/font_path_roboto_light"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="40dp" android:textColor="@android:color/white" android:id="@+id/text_view_clock_wakeTime" android:layout_width="wrap_content" android:layout_height="wrap_content" app:typeface="@string/font_bebas_regular"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="25dp" android:textColor="@android:color/white" android:id="@+id/text_view_clock_hours" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3dp" android:layout_marginBottom="4dp" android:text="@string/activity_sleep_time_textH" android:layout_alignBottom="@+id/text_view_clock_wakeTime" android:textAllCaps="true" app:typeface="@string/font_bebas_regular"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="75dp" android:layout_marginRight="10dp" android:layout_weight="1">
+                <Button android:textStyle="bold" android:layout_gravity="right" android:id="@+id/action_alarmclock_start" android:background="@drawable/setalarm_start" android:layout_width="75dp" android:layout_height="75dp" android:layout_marginBottom="15dp"/>
+            </LinearLayout>
+        </LinearLayout>
+        <include layout="@layout/fragment_clock_footer"/>
+    </LinearLayout>
+</LinearLayout>

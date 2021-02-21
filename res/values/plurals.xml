@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="food_total_items_added">
+        <item quantity="one">%d item added</item>
+        <item quantity="many">%d items added</item>
+        <item quantity="other">%d items added</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="results">
+        <item quantity="one">1 result</item>
+        <item quantity="other">%d results</item>
+    </plurals>
+    <plurals name="unit_bottle">
+        <item quantity="one">1 bottle</item>
+        <item quantity="other">%d bottles</item>
+    </plurals>
+    <plurals name="unit_can">
+        <item quantity="one">1 can</item>
+        <item quantity="other">%d cans</item>
+    </plurals>
+    <plurals name="unit_cup">
+        <item quantity="one">1 cup</item>
+        <item quantity="other">%d cups</item>
+    </plurals>
+    <plurals name="unit_glass">
+        <item quantity="one">1 glass</item>
+        <item quantity="other">%d glasses</item>
+    </plurals>
+    <plurals name="unit_shot">
+        <item quantity="one">1 shot</item>
+        <item quantity="other">%d shots</item>
+    </plurals>
+    <plurals name="unit_time">
+        <item quantity="one">1 time</item>
+        <item quantity="other">%d times</item>
+    </plurals>
+    <plurals name="unsynced_items_instant_heart_rate">
+        <item quantity="one">You have 1 unsynced reading.</item>
+        <item quantity="other">You have %d unsynced readings.</item>
+    </plurals>
+    <plurals name="unsynced_items_sleep_time">
+        <item quantity="one">You have 1 unsynced night.</item>
+        <item quantity="other">You have %d unsynced nights.</item>
+    </plurals>
+</resources>

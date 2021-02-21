@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="8253" android:versionName="5.36.8253" android:compileSdkVersion="29" android:compileSdkVersionCodename="10" package="si.modula.android.instantheartrate" platformBuildVersionCode="29" platformBuildVersionName="10">
+    <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="29"/>
+    <uses-feature android:name="android.hardware.sensor.accelerometer" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera" android:required="true"/>
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.azumio.android.argus.intents.SYNC_SERVICE_READ"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.READ_PROFILE"/>
+    <uses-permission android:name="android.permission.BODY_SENSORS"/>
+    <uses-permission android:name="si.modula.android.instantheartrate.permission.C2D_MESSAGE"/>
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <meta-data android:name="android.webkit.WebView.EnableSafeBrowsing" android:value="true"/>
+    <permission android:label="Argus sync service" android:name="si.modula.android.instantheartrate.intents.SYNC_SERVICE_READ" android:protectionLevel="signatureOrSystem"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-feature android:glEsVersion="20000" android:required="true"/>
+    <uses-feature android:name="android.hardware.camera.front" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+    <uses-feature android:name="android.hardware.screen.landscape" android:required="false"/>
+    <uses-feature android:name="android.hardware.wifi" android:required="false"/>
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
+    <application android:theme="@style/AppTheme.Light" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:name="com.azumio.android.argus.HeartRateApplication" android:process="si.modula.android.instantheartrate" android:taskAffinity="si.modula.android.instantheartrate" android:allowTaskReparenting="false" android:allowBackup="true" android:vmSafeMode="true" android:largeHeap="true" android:supportsRtl="true" android:fullBackupContent="@xml/appsflyer_backup_rules" android:usesCleartextTraffic="true" android:roundIcon="@mipmap/ic_launcher_round" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:requestLegacyExternalStorage="true">
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.main_menu.MainActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.main_menu.launch.LaunchActivity" android:launchMode="singleTop" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.azumio.android.argus.onboardings.CancelPopupActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboardings.WelcomeOnboardingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboardings.HowToMeasureIHRActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboardings.IHRMeasurementActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboardings.IHROnboardingsQuestionnaireActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboardings.StartIHRProgramActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboardings.CompleteIHRMeasurementActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboardings.IHRFutureMeasurementActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.FullScreenMapActivity"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.details.UserDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.community.UserPointerListActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.community.HashTagSearcherActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.community.LikesActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.community.FriendsAndFollowersActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.CheckinDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.LikesAndCommentsDetailsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.community.FriendsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.details.sections.AddCustomTagActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.azumio.android.argus.deeplink.PrepareEMailFriendActivity" android:exported="false" android:excludeFromRecents="true" android:noHistory="true"/>
+        <activity android:theme="@style/AppTheme.UserActivityResolver" android:name="com.azumio.android.argus.check_ins.details.UserActivityResolverActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:label="@string/activity_title_settings" android:name="com.azumio.android.argus.settings.SettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/AppTheme.Settings" android:label="@string/activity_title_settings" android:name="com.azumio.android.argus.settings.InstantHeartRateSettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/AppTheme.Settings" android:label="@string/activity_title_settings" android:name="com.azumio.android.argus.settings.InstantHRHeartHealthSettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.azumio.android.argus.heartrateinfo.InstantHeartRateInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.heartrate_setup.IHRWelcomeScreenActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.heartrate_setup.MeasurementActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.heartrate_setup.HRFutureMeasurementActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.heartrate_setup.InstantHeartRateSetUpActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.goals.GoalSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.CaloriesSettings" android:label="@string/activity_title_calories_settings" android:name="com.azumio.android.argus.settings.CaloriesSettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/AppTheme.Settings" android:label="@string/activity_title_social_settings" android:name="com.azumio.android.argus.settings.SocialSettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.FullScreenWebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.secret_settings.SecretSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:label="Night Activity" android:name="com.azumio.android.sleeptime.NightActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Translucent" android:name="com.google.android.gms.ads.AdActivity" android:exported="false" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+        <activity android:theme="@style/AppTheme.UserActivityResolver" android:name="com.azumio.android.argus.check_ins.details.SleepTimeResolverActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:label="Info" android:name="com.azumio.android.sleeptime.info.SleepTimeInfoActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.SleepTimeSettings" android:label="Settings" android:name="com.azumio.android.sleeptime.settings.SleepTimeSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.instantheartrate.activity.HealthProgramActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.instantheartrate.activity.SodiumActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity android:name="com.azumio.android.instantheartrate.activity.CholesterolActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysVisible"/>
+        <activity android:name="com.azumio.android.instantheartrate.activity.UpgradeStarterKitActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden" android:noHistory="true"/>
+        <activity android:name="com.azumio.android.instantheartrate.activity.UpgradeNewPremiumActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.azumio.android.instantheartrate.activity.LastChanceActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:theme="@style/AppTheme.Bridge" android:name="com.azumio.android.argus.BridgeActivity" android:exported="true" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="com.azumio.android.instantheartrate.full.BRIDGE_ACTIVITY"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.azumio.android.argus.heartrate_setup.DOBSetUpActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateVisible|adjustPan"/>
+        <activity android:name="com.azumio.android.argus.heartrate_setup.GenderSetUpActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.heartrate_setup.SetupCompleteActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.instantheartrate.activity.HealthlineNewsletter" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.argus.settings.ProfileSettingsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:name="com.azumio.android.argus.post_premium_purchase.PostPremiumActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.post_premium_purchase.UnlockPremiumActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.argus.workout_plans_v2.overview.CalendarOverviewActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.argus.workout_plans_v2.overview.CalendarWorkoutDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.argus.workout_plans_v2.overview.CalendarSettingActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.workout_plans_v2.NewVideoWorkoutActivity" android:configChanges="orientation|screenSize"/>
+        <activity android:name="com.azumio.android.argus.profile.ProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.profile.ProfileGoalsActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="CLEVERTAP_INAPP_EXCLUDE" android:value="LaunchActivity"/>
+        <meta-data android:name="CLEVERTAP_BACKGROUND_SYNC" android:value="1"/>
+        <receiver android:label="NetworkConnection" android:name="com.azumio.android.argus.utils.reachability.InternetReachabilityManager" android:process="si.modula.android.instantheartrate">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.clevertap.android.sdk.FcmTokenListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.clevertap.android.sdk.FcmMessageListenerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.clevertap.android.sdk.CTBackgroundIntentService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false">
+            <intent-filter>
+                <action android:name="com.clevertap.BG_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.clevertap.android.sdk.CTBackgroundJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <service android:name="com.clevertap.android.sdk.CTNotificationIntentService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.clevertap.PUSH_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.azumio.android.argus.tracking.steps.StepCounterService" android:permission="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" android:enabled="true" android:exported="false" android:process=":step_counter_service">
+            <intent-filter>
+                <action android:name="com.azumio.android.argus.service_step_counting_toggled"/>
+                <action android:name="com.azumio.android.argus.service_step_counting_method_changed"/>
+                <action android:name="com.azumio.android.argus.service_ste_notification_visibility_changed"/>
+            </intent-filter>
+        </service>
+        <activity android:theme="@style/AppTheme.Calories" android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.AddFoodActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.QuickAddActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.GoalWeightSetupActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.GoalBodyDetailSetupActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.GetStartedActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.GoalTimeSetupActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Authentication" android:name="com.azumio.android.argus.authentication.AuthenticationActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.GoalLevelSetupActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Calories" android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.CopyMealActivity" android:screenOrientation="portrait"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.EditEntryActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme.Base" android:label="GPS" android:name="com.azumio.android.argus.main_menu.SelectMovableActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.AddRecipeItemsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <activity android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.NutritionActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <activity android:theme="@style/AppTheme.Calories" android:label="@string/calories_label" android:name="com.azumio.android.argus.calories.activity.MatchBarCodeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.calories.activity.ScanBarCodeActivity" android:stateNotNeeded="true" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:label="WorkoutPlan Activity" android:name="com.azumio.android.argus.workoutplan.WorkoutPlanActivity" android:screenOrientation="portrait"/>
+        <activity android:label="WorkoutPlan Activity" android:name="com.azumio.android.argus.workoutplan.WorkoutPlanFragmentActivity" android:screenOrientation="portrait"/>
+        <activity android:label="Plan Recommendation Activity" android:name="com.azumio.android.argus.workoutplan.PlanRecommendationActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.AppCompat.NoActionBar" android:label="Workout Player Activity" android:name="com.azumio.android.argus.workoutplan.WorkoutPlayerActivity" android:screenOrientation="sensorLandscape" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:label="Download Activity" android:name="com.azumio.android.argus.workoutplan.SettingsProgamsDownloadActivity" android:screenOrientation="portrait"/>
+        <activity android:label="Program Download Activity" android:name="com.azumio.android.argus.workoutplan.ProgramDownloadActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.gps.PickPlaceActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Transparent" android:name="com.azumio.android.argus.permissions.DialogActivity"/>
+        <activity android:name="com.azumio.android.argus.premium.PremiumPurchaseActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="argus"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.azumio.android.argus.premium.PremiumOutfunnelPrompt" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.argus.reports.ReportsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Transparent" android:name="com.azumio.android.argus.settings.MonthPickerActivity"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.goals.GoalsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.rate.KnowledgeBaseActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Translucent" android:name="com.azumio.android.argus.main_menu.SelectActivity" android:screenOrientation="unspecified"/>
+        <activity android:name="com.azumio.android.sleeptime.activity.UpgradeSTStarterKitActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name="com.azumio.android.argus.rate.SuggestionActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.sleeptime.activity.SleepTimeSoundscapesActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.sleeptime.activity.SoundscapeInfo" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Translucent" android:name="com.azumio.android.argus.check_ins.details.CompletionActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.argus.FullScreenWebViewActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.argus.webintegration.CustomFragmentFullscreenWebViewActivity" android:screenOrientation="portrait" android:configChanges="locale|touchscreen|keyboardHidden|orientation|screenLayout|uiMode|screenSize"/>
+        <activity android:theme="@style/AppTheme.UserActivityResolver" android:name="com.azumio.android.argus.check_ins.details.CompletionBodyWeightActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.DevicesAndApplicationsActivity" android:name="com.azumio.android.argus.devices_and_apps.DevicesAndApplicationsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.gps.MotionProcessorActivity" android:exported="true" android:screenOrientation="portrait" android:alwaysRetainTaskState="true"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.gps.SelectCustomGpsScreensActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Light" android:name="com.azumio.android.argus.check_ins.gps.CustomizeGpsScreensActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Translucent" android:name="com.azumio.android.argus.tracking.steps.StepCounterNotSupportedActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/AppTheme.Translucent" android:name="com.azumio.android.argus.tracking.steps.StepCounterIssueDialogActivity" android:screenOrientation="unspecified"/>
+        <activity android:theme="@style/AppTheme.CaloriesSettings" android:label="@string/activity_title_step_counting_settings" android:name="com.azumio.android.argus.settings.stepcounting.StepCountingSettingsActivity" android:launchMode="singleTop" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustUnspecified|stateHidden|adjustResize"/>
+        <activity android:theme="@style/AppTheme.Settings" android:label="@string/google_fit_integration_activity_title" android:name="com.azumio.android.argus.googlefit.GoogleFitIntegrationActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.bodyweight.BodyWeightActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" android:name="com.azumio.android.argus.deeplink.ParseDeepLinkActivity" android:exported="true" android:excludeFromRecents="true" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="si.modula.android.instantheartrate" android:host="*" android:pathPrefix="/"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="si.modula.android.instantheartrate" android:host="*"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="com.azumio.iphone.argus" android:host="*" android:pathPrefix="/"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="com.azumio.iphone.argus" android:host="*"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.azumio.android.argus.premium.PremiumScreenActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.premium.LastChanceCounterActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.mealplans.activity.MealPlansActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.mealplans.activity.MealPlanTestActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.mealplans.details.MealPlanDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.mealplans.activity.MealPlanRecipeDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.mealplans.activity.MealPlansRecipeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.HandleBridgeActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.GetStartedActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.WelcomeScreenActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.SignMeUpActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.ActualWeightSetup" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.ExpectedWeightSetup" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.DefineGoalActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.DetailedSetup" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.LevelsSetup" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.WeightLoseGainSetup" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.StepsGoalActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.onboarding.CompletionSetup" android:exported="false" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Fullscreen" android:name="com.azumio.android.argus.calories.classify.FoodPhotoActivity" android:launchMode="singleTask" android:screenOrientation="unspecified" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/AppTheme.Fullscreen" android:name="com.azumio.android.argus.calories.preview.MealPreviewActivity" android:launchMode="singleTask" android:screenOrientation="unspecified" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:name="com.azumio.android.argus.calories.activity.MicroNutritionActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Calories" android:name="com.azumio.android.argus.calories.activity.EditNutritionActivity" android:screenOrientation="unspecified" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme.Calories" android:name="com.azumio.android.argus.calories.activity.DayStreakActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.azumio.android.argus.workouts.WorkoutsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.azumio.android.argus.insights.InsightsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.bloodpressure.BloodPressureHistoryActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.addmulticheckin.AddMultiCheckinActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.main_menu.CGMActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.v3logger.LoggingActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.azumio.android.argus.v3logger.form.meds.AddOrEditMedicineActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme.Fullscreen" android:name="com.azumio.android.argus.v3logger.form.meds.goal.AddOrEditGoalMedicineActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.azumio.android.argus.v3logger.form.meds.MedicinesInputActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.azumio.android.argus.tutorial.DeleteDrawerItemTutorialActivity"/>
+        <activity android:name="com.azumio.android.DefaultGoogleFitSyncActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.profile.GoalsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.profile.HealthRecord.HealthRecordActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Settings" android:name="com.azumio.android.argus.client_questionnaire.HealthRecordQuestionnaireActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.azumio.android.argus.lesson_book.LessonBookActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.lesson_book.WeeklyLessonsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.main_menu.ProviderCodeSetUpActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/AppTheme.Fullscreen" android:name="com.azumio.android.argus.v3logger.form.meds.goal.MedicineGoalListActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.CodeRedeemedActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.settings.TermsAndConditionsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.main_menu.NotificationPopUpActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.profile.ReminderSettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Fullscreen" android:name="com.azumio.android.argus.coaching.diabetesCoaching.offer.DiabetesCoachingOfferActivity" android:taskAffinity=".CoachPaymentFlow" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Fullscreen" android:name="com.azumio.android.argus.coaching.diabetesCoaching.payment.DiabetesCoachingPaymentActivity" android:taskAffinity=".CoachPaymentFlow" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/AppTheme.Base.TranscluentStatusBar" android:name="com.azumio.android.argus.chat.ChatActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.clevertap.android.sdk.InAppNotificationActivity" android:configChanges="keyboardHidden|orientation"/>
+        <activity android:theme="@style/AppTheme.Fullscreen" android:label="@string/title_activity_fullscreen_image" android:name="com.azumio.android.argus.imageDisplay.FullscreenImageActivity" android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity android:theme="@style/Theme.Transparent" android:name="com.azumio.android.argus.main_menu.PremiumTrialActivity" android:noHistory="true"/>
+        <activity android:theme="@style/Theme.Transparent" android:name="com.azumio.android.argus.main_menu.RegistrationGiftActivity" android:noHistory="true"/>
+        <activity android:theme="@style/Theme.Transparent" android:name="com.azumio.android.argus.main_menu.LastChanceTrialActivity" android:noHistory="true"/>
+        <meta-data android:name="CLEVERTAP_USE_GOOGLE_AD_ID" android:value="1"/>
+        <meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="@string/CLEVER_TAP_ACCOUNT_ID"/>
+        <meta-data android:name="CLEVERTAP_TOKEN" android:value="@string/CLEVER_TAP_TOKEN"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/meta_data_facebook_app_id"/>
+        <meta-data android:name="scm_revision" android:value="@string/generated_scm_revision"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="0abf0032bcbabff8a379edf7cf5a637ad44b103d"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/meta_data_google_api_key"/>
+        <meta-data android:name="CLEVERTAP_USE_GOOGLE_AD_ID" android:value="1"/>
+        <meta-data android:name="CLEVERTAP_ACCOUNT_ID" android:value="@string/CLEVER_TAP_ACCOUNT_ID"/>
+        <meta-data android:name="CLEVERTAP_TOKEN" android:value="@string/CLEVER_TAP_TOKEN"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/meta_data_facebook_app_id"/>
+        <meta-data android:name="scm_revision" android:value="@string/generated_scm_revision"/>
+        <meta-data android:name="com.crashlytics.ApiKey" android:value="0abf0032bcbabff8a379edf7cf5a637ad44b103d"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="@string/meta_data_google_api_key"/>
+        <provider android:name="com.azumio.android.argus.utils.CustomFileProvider" android:exported="false" android:authorities="si.modula.android.instantheartrate.provider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <receiver android:name="com.azumio.android.argus.app_widgets.WidgetPermissionBroadcastReceiver"/>
+        <receiver android:name="com.azumio.android.argus.app_widgets.WidgetPermissionBroadcastReceiver"/>
+        <receiver android:name="com.azumio.android.argus.notification.NotificationPublisher" android:enabled="false"/>
+        <receiver android:name="com.appsflyer.SingleInstallBroadcastReceiver" android:permission="android.permission.INSTALL_PACKAGES" android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service android:name="com.azumio.android.argus.check_ins.sync.CheckinSyncServiceAPI" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" android:process="si.modula.android.instantheartrate"/>
+        <service android:name="com.azumio.android.sleeptime.service.SoundscapeMediaService" android:enabled="true" android:exported="false" android:process="si.modula.android.instantheartrate"/>
+        <service android:name="com.azumio.android.argus.check_ins.sync.CheckInsSyncService" android:permission="si.modula.android.instantheartrate.intents.SYNC_SERVICE_READ" android:enabled="true" android:exported="true" android:process="si.modula.android.instantheartrate">
+            <intent-filter>
+                <action android:name="com.azumio.android.argus.check_ins.sync.CheckInsSyncService"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.azumio.android.argus.check_ins.sync.CheckinSyncServiceAPI" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false" android:process="si.modula.android.instantheartrate"/>
+        <service android:name="com.azumio.android.sleeptime.service.SoundscapeMediaService" android:enabled="true" android:exported="false" android:process="si.modula.android.instantheartrate"/>
+        <service android:name="com.azumio.android.argus.check_ins.sync.CheckInsSyncService" android:permission="si.modula.android.instantheartrate.intents.SYNC_SERVICE_READ" android:enabled="true" android:exported="true" android:process="si.modula.android.instantheartrate">
+            <intent-filter>
+                <action android:name="com.azumio.android.argus.check_ins.sync.CheckInsSyncService"/>
+            </intent-filter>
+        </service>
+        <meta-data android:name="aia-compat-api-min-version" android:value="1"/>
+        <activity android:theme="@style/AppTheme.Fitness" android:name="com.azumio.android.argus.fitnessbuddy.main.FitnessBuddyMainActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateHidden|stateAlwaysHidden|adjustResize|adjustPan|adjustNothing"/>
+        <activity android:theme="@style/AppTheme.Fitness" android:name="com.azumio.android.argus.fitnessbuddy.exercises.custom.list.CustomExercisesListActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/AppTheme.Fitness" android:name="com.azumio.android.argus.fitnessbuddy.exercises.custom.modify.CustomExerciseActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.fitnessbuddy.exercise_details.ExerciseVideoActivity" android:screenOrientation="landscape"/>
+        <activity android:name="com.azumio.android.argus.fitnessbuddy.exercise_details.ExerciseDetailsActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.azumio.android.argus.fitnessbuddy.workout_details.WorkoutDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.fitnessbuddy.workouts.GymWorkoutActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.customworkouts.CustomWorkoutsListActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.customworkouts.CustomWorkoutActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan"/>
+        <activity android:name="com.azumio.android.argus.workouts.TopRatedWorkoutsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.workoutplans.onboardings.WorkoutPlansOnboarding" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/FbTheme" android:name="com.azumio.android.argus.new_workoutplayer.StartWorkoutActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.azumio.android.argus.workoutplans.onboardings.MusicSelectionActivity"/>
+        <activity android:name="com.azumio.android.argus.exercise.ExerciseHistoryActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/FoodLensAppTheme.NoActionBar" android:label="@string/foodlens_title_activity_result" android:name="com.azumio.android.foodlenslibrary.activity.ResultActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/FoodLensAppTheme.NoActionBar" android:label="@string/foodlens_title_activity_camera" android:name="com.azumio.android.foodlenslibrary.activity.CameraActivity" android:screenOrientation="portrait"/>
+        <activity android:theme="@style/FoodLensAppTheme.NoActionBar" android:label="@string/foodlens_title_activity_add_food" android:name="com.azumio.android.foodlenslibrary.activity.AddFoodActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <activity android:theme="@style/FoodLensAppTheme.NoActionBar" android:label="@string/foodlens_title_activity_edit_food" android:name="com.azumio.android.foodlenslibrary.activity.EditEntryActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <activity android:theme="@style/FoodLensAppTheme.NoActionBar" android:label="@string/foodlens_title_activity_quick_add_food" android:name="com.azumio.android.foodlenslibrary.activity.QuickAddActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustUnspecified|stateUnchanged|stateVisible|stateAlwaysVisible|adjustResize"/>
+        <service android:name="com.google.firebase.components.ComponentDiscoveryService" android:exported="false" android:directBootAware="true">
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.iid.Registrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+            <meta-data android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
+        </service>
+        <service android:name="com.azumio.android.movementmonitor.impl.MovementMonitorService" android:enabled="true" android:process=":MovementMonitorService"/>
+        <activity android:theme="@style/Theme.Transparent" android:name="com.azumio.android.movementmonitor.impl.GooglePermissionActivity" android:process=":MovementMonitorService"/>
+        <meta-data android:name="com.google.gms.fitness.sdk.version" android:value="19.0.0"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:exported="false" android:excludeFromRecents="true"/>
+        <service android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:exported="true" android:visibleToInstantApps="true"/>
+        <service android:name="androidx.work.impl.background.firebase.FirebaseJobService" android:exported="false">
+            <intent-filter>
+                <action android:name="com.firebase.jobdispatcher.ACTION_EXECUTE"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="androidx.work.impl.background.firebase.FirebaseDelayedJobAlarmReceiver" android:exported="true"/>
+        <service android:name="com.google.firebase.messaging.FirebaseMessagingService" android:exported="false" android:directBootAware="true">
+            <intent-filter android:priority="-500">
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <receiver android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:exported="false"/>
+        <provider android:name="androidx.work.impl.WorkManagerInitializer" android:exported="false" android:multiprocess="true" android:authorities="si.modula.android.instantheartrate.workmanager-init"/>
+        <service android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false"/>
+        <service android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="@bool/enable_system_job_service_default" android:exported="true"/>
+        <receiver android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" android:enabled="true" android:exported="false"/>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BATTERY_OKAY"/>
+                <action android:name="android.intent.action.BATTERY_LOW"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.intent.action.DEVICE_STORAGE_LOW"/>
+                <action android:name="android.intent.action.DEVICE_STORAGE_OK"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" android:enabled="false">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver" android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.TIME_SET"/>
+                <action android:name="android.intent.action.TIMEZONE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false">
+            <intent-filter>
+                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies"/>
+            </intent-filter>
+        </receiver>
+        <activity android:theme="@style/com_facebook_activity_theme" android:name="com.facebook.FacebookActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <activity android:name="com.facebook.CustomTabActivity"/>
+        <activity android:theme="@style/zxing_CaptureTheme" android:name="com.journeyapps.barcodescanner.CaptureActivity" android:clearTaskOnLaunch="true" android:stateNotNeeded="true" android:screenOrientation="sensorLandscape" android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.facebook.notifications.internal.activity.CardActivity" android:configChanges="orientation|screenSize"/>
+        <service android:name="com.firebase.jobdispatcher.GooglePlayReceiver" android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY"/>
+            </intent-filter>
+        </service>
+        <service android:name="com.lefu.hetai_bleapi.api.service.BluetoothLeService" android:enabled="true"/>
+        <provider android:name="com.prolificinteractive.materialcalendarview.MaterialCalendarViewInitProvider" android:enabled="true" android:exported="false" android:authorities="si.modula.android.instantheartrate.materialcalendarviewinitprovider"/>
+        <activity android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" android:name="com.clevertap.android.sdk.CTInboxActivity" android:configChanges="keyboardHidden"/>
+        <receiver android:name="com.clevertap.android.sdk.CTPushNotificationReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" android:exported="false">
+            <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
+        </service>
+        <service android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="false"/>
+        <receiver android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" android:exported="false"/>
+        <provider android:name="com.google.firebase.provider.FirebaseInitProvider" android:exported="false" android:authorities="si.modula.android.instantheartrate.firebaseinitprovider" android:initOrder="100" android:directBootAware="true"/>
+        <receiver android:name="com.google.android.gms.measurement.AppMeasurementReceiver" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementService" android:enabled="true" android:exported="false"/>
+        <service android:name="com.google.android.gms.measurement.AppMeasurementJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:enabled="true" android:exported="false"/>
+        <provider android:name="com.facebook.internal.FacebookInitProvider" android:exported="false" android:authorities="si.modula.android.instantheartrate.FacebookInitProvider"/>
+        <receiver android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver" android:exported="false">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer" android:exported="false" android:multiprocess="true" android:authorities="si.modula.android.instantheartrate.lifecycle-process"/>
+        <activity android:theme="@style/Theme.Transparent" android:name="com.karumi.dexter.DexterActivity" android:launchMode="singleInstance"/>
+        <provider android:name="androidx.core.content.FileProvider" android:exported="false" android:authorities="si.modula.android.instantheartrate.easyphotopicker.fileprovider" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/filepaths"/>
+        </provider>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="2.0.1"/>
+        <activity android:theme="@style/Theme.Translucent.NoTitleBar" android:name="com.android.billingclient.api.ProxyBillingActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize"/>
+    </application>
+</manifest>

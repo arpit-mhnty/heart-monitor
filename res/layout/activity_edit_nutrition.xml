@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.FillingView android:id="@+id/main_menu_toolbars" android:background="?attr/colorPrimary" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:layout_alignParentTop="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/white" android:id="@+id/toolbar_back_arrow" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginRight="15dp" android:text="←" android:layout_alignParentLeft="true" app:fontPath="@string/font_path_material_design_set"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18dp" android:textColor="@android:color/white" android:id="@+id/activity_with_fragment_toolbar_textview" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Additional Nutritional Goals" android:layout_toRightOf="@+id/toolbar_back_arrow" android:layout_centerVertical="true" app:typeface="@string/font_path_roboto_regular"/>
+        </RelativeLayout>
+    </com.azumio.android.argus.view.FillingView>
+    <LinearLayout android:orientation="horizontal" android:background="@color/grey_color" android:paddingLeft="20dp" android:paddingTop="20dp" android:paddingRight="20dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="55dp" android:weightSum="5">
+        <TextView android:gravity="right" android:id="@+id/totalValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Enter your goals" android:textAllCaps="true"/>
+    </LinearLayout>
+    <ExpandableListView android:id="@+id/edit_nutrition_list_view" android:background="@color/white" android:paddingBottom="20dp" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:groupIndicator="@null" android:childDivider="@android:color/transparent" android:divider="@null" android:dividerHeight="0dp" android:choiceMode="singleChoice" android:layout_below="@+id/main_menu_toolbars"/>
+</LinearLayout>

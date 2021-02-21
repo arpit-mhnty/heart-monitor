@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <include layout="@layout/view_common_toolbar"/>
+    <RelativeLayout android:orientation="vertical" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <include layout="@layout/view_google_fit_integration_title"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="@string/common_status" android:layout_below="@+id/title" app:typeface="@string/font_path_roboto_regular"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textStyle="italic" android:id="@+id/curent_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16dp" android:layout_below="@+id/title" android:layout_alignParentRight="true" app:typeface="@string/font_path_roboto_regular"/>
+    </RelativeLayout>
+    <include layout="@layout/view_google_fit_integration_button"/>
+    <androidx.appcompat.widget.AppCompatButton android:textSize="18sp" android:textColor="@color/white" android:id="@+id/google_fit_disconnect_button" android:background="@drawable/corner_radius_rect_border" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:layout_marginTop="16dp" android:foreground="?android:attr/selectableItemBackground" android:text="@string/google_fit_integration_disconnect" android:layout_below="@+id/curent_status" android:textAllCaps="false" app:backgroundTint="@color/buttonColor"/>
+</LinearLayout>

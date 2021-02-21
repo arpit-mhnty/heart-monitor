@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/item_blog_cell_root" android:background="?attr/selectableItemBackground" android:paddingRight="8dp" android:paddingBottom="8dp" android:layout_width="200dp" android:layout_height="150dp">
+    <ImageView android:id="@+id/item_blog_cell_photo" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:adjustViewBounds="true"/>
+    <ImageView android:layout_gravity="top|left|center_vertical|center_horizontal|center|start" android:id="@+id/item_blog_cell_premium_crown" android:background="@drawable/drawable_premium_background" android:padding="4dp" android:layout_width="24dp" android:layout_height="24dp" android:layout_marginLeft="8dp" android:layout_marginTop="8dp" android:src="@drawable/premium_crown"/>
+    <TextView android:textColor="@color/white" android:gravity="start" android:layout_gravity="bottom" android:id="@+id/item_bloc_cell_text" android:padding="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Lorem ipsum"/>
+</FrameLayout>

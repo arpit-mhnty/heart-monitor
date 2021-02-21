@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:background="#fff" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_main" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/settings_activity_toolbar_text_color" android:id="@+id/toolbar_done" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_marginRight="10dp" android:text="@string/font_material_design_set_character_check" android:layout_alignParentRight="true" app:fontPath="@string/font_path_material_design_set"/>
+            <TextView android:textSize="@dimen/toolbar_text_size" android:textColor="@color/settings_activity_toolbar_text_color" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/toolbar_text_view_title" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/instant_heart_health_program_settings" android:singleLine="true" android:layout_toLeftOf="@+id/toolbar_done"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <FrameLayout android:focusable="true" android:focusableInTouchMode="true" android:layout_width="0dp" android:layout_height="0dp"/>
+        <ViewSwitcher android:id="@+id/view_switcher_progress_settings" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+            <ScrollView android:id="@+id/container_settings_options" android:layout_width="match_parent" android:layout_height="match_parent" android:stackFromBottom="true" android:transcriptMode="alwaysScroll">
+                <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:background="#e7e7e7" android:layout_width="match_parent" android:layout_height="1dp"/>
+                    <FrameLayout android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <fragment android:name="com.azumio.android.argus.settings.SettingsFragment" android:id="@+id/fragment_settings_general" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+                    </FrameLayout>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/action_setup_change_goal" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginTop="?attr/optionPaddingVertical" android:layout_marginRight="?attr/optionPaddingRight" android:layout_marginBottom="?attr/optionPaddingVertical" android:weightSum="1" android:minHeight="?attr/optionMinimumHeight">
+                        <TextView android:textAppearance="?attr/textAppearanceTitle" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="@string/activity_settings_change_goal" android:layout_weight="1"/>
+                        <ImageButton android:layout_gravity="center_vertical" android:id="@+id/image_button_go_to_change_goal" android:background="@null" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:src="@drawable/button_go_to_mtrl_am_alpha"/>
+                    </LinearLayout>
+                    <include layout="@layout/horizontal_line_separator"/>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/action_setup_change_program" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginTop="?attr/optionPaddingVertical" android:layout_marginRight="?attr/optionPaddingRight" android:layout_marginBottom="?attr/optionPaddingVertical" android:weightSum="1" android:minHeight="?attr/optionMinimumHeight">
+                        <TextView android:textAppearance="?attr/textAppearanceTitle" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="@string/activity_settings_change_program" android:layout_weight="1"/>
+                        <ImageButton android:layout_gravity="center_vertical" android:id="@+id/image_button_go_to_change_program" android:background="@null" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:src="@drawable/button_go_to_mtrl_am_alpha"/>
+                    </LinearLayout>
+                    <include layout="@layout/horizontal_line_separator"/>
+                    <LinearLayout android:orientation="horizontal" android:id="@+id/action_setup_cancel_program" android:clickable="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="?attr/optionPaddingLeft" android:layout_marginTop="?attr/optionPaddingVertical" android:layout_marginRight="?attr/optionPaddingRight" android:layout_marginBottom="?attr/optionPaddingVertical" android:weightSum="1" android:minHeight="?attr/optionMinimumHeight">
+                        <TextView android:textAppearance="?attr/textAppearanceTitle" android:layout_gravity="center_vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="@string/activity_settings_cancel_program" android:layout_weight="1"/>
+                        <ImageButton android:layout_gravity="center_vertical" android:id="@+id/image_button_go_to_cancel_program" android:background="@null" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginRight="5dp" android:layout_marginBottom="5dp" android:src="@drawable/button_go_to_mtrl_am_alpha"/>
+                    </LinearLayout>
+                    <include layout="@layout/horizontal_line_separator"/>
+                    <FrameLayout android:id="@+id/frame_bottom" android:background="#ffffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <Space android:layout_width="wrap_content" android:layout_height="20dp"/>
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+        </ViewSwitcher>
+        <View android:id="@+id/top_shadow" android:background="@drawable/bottom_shadow" android:layout_width="match_parent" android:layout_height="6dp" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+</LinearLayout>

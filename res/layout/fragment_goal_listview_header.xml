@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView android:textSize="14dp" android:textColor="#7f8390" android:gravity="center" android:id="@+id/goals_ford_sentence" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="32dp" android:layout_marginRight="20dp" android:text="@string/goals_ford_sentence"/>
+    <TextView android:textSize="14dp" android:textStyle="italic" android:textColor="#7f8390" android:gravity="right" android:id="@+id/goals_sentence_author" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="40dp" android:layout_marginTop="2dp" android:layout_marginRight="40dp" android:text="@string/goals_sentence_author"/>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="5dp">
+    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="32dp" android:textColor="@android:color/white" android:id="@+id/calories_fragment_icon_element_customfont" android:layout_width="30dp" android:layout_height="30dp" app:fontPath="@string/font_path_argus_set"/>
+</FrameLayout>

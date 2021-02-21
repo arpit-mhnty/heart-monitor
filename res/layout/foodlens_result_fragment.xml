@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#000000" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.foodlenslibrary.views.ImageContainerLayout android:id="@+id/image_container" android:clipChildren="false" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="@dimen/foodlens_result_container_bottom_margin">
+        <ImageView android:id="@+id/food_image" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="centerCrop" android:adjustViewBounds="false"/>
+    </com.azumio.android.foodlenslibrary.views.ImageContainerLayout>
+    <include app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" layout="@layout/foodlens_result_bottom_sheet"/> /&gt; 
+    <LinearLayout android:layout_gravity="bottom" android:orientation="horizontal" android:id="@+id/save_button_container" android:background="@color/foodlens_white_80_alpha" android:padding="25dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="@dimen/foodlens_result_bottom_sheet_loading_peek_height">
+        <Button android:textColor="@color/foodlens_white" android:id="@+id/add_more_button" android:background="@drawable/foodlens_dialogue_done_button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:text="@string/foodlens_add_more" android:layout_weight="0.4"/>
+        <Button android:textColor="@color/foodlens_white" android:id="@+id/save_meal_button" android:background="@drawable/foodlens_dialogue_done_button" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/foodlens_save_meal" android:layout_weight="0.6"/>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/root" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="@dimen/outer_margin_checkins">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="40dp" android:textColor="#bfbfbf" android:id="@+id/fragment_tag_icon" android:duplicateParentState="true" android:layout_width="35dp" android:layout_height="41dp" android:layout_marginLeft="20dp" android:layout_marginTop="16dp" android:layout_marginBottom="23dp" app:fontPath="@string/font_path_argus_set" app:textAlign="1"/>
+        <LinearLayout android:orientation="vertical" android:paddingTop="11dp" android:paddingBottom="13dp" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_toRightOf="@+id/fragment_tag_icon" android:layout_toEndOf="@+id/fragment_tag_icon">
+            <TextView android:id="@+id/fragment_tag_add_tags" android:duplicateParentState="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginTop="16dp" android:text="ADD TAGS"/>
+            <org.apmem.tools.layouts.FlowLayout android:gravity="left" android:orientation="horizontal" android:id="@+id/fragment_tag_gridview" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <View android:id="@+id/fragment_tag_divider" android:background="#bfbfbf" android:layout_width="wrap_content" android:layout_height="1.5px"/>
+</LinearLayout>

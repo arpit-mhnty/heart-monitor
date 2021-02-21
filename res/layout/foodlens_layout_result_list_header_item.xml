@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="50dp">
+    <androidx.appcompat.widget.AppCompatButton android:textColor="@drawable/foodlens_result_list_group_button_text" android:gravity="center" android:id="@+id/group_button" android:background="@drawable/foodlens_ic_result_list_group_button" android:paddingLeft="4dp" android:paddingRight="4dp" android:layout_width="wrap_content" android:layout_height="32dp" android:layout_margin="5dp" android:text="food for thought" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintLeft_toLeftOf="0" app:layout_constraintRight_toRightOf="0" app:layout_constraintTop_toTopOf="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:id="@+id/exercise_logged" android:paddingLeft="20dp" android:paddingTop="15dp" android:paddingBottom="15dp" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:typeface="@string/font_path_roboto_regular"/>
+    <RelativeLayout android:id="@+id/mainlayout" android:layout_width="match_parent" android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/exercise_logged">
+        <ImageView android:id="@+id/cell_exercise_icon_image" android:layout_width="50dp" android:layout_height="50dp" android:layout_marginLeft="20dp" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:src="@drawable/img_exercise" android:layout_alignParentLeft="true"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginRight="20dp" android:layout_marginBottom="15dp" android:layout_toRightOf="@+id/cell_exercise_icon_image" android:layout_alignParentRight="true">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="#292929" android:id="@+id/exercise_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3dp" app:typeface="@string/font_path_roboto_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="#898989" android:id="@+id/sets" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Set 1 : " app:typeface="@string/font_path_roboto_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="#898989" android:id="@+id/notes" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="45dp" app:typeface="@string/font_path_roboto_regular"/>
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/divider" android:background="#eeeeee" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="20dp"/>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

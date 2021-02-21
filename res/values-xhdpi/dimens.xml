@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cell_text_desc">12sp</dimen>
+    <dimen name="cell_text_tile">12sp</dimen>
+    <dimen name="getall_height">44dp</dimen>
+    <dimen name="ihr_margin_top">120dp</dimen>
+    <dimen name="margin_right">16sp</dimen>
+    <dimen name="margin_top">10dp</dimen>
+    <dimen name="margins">15dp</dimen>
+    <dimen name="marginstop">10dp</dimen>
+    <dimen name="recommendation_width">224dp</dimen>
+    <dimen name="width_height">120dp</dimen>
+    <dimen name="workout_plan_text">14sp</dimen>
+</resources>

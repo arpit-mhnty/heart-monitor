@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <androidx.appcompat.widget.AppCompatTextView android:textSize="10sp" android:textColor="@color/foodlens_white" android:gravity="center" android:id="@+id/food_name" android:background="@drawable/foodlens_stack_item_background" android:padding="5dp" android:layout_width="@dimen/foodlens_segment_width" android:layout_height="wrap_content"/>
+</FrameLayout>

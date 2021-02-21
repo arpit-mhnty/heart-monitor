@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/background_color" style="@style/MatchWidthWrapHeight">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title_row" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:weightSum="2" style="@style/MatchWidthWrapHeight">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textColor="@color/white" android:id="@+id/iconCode" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginTop="2dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp" android:layout_alignParentLeft="true"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="@color/text_color" android:id="@+id/instructionText" android:layout_marginTop="10dp" android:layout_marginBottom="5dp" android:text="" android:layout_toRightOf="@+id/iconCode" android:layout_centerInParent="true" app:typeface="@string/font_path_sans_francisco_regular" style="@style/MatchWidthWrapHeight"/>
+    </RelativeLayout>
+</RelativeLayout>

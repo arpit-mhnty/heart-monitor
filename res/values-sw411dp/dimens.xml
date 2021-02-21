@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="calories_goal_setup_span_dimen">17.5dp</dimen>
+    <dimen name="cm_completion_note_dimen">18sp</dimen>
+    <dimen name="margin_border_detail_overlay">60dp</dimen>
+    <dimen name="margin_bottom_details_overlay">-30dp</dimen>
+    <dimen name="margin_bottom_overlay">25dp</dimen>
+    <dimen name="margin_glow2_left">-255dp</dimen>
+    <dimen name="margin_glow3_left">-282dp</dimen>
+    <dimen name="margin_glow_left">-233dp</dimen>
+    <dimen name="margin_left">-210dp</dimen>
+    <dimen name="margin_top_hr_details">60dp</dimen>
+    <dimen name="measurement_view_width">270dp</dimen>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="@dimen/action_bar_elevation">
+        <androidx.appcompat.widget.Toolbar android:id="@+id/main_menu_toolbar" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="20dp" android:textColor="@color/settings_activity_toolbar_text_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/activity_friends_and_followers_toolbar_text_view" android:layout_width="match_parent" android:layout_height="match_parent" android:singleLine="true" android:layout_toLeftOf="@+id/main_menu_toolbar_notification" android:layout_toStartOf="@+id/main_menu_toolbar_notification"/>
+                <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="24dp" android:textColor="@color/settings_activity_toolbar_text_color" android:id="@+id/main_menu_toolbar_notification" android:background="?attr/selectableItemBackgroundBorderless" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginLeft="15dp" android:layout_marginRight="15dp" android:layout_alignParentRight="true" app:fontPath="@string/font_path_material_design_set"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <com.azumio.android.argus.widget.PagerSlidingTabStrip android:id="@+id/tabs" android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="48dp" app:pstsDividerColor="@color/colorPrimary" app:pstsIndicatorColor="@color/menu_page_indicator_color" app:pstsIndicatorHeight="4dp" app:pstsShouldExpand="true" app:pstsTabPaddingLeftRight="8dp" app:pstsTextAllCaps="true" app:pstsUnderlineHeight="0dp"/>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager android:id="@+id/activity_friends_and_followers_view_pager" android:layout_width="match_parent" android:layout_height="match_parent"/>
+</LinearLayout>

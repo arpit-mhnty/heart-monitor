@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/foodlens_white" android:layout_width="match_parent" android:layout_height="64dp">
+    <RelativeLayout android:gravity="center" android:id="@+id/progressLayout" android:background="@color/foodlens_white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/progressView" android:layout_width="50dp" android:layout_height="50dp" android:indeterminate="true" style="?android:attr/progressBarStyle"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@+id/no_result" android:background="@color/foodlens_white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="64dp">
+        <TextView android:textColor="@color/foodlens_black_50_alpha" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/foodlens_no_result" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/foodLayout" android:background="@color/foodlens_white" android:layout_width="match_parent" android:layout_height="64dp">
+        <CheckBox android:id="@+id/add_food_multiselect" android:paddingLeft="5dp" android:paddingTop="5dp" android:paddingRight="5dp" android:focusable="false" android:focusableInTouchMode="false" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:button="@null"/>
+        <RelativeLayout android:gravity="center_vertical" android:id="@+id/layout_right" android:layout_width="wrap_content" android:layout_height="64dp" android:layout_toRightOf="@+id/add_food_multiselect">
+            <com.azumio.android.foodlenslibrary.views.CenteredCustomFontView android:textSize="30dp" android:id="@+id/next" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+            <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView android:textSize="14sp" android:textStyle="bold" android:gravity="center_vertical" android:id="@+id/cell_recent_calories" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="15dp" android:text="0" android:singleLine="true" android:layout_toLeftOf="@+id/next" android:layout_centerInParent="true" android:layout_centerVertical="true" app:typeface="@string/font_path_roboto_regular"/>
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/caloriesDetail" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginRight="10dp" android:layout_toLeftOf="@+id/cell_recent_calories" android:layout_alignParentLeft="true">
+                <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/foodlens_setup_text_color" android:id="@+id/cell_recent_lunch_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Coffee with 2% Milk" android:singleLine="true" android:layout_toLeftOf="@+id/cell_recent_calories" app:typeface="@string/font_path_roboto_medium"/>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView android:textSize="12sp" android:textColor="#6c7379" android:layout_gravity="center_vertical" android:id="@+id/cell_recent_lunch_details" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="12 oz, 62 calories" app:typeface="@string/font_path_roboto_regular"/>
+                    <TextView android:textSize="30dp" android:id="@+id/icon_important" android:background="@drawable/foodlens_check" android:layout_width="10dp" android:layout_height="10dp" android:layout_marginLeft="5dp" android:layout_marginTop="2dp" android:layout_marginRight="15dp" android:layout_toRightOf="@+id/cell_recent_lunch_details"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="50dp">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="150dp">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="120dp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/totalCaloriesCenteredTextview" android:layout_width="wrap_content" android:layout_height="150dp" app:typeface="@string/font_path_league_gothic_regular"/>
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <GridLayout android:id="@+id/activitiesIconsGridLayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_centerInParent="true" android:rowCount="3" android:columnCount="2"/>
+                </RelativeLayout>
+                <RelativeLayout android:id="@+id/moreIndicatorView" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent">
+                    <TextView android:textSize="35dp" android:textColor="@android:color/white" android:paddingBottom="28dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/ellipsis" android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="30dp" android:layout_marginRight="30dp">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="50dp" android:id="@+id/activeCaloriesTextview" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:typeface="@string/font_path_league_gothic_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="50dp" android:id="@+id/basalCaloriesTextview" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:typeface="@string/font_path_league_gothic_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="50dp" android:id="@+id/totalCaloriesTextview" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" app:typeface="@string/font_path_league_gothic_regular"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/abstract_dynamic_gps_inflater_fragment_container" android:layout_width="match_parent" android:layout_height="wrap_content" android:weightSum="6">
+    <com.azumio.android.argus.view.DetailedValue android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginTop="15dp" android:layout_marginRight="2dp" android:layout_marginBottom="10dp" app:descriptionViewTextSize="12dp" app:valueViewTextSize="77dp"/>
+    <com.azumio.android.argus.view.DetailedValue android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginRight="2dp" app:descriptionViewTextSize="12dp" app:valueViewTextSize="77dp"/>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="2dp" android:layout_marginTop="12dp" android:layout_marginRight="2dp" android:minHeight="64dp">
+        <com.azumio.android.argus.view.DetailedValue android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1" app:descriptionViewTextSize="12dp" app:displayDivider="true" app:valueViewTextSize="34dp"/>
+        <com.azumio.android.argus.view.DetailedValue android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1" app:descriptionViewTextSize="12dp" app:displayDivider="true" app:valueViewTextSize="34dp"/>
+        <com.azumio.android.argus.view.DetailedValue android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1" app:descriptionViewTextSize="12dp" app:displayDivider="true" app:valueViewTextSize="34dp"/>
+        <com.azumio.android.argus.view.DetailedValue android:layout_width="0dp" android:layout_height="64dp" android:layout_weight="1" app:descriptionViewTextSize="12dp" app:valueViewTextSize="34dp"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginLeft="16dp" android:layout_marginRight="16dp">
+    <ImageButton android:layout_gravity="top|right|center_vertical|center_horizontal|center" android:id="@+id/image_button_info" android:background="@null" android:layout_width="64dp" android:layout_height="64dp" android:scaleType="centerInside"/>
+    <com.azumio.android.argus.view.CenteredCustomFontView android:layout_gravity="top|right|center_vertical|center_horizontal|center" android:id="@+id/image_go_premium" android:visibility="gone" android:layout_marginTop="50dp" android:layout_marginRight="6dp" style="@style/GoPremiumIcon"/>
+    <ImageButton android:layout_gravity="top|left|center_vertical|center_horizontal|center" android:id="@+id/image_button_settings" android:background="@null" android:layout_width="64dp" android:layout_height="64dp" android:scaleType="centerInside"/>
+    <com.facebook.widget.LikeView android:layout_gravity="bottom|left|center_vertical|center_horizontal|center" android:id="@+id/facebook_like_view" android:layout_width="wrap_content" android:layout_height="32dp" android:minHeight="32dp"/>
+</FrameLayout>

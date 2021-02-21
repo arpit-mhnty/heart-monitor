@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:state_pressed="true">
+        <shape>
+            <solid/>
+            <stroke android:width="0.5dp" android:color="#1f2439"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <gradient android:startColor="@color/menu_item_backgroud" android:endColor="@color/menu_item_backgroud" android:angle="-90"/>
+            <stroke android:width="0.5dp" android:color="#1f2439"/>
+        </shape>
+    </item>
+</selector>

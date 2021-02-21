@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="64dp">
+    <FrameLayout android:id="@+id/place_image_container" android:background="#aaa" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="8dp" android:layout_marginRight="5dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/place_icon" android:clickable="false" android:layout_width="30dp" android:layout_height="30dp"/>
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="8dp" android:layout_toRightOf="@+id/place_image_container" android:layout_centerVertical="true">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18dp" android:textStyle="bold" android:ellipsize="end" android:id="@+id/place_name" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" app:typeface="@string/font_path_roboto_regular"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14dp" android:ellipsize="end" android:id="@+id/place_address" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLines="1" app:typeface="@string/font_path_roboto_regular"/>
+    </LinearLayout>
+    <View android:background="#aaa" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginBottom="1dp" android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="wrap_content" android:layout_height="wrap_content">
+    <LinearLayout android:layout_width="wrap_content" android:layout_height="80dp">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30dp" android:layout_gravity="center" android:id="@+id/centered_custom_font_view_with_text_font_view" android:layout_width="25dp" android:layout_height="25dp"/>
+        <TextView android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@+id/centered_custom_font_view_with_text_text_view" android:layout_width="wrap_content" android:layout_height="match_parent" android:lines="1" android:singleLine="true"/>
+    </LinearLayout>
+</merge>

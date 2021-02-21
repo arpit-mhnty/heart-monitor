@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/split_black_alpha" android:layout_width="match_parent" android:layout_height="match_parent" android:weightSum="1">
+    <com.azumio.android.argus.view.LocationAccuracyIndicator android:id="@+id/location_accuracy_indicator" android:layout_width="200dp" android:layout_height="20dp" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"/>
+    <LinearLayout android:orientation="vertical" android:id="@+id/abstract_dynamic_gps_inflater_fragment_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/container_bottom_buttons" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <com.azumio.android.argus.view.FloatingActionButton android:id="@+id/fragment_map_gps_pause_button" android:layout_width="95dp" android:layout_height="95dp" app:fab_background_color="#fff" app:fab_icon="@drawable/icon_pause" app:fab_icon_color="@color/main_menu_page_indicator_color" app:fab_icon_scale="0.2"/>
+        <com.azumio.android.argus.view.FloatingActionButton android:id="@+id/fragment_map_gps_resume_button" android:layout_width="95dp" android:layout_height="95dp" android:layout_marginRight="@dimen/fab_margin_right" app:fab_background_color="@color/main_menu_page_indicator_color" app:fab_icon="@drawable/playbutton" app:fab_icon_color="#fff" app:fab_icon_scale="0.2"/>
+        <com.azumio.android.argus.view.FloatingActionButton android:layout_gravity="center" android:id="@+id/action_end" android:layout_width="95dp" android:layout_height="95dp" app:fab_background_color="@color/stop_gps_fab_color" app:fab_icon="@drawable/icon_finish_flag" app:fab_icon_color="#fff" app:fab_icon_scale="0.2"/>
+    </LinearLayout>
+</LinearLayout>

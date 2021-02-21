@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="50dp">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="#6e6e6e" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/medicine_frequency_title" android:layout_centerVertical="true" android:layout_marginStart="20dp" android:layout_alignParentStart="true" app:typeface="@string/font_path_roboto_medium"/>
+    </RelativeLayout>
+    <include layout="@layout/view_medicine_field_separator"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/black" android:id="@+id/frequencyTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginBottom="5dp" android:text="@string/how_often_do_you_take_this_medication" android:layout_marginStart="20dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/guideline4" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:typeface="@string/font_path_roboto_medium"/>
+        <Spinner android:textSize="16sp" android:id="@+id/frequencyValue" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="20dp" app:layout_constraintBottom_toBottomOf="@+id/frequencyTitle" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="@+id/frequencyTitle"/>
+        <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/guideline4" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.6"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <include layout="@layout/view_medicine_field_separator"/>
+    <androidx.constraintlayout.widget.ConstraintLayout android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="60dp">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@color/black" android:id="@+id/trackingTitle" android:layout_width="0dp" android:layout_height="wrap_content" android:text="@string/medicine_tracking_title" android:layout_centerVertical="true" android:layout_marginStart="20dp" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/guideline5" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:typeface="@string/font_path_roboto_medium"/>
+        <androidx.constraintlayout.widget.Guideline android:orientation="vertical" android:id="@+id/guideline5" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintGuide_percent="0.6"/>
+        <androidx.appcompat.widget.SwitchCompat android:id="@+id/trackingSwitch" android:clipChildren="false" android:clipToPadding="false" android:layout_width="70dp" android:layout_height="30dp" android:checked="true" android:layout_centerVertical="true" android:layout_marginEnd="20dp" app:layout_constraintBottom_toBottomOf="@+id/trackingTitle" app:layout_constraintEnd_toEndOf="0" app:layout_constraintTop_toTopOf="@+id/trackingTitle" app:showText="false"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</merge>

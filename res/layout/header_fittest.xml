@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/toplayout" android:layout_width="match_parent" android:layout_height="50dp">
+        <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:background="#f4f5f7" android:layout_width="0dp" android:layout_height="50dp" android:layout_weight="0.3">
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="@color/cell_header_grey_text" android:id="@+id/cell_workout_name" android:paddingLeft="5dp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="EXERCISE" android:layout_weight="0.3"/>
+        </LinearLayout>
+        <TextView android:textSize="16sp" android:textColor="@color/cell_header_grey_text" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/cell_fittest_date" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.17"/>
+        <TextView android:textSize="16sp" android:textColor="@color/cell_header_grey_text" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/cell_fittest_date2" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.17"/>
+        <TextView android:textSize="16sp" android:textColor="@color/cell_header_grey_text" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/cell_fittest_date3" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.17"/>
+        <TextView android:textSize="16sp" android:textColor="@color/cell_header_grey_text" android:gravity="center" android:layout_gravity="center_vertical" android:id="@+id/cell_fittest_date4" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="0.17"/>
+    </LinearLayout>
+    <View android:id="@+id/line" android:background="#cbcbcb" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/topLayout"/>
+</RelativeLayout>

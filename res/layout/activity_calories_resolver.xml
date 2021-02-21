@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/container" android:layout_width="match_parent" android:layout_height="match_parent" android:keepScreenOn="true">
+    <com.azumio.android.argus.view.FillingView android:id="@+id/main_menu_toolbars" android:background="?attr/colorPrimary" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize" android:layout_alignParentTop="true">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/white" android:id="@+id/toolbar_back_arrow" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginRight="15dp" android:text="←" android:layout_alignParentLeft="true" app:fontPath="@string/font_path_material_design_set"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18dp" android:textColor="@android:color/white" android:id="@+id/activity_with_fragment_toolbar_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:layout_toRightOf="@+id/toolbar_back_arrow" android:layout_centerVertical="true" app:typeface="@string/font_path_roboto_regular"/>
+        </RelativeLayout>
+    </com.azumio.android.argus.view.FillingView>
+    <FrameLayout android:id="@+id/activity_with_fragment_container" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/main_menu_toolbars"/>
+    <FrameLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/activity_with_fragment_container">
+        <fragment android:name="com.azumio.android.argus.settings.SettingsFragment" android:id="@+id/fragment_settings_setup_calories" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <RelativeLayout android:id="@+id/transparentLayout" android:background="#cc000000" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_alignParentTop="true"/>
+</RelativeLayout>

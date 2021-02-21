@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/popup_element" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@+id/copyMeal" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:textSize="30dp" android:id="@+id/copy_btn" android:background="@drawable/abc_ic_menu_copy_mtrl_am_alpha" android:layout_width="24dp" android:layout_height="25dp" android:layout_marginLeft="20dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:backgroundTint="@color/black_50_alpha"/>
+            <TextView android:textSize="18sp" android:textColor="@color/calories_meal" android:gravity="center" android:paddingTop="15dp" android:paddingBottom="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="26dp" android:text="@string/copy_meal" android:layout_toRightOf="@+id/copy_btn" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/saveMeal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/separater">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30dp" android:textColor="#6b6b6b" android:id="@+id/save_btn" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginLeft="20dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+            <TextView android:textSize="18sp" android:textColor="@color/calories_meal" android:gravity="center" android:paddingBottom="15dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="15dp" android:text="@string/save_meal" android:layout_toRightOf="@+id/save_btn" android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

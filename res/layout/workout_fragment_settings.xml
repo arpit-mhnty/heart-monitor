@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar android:id="@+id/toolbar_main" android:background="#1c95c8" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="@dimen/arrow_text_size" android:textColor="@color/white" android:id="@+id/toolbar_back_arrow" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginRight="15dp" android:text="←" android:layout_alignParentLeft="true" app:fontPath="@string/font_path_material_design_set"/>
+            <TextView android:textSize="@dimen/toolbar_text_size" android:textColor="@color/white" android:ellipsize="end" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/toolbar_text_view_title" android:layout_width="match_parent" android:layout_height="match_parent" android:text="@string/plan_settings" android:singleLine="true" android:layout_toLeftOf="@+id/toolbar_done" android:layout_toRightOf="@+id/toolbar_back_arrow"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView android:id="@+id/scrollview" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/bottomlayout" android:layout_below="@+id/toolbar_main">
+        <LinearLayout android:orientation="vertical" android:id="@+id/mainLayout" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/toplayout" android:background="@color/graybg" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/label" android:id="@+id/txt_amout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/workoutplan_programs"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/layoutschedule" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="15sp" android:textColor="@color/titiletxtcolor" android:id="@+id/txtschedule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/workoutplan_schedule" android:layout_alignParentLeft="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/scheduleInnerLayout" android:background="@color/white" android:paddingBottom="20dp" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <LinearLayout android:id="@+id/scheduleLayout" android:background="@color/black_50_alpha" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="20dp">
+                    <RelativeLayout android:id="@+id/sun" android:layout_width="50dp" android:layout_height="80dp" android:layout_weight="1">
+                        <Button android:textSize="14sp" android:textColor="#fff" android:id="@+id/sunbtn" android:background="@color/header" android:layout_width="50dp" android:layout_height="30dp" android:text="@string/workoutplan_sun"/>
+                        <LinearLayout android:gravity="center" android:id="@+id/checkSun" android:tag="checkBoxLayout" android:background="@drawable/rect_border" android:layout_width="50dp" android:layout_height="50dp" android:layout_below="@+id/sunbtn">
+                            <CheckBox android:layout_gravity="center_vertical" android:id="@+id/chkSun" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@null"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/mon" android:layout_width="50dp" android:layout_height="80dp" android:layout_weight="1">
+                        <Button android:textSize="14sp" android:textColor="#fff" android:id="@+id/monbtn" android:background="@color/header" android:layout_width="50dp" android:layout_height="30dp" android:text="@string/workoutplan_mon"/>
+                        <LinearLayout android:gravity="center" android:id="@+id/checkMon" android:tag="checkBoxLayout" android:background="@drawable/rect_border" android:layout_width="50dp" android:layout_height="50dp" android:layout_below="@+id/monbtn">
+                            <CheckBox android:id="@+id/chkMon" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@null"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/tue" android:layout_width="50dp" android:layout_height="80dp" android:layout_weight="1" android:layout_toRightOf="@+id/mon">
+                        <Button android:textSize="14sp" android:textColor="#fff" android:id="@+id/tuebtn" android:background="@color/header" android:layout_width="50dp" android:layout_height="30dp" android:text="@string/workoutplan_tue"/>
+                        <LinearLayout android:gravity="center" android:id="@+id/checkTue" android:tag="checkBoxLayout" android:background="@drawable/rect_border" android:layout_width="50dp" android:layout_height="50dp" android:layout_below="@+id/tuebtn">
+                            <CheckBox android:id="@+id/chkTue" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@null"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/wed" android:layout_width="50dp" android:layout_height="80dp" android:layout_weight="1">
+                        <Button android:textSize="14sp" android:textColor="#fff" android:id="@+id/wedbtn" android:background="@color/header" android:layout_width="50dp" android:layout_height="30dp" android:text="@string/workoutplan_wed"/>
+                        <LinearLayout android:gravity="center" android:id="@+id/checkWed" android:tag="checkBoxLayout" android:background="@drawable/rect_border" android:layout_width="50dp" android:layout_height="50dp" android:layout_below="@+id/wedbtn">
+                            <CheckBox android:id="@+id/chkWed" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@null"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/thu" android:layout_width="50dp" android:layout_height="80dp" android:layout_weight="1" android:layout_toRightOf="@+id/wed">
+                        <Button android:textSize="14sp" android:textColor="#fff" android:id="@+id/thubtn" android:background="@color/header" android:layout_width="50dp" android:layout_height="30dp" android:text="@string/workoutplan_thu"/>
+                        <LinearLayout android:gravity="center" android:id="@+id/checkThu" android:tag="checkBoxLayout" android:background="@drawable/rect_border" android:layout_width="50dp" android:layout_height="50dp" android:layout_below="@+id/thubtn">
+                            <CheckBox android:id="@+id/chkThu" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@null"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/fri" android:layout_width="50dp" android:layout_height="80dp" android:layout_weight="1">
+                        <Button android:textSize="14sp" android:textColor="#fff" android:id="@+id/fribtn" android:background="@color/header" android:layout_width="50dp" android:layout_height="30dp" android:text="@string/workoutplan_fri"/>
+                        <LinearLayout android:gravity="center" android:id="@+id/checkFri" android:tag="checkBoxLayout" android:background="@drawable/rect_border" android:layout_width="50dp" android:layout_height="50dp" android:layout_below="@+id/fribtn">
+                            <CheckBox android:id="@+id/chkFri" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@null"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout android:id="@+id/sat" android:layout_width="50dp" android:layout_height="80dp" android:layout_weight="1">
+                        <Button android:textSize="14sp" android:textColor="#fff" android:id="@+id/satbtn" android:background="@color/header" android:layout_width="50dp" android:layout_height="30dp" android:text="@string/workoutplan_sat"/>
+                        <LinearLayout android:gravity="center" android:id="@+id/checkSat" android:tag="checkBoxLayout" android:background="@drawable/rect_border" android:layout_width="50dp" android:layout_height="50dp" android:layout_below="@+id/satbtn">
+                            <CheckBox android:id="@+id/chkSat" android:focusable="false" android:focusableInTouchMode="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" android:button="@null"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/layout_separator1" android:background="@drawable/news_feed_post_separator" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/layoutgoal" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/titiletxtcolor" android:id="@+id/txtgoal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/workoutplan_goal" android:layout_alignParentLeft="true"/>
+            </RelativeLayout>
+            <RadioGroup android:layout_gravity="right" android:orientation="vertical" android:id="@+id/radios" android:background="@color/white" android:paddingLeft="15dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text">
+                <RadioButton android:textColor="@drawable/color_rbtxt" android:gravity="center_vertical" android:id="@+id/first" android:tag="weight loss" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="20dp" android:button="@null" android:text="@string/workoutplan_weight_loss" android:drawableRight="@drawable/radio_bg" android:drawablePadding="150dp"/>
+                <RadioButton android:textColor="@drawable/color_rbtxt" android:gravity="center_vertical" android:id="@+id/second" android:tag="muscle gain" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="20dp" android:button="@null" android:text="@string/workoutplan_muscle_gain" android:drawableRight="@drawable/radio_bg" android:drawablePadding="150dp"/>
+                <RadioButton android:textColor="@drawable/color_rbtxt" android:gravity="center_vertical" android:id="@+id/third" android:tag="general fitness" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="20dp" android:button="@null" android:text="@string/workoutplan_general_fitness" android:drawableRight="@drawable/radio_bg" android:drawablePadding="150dp"/>
+            </RadioGroup>
+            <RelativeLayout android:id="@+id/layout_separator" android:background="@drawable/news_feed_post_separator" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/layoutexp" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/titiletxtcolor" android:id="@+id/txtexp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/workoutplan_experience" android:layout_alignParentLeft="true"/>
+            </RelativeLayout>
+            <RadioGroup android:layout_gravity="right" android:orientation="vertical" android:id="@+id/radios2" android:background="@color/white" android:paddingLeft="15dp" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text">
+                <RadioButton android:textColor="@drawable/color_rbtxt" android:gravity="center_vertical" android:id="@+id/beginner" android:tag="beginner" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="20dp" android:button="@null" android:text="@string/workoutplan_beginner" android:drawableRight="@drawable/radio_bg" android:drawablePadding="150dp"/>
+                <RadioButton android:textColor="@drawable/color_rbtxt" android:gravity="center_vertical" android:id="@+id/intermediate" android:tag="intermediate" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="20dp" android:button="@null" android:text="@string/workoutplan_intermediate" android:drawableRight="@drawable/radio_bg" android:drawablePadding="150dp"/>
+                <RadioButton android:textColor="@drawable/color_rbtxt" android:gravity="center_vertical" android:id="@+id/advanced" android:tag="advanced" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="20dp" android:button="@null" android:text="@string/workoutplan_advanced" android:drawableRight="@drawable/radio_bg" android:drawablePadding="150dp"/>
+                <RadioButton android:textColor="@drawable/color_rbtxt" android:gravity="center_vertical" android:id="@+id/expert" android:tag="expert" android:layout_width="match_parent" android:layout_height="40dp" android:layout_marginRight="20dp" android:button="@null" android:text="@string/workoutplan_expert" android:drawableRight="@drawable/radio_bg" android:drawablePadding="150dp"/>
+            </RadioGroup>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/progessLayout" android:background="@color/graybg" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/txtcolor" android:id="@+id/txt_separaterProgress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/workoutplan_progress"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/fittestLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/titiletxtcolor" android:id="@+id/txt_fittest" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/workoutplan_fit_test" android:layout_alignParentLeft="true"/>
+                <TextView android:textColor="@color/setup_text_color" android:id="@+id/txt_calorievalue1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/layout_separator2" android:background="@drawable/news_feed_post_separator" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/currentlayout" android:background="@color/graybg" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/label" android:id="@+id/txt_separater1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/workoutplan_current"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/programsLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/titiletxtcolor" android:id="@+id/txt_caloriesProgram" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/wp_program" android:layout_alignParentLeft="true"/>
+                <TextView android:textSize="12sp" android:textColor="@color/setup_text_color" android:gravity="center_vertical" android:id="@+id/txtPrograms" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:layout_marginRight="20dp" android:text="@string/wp_no_active_program" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/layout_separator3" android:background="@drawable/news_feed_post_separator" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/cancellayout" android:background="@color/graybg" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/txtcolor" android:id="@+id/txtcancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/wp_cancel"/>
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/cancelProgramLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/titiletxtcolor" android:id="@+id/txt_cancelprogram" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/wp_cancel_program" android:layout_alignParentLeft="true"/>
+                <TextView android:textColor="@color/setup_text_color" android:id="@+id/txt_calorievalue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/layout_separator4" android:background="@drawable/news_feed_post_separator" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/clearVideoLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/titiletxtcolor" android:id="@+id/txt_calories" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/wp_clear_program_videos" android:layout_alignParentLeft="true"/>
+                <TextView android:textColor="@color/setup_text_color" android:id="@+id/txt_calorie_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+            <RelativeLayout android:id="@+id/layout_separator5" android:background="@drawable/news_feed_post_separator" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <RelativeLayout android:gravity="center_vertical" android:id="@+id/newPlanLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="45dp">
+                <TextView android:textSize="16sp" android:textColor="@color/titiletxtcolor" android:id="@+id/txt_newPlan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:text="@string/wp_new_plan" android:layout_alignParentLeft="true"/>
+            </RelativeLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@+id/bottom_separater" android:background="#e7e7e7" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1dp" android:layout_below="@+id/clearVideoLayout"/>
+            <FrameLayout android:id="@+id/frame_bottom" android:background="@color/graybg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Space android:layout_width="wrap_content" android:layout_height="20dp"/>
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:gravity="center_vertical" android:id="@+id/bottomlayout" android:background="@color/graybg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="65dp" android:layout_alignParentBottom="true">
+        <Button android:textColor="@color/white" android:id="@+id/nextbtn" android:background="#009de5" android:layout_width="match_parent" android:layout_height="45dp" android:layout_marginLeft="25dp" android:layout_marginRight="25dp" android:text="@string/wp_next"/>
+    </RelativeLayout>
+</RelativeLayout>

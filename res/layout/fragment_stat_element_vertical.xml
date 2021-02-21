@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:clickable="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1">
+        <RelativeLayout android:id="@+id/circleView" android:background="@drawable/circle_shape" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginRight="10dp" android:backgroundTint="@color/white">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textColor="@color/white" android:id="@+id/fragment_stat_icon" android:layout_width="24dp" android:layout_height="24dp" android:layout_centerHorizontal="true" android:layout_centerVertical="true" app:fontPath="@string/font_path_argus_set"/>
+        </RelativeLayout>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14.5sp" android:textColor="@color/stat_element_darker" android:id="@+id/fragment_stat_element" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toRightOf="@+id/circleView" android:layout_centerVertical="true" android:layout_toEndOf="@+id/circleView" app:typeface="@string/font_path_roboto_regular"/>
+    </RelativeLayout>
+    <View android:background="#e1e1e1" android:visibility="gone" android:layout_width="match_parent" android:layout_height="1px" android:layout_marginTop="12dp"/>
+</LinearLayout>

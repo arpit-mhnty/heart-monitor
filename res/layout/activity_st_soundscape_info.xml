@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/sleep_time_background" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.FillingView android:id="@+id/main_menu_toolbars" android:background="#110a47" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30dp" android:textColor="@android:color/white" android:id="@+id/activity_with_fragment_arrow" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginRight="15dp" app:fontPath="@string/font_path_material_design_set"/>
+            <TextView android:textSize="20dp" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/activity_with_fragment_toolbar_textview" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="@string/activity_sleep_time_info" android:singleLine="true" android:layout_toRightOf="@+id/activity_with_fragment_arrow"/>
+        </RelativeLayout>
+    </com.azumio.android.argus.view.FillingView>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_above="@+id/bottom_layout">
+            <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <LinearLayout android:orientation="vertical" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="5">
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="24sp" android:textColor="@android:color/white" android:id="@+id/text_soundscapes" android:paddingTop="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_info_soundscape" app:typeface="@string/font_path_roboto_light"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@android:color/white" android:id="@+id/text_soundscapes_desc" android:paddingTop="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_info_soundscape_desc" app:typeface="@string/font_path_roboto_light"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@android:color/white" android:id="@+id/text_soundscapes_desc2" android:paddingTop="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_info_soundscape_desc2" app:typeface="@string/font_path_roboto_light"/>
+                    <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="@android:color/white" android:id="@+id/text_soundscapes_desc3" android:paddingTop="20dp" android:paddingBottom="20dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/activity_sleep_time_info_soundscape_desc3" app:typeface="@string/font_path_roboto_light"/>
+                </LinearLayout>
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+            </LinearLayout>
+        </ScrollView>
+        <RelativeLayout android:id="@+id/bottom_layout" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_marginBottom="10dp" android:layout_alignParentBottom="true" android:layout_centerInParent="true">
+            <Button android:textSize="16sp" android:textColor="#272e69" android:id="@+id/btnStarted" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/get_started"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

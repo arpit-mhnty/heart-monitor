@@ -1,0 +1,9 @@
+INSERT INTO `fitness_categories` (fitness_category_id,category_name,img) VALUES (1,'Core','cat_core.png');
+INSERT INTO `fitness_categories` (fitness_category_id,category_name,img) VALUES (2,'Lower Body','cat_lower_body.png');
+INSERT INTO `fitness_categories` (fitness_category_id,category_name,img) VALUES (3,'Chest','cat_chest.png');
+INSERT INTO `fitness_categories` (fitness_category_id,category_name,img) VALUES (4,'Shoulders','cat_shoulders.png');
+INSERT INTO `fitness_categories` (fitness_category_id,category_name,img) VALUES (5,'Back','cat_back.png');
+INSERT INTO `fitness_categories` (fitness_category_id,category_name,img) VALUES (6,'Arms','cat_arms.png');
+INSERT INTO `fitness_categories` (fitness_category_id,category_name,img) VALUES (7,'Cardio','cat_cardio.png');
+INSERT INTO `fitness_categories` (fitness_category_id,category_name,img) VALUES (8,'Stretches','cat_stretches.png');
+

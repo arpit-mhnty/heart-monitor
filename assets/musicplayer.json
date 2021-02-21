@@ -1,0 +1,97 @@
+{
+	"music": [{
+			"filename": "workout-music-Air",
+			"title": "Air",
+			"album": "Fitness Buddy"
+		}, {
+			"filename": "workout-music-Forest",
+			"title": "Forest",
+			"album": "Fitness Buddy"
+		}, {
+			"filename": "workout-music-Power",
+			"title": "Power",
+			"album": "Fitness Buddy"
+		}, {
+			"filename": "workout-music-Gaga",
+			"title": "Gaga",
+			"album": "Fitness Buddy"
+		}, {
+			"filename": "Up All Night",
+			"title": "Up All Night",
+			"album": "Fitness Buddy"
+		}, {
+			"filename": "Happiness",
+			"title": "Happiness",
+			"album": "Fitness Buddy"
+		}, {
+			"filename": "Supergroove",
+			"title": "Supergroove",
+			"album": "Fitness Buddy"
+		}, {
+			"filename": "Sky Reach",
+			"title": "Sky Reach",
+			"album": "Fitness Buddy"
+		}, {
+			"filename": "Body Dance",
+			"title": "Body Dance",
+			"album": "Fitness Buddy"
+		}
+
+	],
+	"DoneSet": ["Audio-Done-all done", "Audio-Done-awesome", "Audio-Done-beast mode 2", "Audio-Done-beast mode",
+		"Audio-Done-brilliant", "Audio-Done-done", "Audio-Done-excellent job", "Audio-Done-excellent work",
+		"Audio-Done-excellent", "Audio-Done-fantastic", "Audio-Done-finished 2", "Audio-Done-good work",
+		"Audio-Done-good", "Audio-Done-great job", "Audio-Done-great set", "Audio-Done-great work", "Audio-Done-great",
+		"Audio-Done-let's keep it going", "Audio-Done-marvelous", "Audio-Done-nicely done", "Audio-Done-perfect 2",
+		"Audio-Done-perfect", "Audio-Done-recover now 2", "Audio-Done-recover now", "Audio-Done-set complete",
+		"Audio-Done-super", "Audio-Done-superb", "Audio-Done-that was a good set 2", "Audio-Done-that was a good set",
+		"Audio-Done-that was exceptional", "Audio-Done-that was fantastic", "Audio-Done-that was great",
+		"Audio-Done-that was solid", "Audio-Done-tremendous work", "Audio-Done-tremendous", "Audio-Done-very good",
+		"Audio-Done-well done", "Audio-Done-you did it", "Audio-Done-you made it 2", "Audio-Done-you made it",
+		"Audio-Done-you're a beast 2", "Audio-Done-you're a beast"
+	],
+	"Encourage": ["Audio-Encourage-almost there", "Audio-Encourage-come on", "Audio-Encourage-don't stop until you're done", "Audio-Encourage-get your heart rate up",
+		"Audio-Encourage-keep going don't give up on me now 2", "Audio-Encourage-keep going don't give up on me now",
+		"Audio-Encourage-keep moving", "Audio-Encourage-last stretch lets do this", "Audio-Encourage-no pain no gain",
+		"Audio-Encourage-push it", "Audio-Encourage-that's it", "Audio-Encourage-work hard now you'll feel great afterwards",
+		"Audio-Encourage-you still have more in the tank 2", "Audio-Encourage-you still have more in the tank"
+	],
+
+	"Intro": ["Audio-Introduction-let's begin with", "Audio-Introduction-let's start with"],
+
+	"IntroAgain": ["Audio-IntroductionAgain-now for", "Audio-IntroductionAgain-let's do 2",
+		"Audio-IntroductionAgain-let's do",
+		"Audio-IntroductionAgain-time for"
+	],
+
+	"PrepareNextExercise": ["Audio-IntroductionAgain-get ready for the next exercise",
+		"Audio-IntroductionAgain-our next exercise is",
+		"Audio-IntroductionAgain-prepare for the next exercise"
+	],
+
+	"Of": ["Audio-SetWords-of (long)", "Audio-SetWords-of (short)"],
+	"Rest": ["Audio-Rest-ease up for", "Audio-Rest-relax for", "Audio-Rest-rest for", "Audio-Rest-take a break for",
+		"Audio-Rest-unwind for"
+	],
+
+	"RestEnd": ["Audio-RestEnd-now prepare for the next set", "Audio-RestEnd-now prepare to start again"],
+	"And": ["Audio-StartingIndicator-and 2", "Audio-StartingIndicator-and",
+		"Audio-StartingIndicator-go 2",
+		"Audio-StartingIndicator-go"
+	],
+	"Ready": ["Audio-Ready-get ready", "Audio-Ready-get set", "Audio-Ready-here we go 2", "Audio-Ready-here we go"],
+
+	"Finish": ["Audio-Finished-excellent work powering through that workout", "Audio-Finished-great work",
+		"Audio-Finished-that was an awesome job",
+		"Audio-Finished-that was perfect",
+		"Audio-Finished-we are all done",
+		"Audio-Finished-we're done with today's workout",
+		"Audio-Finished-workout completed",
+		"Audio-Finished-you did a fantastic job",
+		"Audio-Finished-you did an awesome job with this workout",
+		"Audio-Finished-you did tremendously well good job",
+		"Audio-Finished-you did your very best",
+		"Audio-Finished-you made it to the end",
+		"Audio-Finished-you powered through that workout"
+	]
+}

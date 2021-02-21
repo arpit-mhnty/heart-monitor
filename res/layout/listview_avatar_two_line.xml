@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="58dp">
+    <com.azumio.android.argus.view.HexImageView android:id="@+id/listview_avatar_two_line_element_avatar" android:layout_width="47dp" android:layout_height="47dp" android:layout_marginLeft="@dimen/global_left_right_padding" android:layout_centerVertical="true"/>
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/toggleButton" android:layout_centerVertical="true" android:layout_toStartOf="@+id/toggleButton">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:id="@+id/listview_avatar_two_line_element_textview_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inner_margin_checkins" app:typeface="@string/font_path_roboto_regular"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:id="@+id/listview_avatar_two_line_element_textview_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/inner_margin_checkins" app:typeface="@string/font_path_roboto_regular"/>
+    </LinearLayout>
+    <CheckBox android:id="@+id/toggleButton" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:button="@drawable/customdrawablecheckbox" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

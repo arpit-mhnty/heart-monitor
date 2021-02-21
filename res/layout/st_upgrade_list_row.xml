@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" style="@style/MatchWidthWrapHeight">
+    <RelativeLayout android:orientation="horizontal" android:id="@+id/title_row" android:layout_marginLeft="25dp" android:layout_marginTop="5dp" android:layout_marginRight="25dp" android:weightSum="2" style="@style/MatchWidthWrapHeight">
+        <com.azumio.android.argus.view.CenteredCustomFontView android:textColor="@color/nextbtn" android:id="@+id/icon_code" android:layout_width="35dp" android:layout_height="35dp" android:layout_marginTop="2dp" android:layout_marginRight="10dp" android:layout_marginBottom="5dp"/>
+        <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/black" android:gravity="center" android:id="@+id/text_title" android:layout_marginTop="10dp" android:layout_marginBottom="5dp" android:layout_toRightOf="@+id/icon_code" style="@style/WrapWidthWrapHeight"/>
+        <TextView android:textSize="14sp" android:textColor="@color/black" android:id="@+id/text_descreption" android:layout_toRightOf="@+id/icon_code" android:layout_below="@+id/text_title" style="@style/WrapWidthWrapHeight"/>
+    </RelativeLayout>
+</RelativeLayout>

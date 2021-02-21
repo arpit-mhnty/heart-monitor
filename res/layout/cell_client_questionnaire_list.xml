@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:gravity="center" android:id="@+id/progressLayout" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="50dp">
+        <ProgressBar android:layout_gravity="center" android:id="@+id/progressView" android:layout_width="50dp" android:layout_height="50dp" android:indeterminate="true" style="?android:attr/progressBarStyle"/>
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:id="@+id/no_result" android:background="@color/white" android:visibility="gone" android:layout_width="match_parent" android:layout_height="64dp">
+        <TextView android:textColor="@color/black_50_alpha" android:gravity="center_horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/no_result" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/foodLayout" android:background="@color/white" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="center_vertical" android:id="@+id/layout_right" android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@+id/innerView" android:layout_width="280dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_alignParentLeft="true">
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="@color/grey_colortxt" android:id="@+id/questionText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="Coffee with 2% Milk" android:singleLine="false" app:typeface="@string/font_path_roboto_medium"/>
+                <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="20sp" android:textColor="@color/text_color" android:id="@+id/answerText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginTop="5dp" android:text="Coffee with 2% Milk" android:singleLine="false" app:typeface="@string/font_path_roboto_medium"/>
+            </LinearLayout>
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="30dp" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_toRightOf="@+id/innerView" android:layout_alignParentRight="true" android:layout_centerHorizontal="true" android:layout_centerVertical="true" android:layout_marginEnd="20dp">
+                <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30sp" android:textColor="@color/calories_color" android:layout_gravity="center_vertical" android:id="@+id/editQuestion" android:visibility="visible" android:layout_width="30dp" android:layout_height="30dp" android:layout_marginRight="10dp" android:layout_alignParentRight="true" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

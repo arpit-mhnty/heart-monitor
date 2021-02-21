@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/yourmealLayout" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="25dp">
+            <RelativeLayout android:background="@drawable/shape" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="21.8sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/header" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Your Own" app:typeface="@string/font_path_roboto_regular"/>
+            <RelativeLayout android:background="@drawable/shape" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="60sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/title" android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="MEAL PLAN" android:lines="1" android:singleLine="true" android:layout_below="@+id/yourmealLayout" app:typeface="@string/font_path_league_gothic_regular"/>
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="13sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/subtitle" android:paddingTop="8dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Choose from different diets to fit\10your needs." android:layout_below="@+id/mealPlanLayout" app:typeface="@string/font_path_roboto_regular"/>
+    </LinearLayout>
+</LinearLayout>

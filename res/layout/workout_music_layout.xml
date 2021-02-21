@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@color/bg_color" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/mainlayout" android:background="@color/header" android:layout_width="match_parent" android:layout_height="54dp" android:layout_alignParentTop="true">
+        <ImageView android:id="@+id/back" android:padding="20dp" android:paddingLeft="0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/back_ios7" android:layout_alignParentLeft="true"/>
+        <LinearLayout android:orientation="horizontal" android:id="@+id/layout" android:background="@drawable/music_btn_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:layout_centerInParent="true">
+            <Button android:textSize="14sp" android:textColor="@color/white" android:id="@+id/btnBuiltIn" android:background="@drawable/playerbtn_background" android:clickable="true" android:layout_width="100dp" android:layout_height="30dp" android:text="Built-In"/>
+            <Button android:textSize="14sp" android:textColor="@color/white" android:id="@+id/btnOther" android:background="@drawable/playerbtn2_background" android:visibility="gone" android:clickable="true" android:layout_width="100dp" android:layout_height="30dp" android:text="Other"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/musiclayout" android:background="@color/bg_color" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/mainlayout" android:layout_alignParentBottom="true" android:layout_centerVertical="true">
+        <ImageView android:id="@+id/musicimg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:src="@drawable/landscape_music_cover" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <RelativeLayout android:gravity="center_vertical" android:id="@+id/titlelayout" android:layout_width="match_parent" android:layout_height="174dp" android:layout_marginLeft="20dp" android:layout_toRightOf="@+id/musicimg" android:layout_centerInParent="true">
+            <TextView android:textSize="32sp" android:textColor="#000" android:id="@+id/txttitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:text="Air"/>
+            <TextView android:textSize="24sp" android:textColor="@color/txtgrey" android:id="@+id/txtalbum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="22dp" android:text="Fitness Buddy" android:layout_below="@+id/txttitle"/>
+            <LinearLayout android:id="@+id/btmlayout" android:layout_width="270dp" android:layout_height="wrap_content" android:layout_marginBottom="20dp" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+                <ImageView android:layout_gravity="center" android:id="@+id/musicprev" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/landscape_music_previous" android:scaleType="centerInside" android:layout_weight="1" android:layout_toRightOf="@+id/musicimg"/>
+                <ImageView android:gravity="center_vertical" android:layout_gravity="center" android:id="@+id/musicpause" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/landscape_music_pause" android:scaleType="centerInside" android:layout_weight="1" android:layout_toRightOf="@+id/musicprev" android:layout_alignParentBottom="true"/>
+                <ImageView android:layout_gravity="center" android:id="@+id/musicforward" android:layout_width="40dp" android:layout_height="40dp" android:src="@drawable/landscape_music_next" android:scaleType="centerInside" android:layout_weight="1" android:layout_toRightOf="@+id/musicpause" android:layout_alignParentBottom="true"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/otherMusiclayout" android:background="@color/bg_color" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="20sp" android:textColor="#000" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginTop="20dp" android:text="Play your favorite music from another app to keep you\10 motivated while working out!" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <RelativeLayout android:id="@+id/bottomlayout" android:background="@color/graybg" android:visibility="gone" android:layout_width="match_parent" android:layout_height="0dp" android:layout_alignParentBottom="true">
+        <TextView android:textColor="@color/txtblue" android:gravity="center_vertical" android:id="@+id/login" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="35dp" android:layout_marginLeft="30dp" android:text="Coaching Tips Volume" android:layout_alignParentLeft="true" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/novol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5dp" android:src="@drawable/landscape_music_no_volume" android:layout_toLeftOf="@+id/volbar" android:layout_centerInParent="true"/>
+        <SeekBar android:id="@+id/volbar" android:layout_width="200dp" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/highvol" android:layout_centerInParent="true"/>
+        <ImageView android:id="@+id/highvol" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:src="@drawable/landscape_music_high_volume" android:layout_alignParentRight="true" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

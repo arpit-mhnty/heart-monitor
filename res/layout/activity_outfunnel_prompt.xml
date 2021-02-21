@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="#43b7b7" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.argus.view.CenteredCustomFontView android:textSize="30sp" android:textColor="@color/white" android:id="@+id/cross" android:visibility="visible" android:layout_width="40dp" android:layout_height="30dp" android:layout_marginLeft="5dp" android:layout_marginTop="25dp" android:layout_alignParentTop="true"/>
+    <ImageView android:id="@+id/mainImage" android:background="@drawable/winner_bg_rays" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
+    <RelativeLayout android:id="@+id/main_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <RelativeLayout android:orientation="vertical" android:id="@+id/frameView" android:background="@drawable/rectangle_corner_border" android:layout_width="300dp" android:layout_height="200dp" android:layout_margin="20dp" android:layout_centerInParent="true">
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layout_centerHorizontal="true">
+                <TextView android:textSize="16sp" android:textStyle="bold" android:gravity="center_horizontal" android:id="@+id/limitedText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="40dp" android:layout_marginRight="25dp" android:layout_marginBottom="0dp" android:text="Don&apos;t miss out on this limited time offer!" android:minLines="2"/>
+                <TextView android:gravity="center_horizontal" android:id="@+id/premiumUserText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginTop="10dp" android:layout_marginRight="25dp" android:text="Premium users achieve their goals 247% faster" android:minLines="2" android:layout_below="@+id/limitedText"/>
+            </RelativeLayout>
+        </RelativeLayout>
+        <LinearLayout android:gravity="top|center_vertical|center_horizontal|center" android:id="@+id/pic" android:layout_width="300dp" android:layout_height="200dp" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="80dp">
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/profile_pic" android:adjustViewBounds="true"/>
+        </LinearLayout>
+    </RelativeLayout>
+    <Button android:textColor="@color/white" android:id="@+id/commitbtn" android:background="@drawable/rectangle_corner_border" android:layout_width="300dp" android:layout_height="50dp" android:text="I&apos;m ready to commit!" android:layout_below="@+id/main_layout" android:layout_centerHorizontal="true" android:textAllCaps="false"/>
+</RelativeLayout>

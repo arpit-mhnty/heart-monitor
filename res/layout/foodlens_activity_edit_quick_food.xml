@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+    <com.azumio.android.foodlenslibrary.views.FillingView android:id="@+id/main_menu_toolbars" android:background="?attr/colorPrimary" android:visibility="visible" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.foodlenslibrary.views.CenteredCustomFontView android:textSize="@dimen/foodlens_arrow_text_size" android:textColor="@color/foodlens_white" android:id="@+id/toolbar_back_arrow" android:layout_width="30dp" android:layout_height="match_parent" android:layout_marginRight="15dp" android:text="←" android:layout_alignParentLeft="true" app:fontPath="@string/font_path_material_design_set"/>
+            <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView android:textSize="18dp" android:textColor="@android:color/white" android:id="@+id/activity_with_fragment_toolbar_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/foodlens_quick_add" android:layout_centerInParent="true" app:typeface="@string/font_path_roboto_regular"/>
+            <com.azumio.android.foodlenslibrary.views.XMLTypefaceTextView android:textSize="16.5dp" android:textColor="@android:color/white" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/activity_save" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20dp" android:text="@string/foodlens_save" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerInParent="true" app:typeface="@string/font_path_roboto_regular"/>
+        </RelativeLayout>
+    </com.azumio.android.foodlenslibrary.views.FillingView>
+    <FrameLayout android:id="@+id/activity_with_fragment_container" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+</LinearLayout>

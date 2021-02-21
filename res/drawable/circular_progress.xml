@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:drawable="@drawable/progress_circular_background"/>
+    <item>
+        <shape android:shape="ring" android:innerRadiusRatio="3.4" android:thicknessRatio="6">
+            <gradient android:startColor="#f97d12" android:endColor="#f97d12" android:useLevel="true" android:type="sweep"/>
+        </shape>
+    </item>
+    <item>
+        <rotate android:drawable="@drawable/progress_particle" android:fromDegrees="0" android:toDegrees="360" android:pivotX="50%" android:pivotY="50%">
+            <color android:color="@color/transparent"/>
+        </rotate>
+    </item>
+</layer-list>

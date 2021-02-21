@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:id="@+id/cell_gradient_Category" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@+id/main_layout" android:background="?attr/selectableItemBackground" android:layout_width="match_parent" android:layout_height="90dp">
+        <RelativeLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="match_parent">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14.5sp" android:textColor="@color/calorie_color" android:gravity="left|center_vertical|center_horizontal|center" android:id="@+id/ansChoice" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_marginLeft="25dp" android:layout_marginRight="60dp" android:text="WEIGHT LOSS" android:layout_alignParentLeft="true" android:textAllCaps="true" app:typeface="@string/font_path_roboto_medium"/>
+            <CheckBox android:theme="@style/MealPlanCheckBox" android:id="@+id/checkbox" android:background="@android:color/transparent" android:focusable="false" android:focusableInTouchMode="false" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15dp" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

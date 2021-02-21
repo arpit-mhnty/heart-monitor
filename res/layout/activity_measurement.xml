@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/ihr_bg" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:gravity="center" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="20dp" android:layout_marginRight="20dp" android:layout_marginBottom="30dp">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="24sp" android:textColor="@android:color/white" android:gravity="center" android:id="@+id/welcometxt" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:text="@string/first_measurement" android:lines="1" app:typeface="@string/font_path_roboto_light"/>
+        <FrameLayout android:id="@+id/activity_with_fragment_container" android:background="#00ff" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/welcometxt"/>
+        <TextView android:textSize="18sp" android:textColor="@color/white" android:gravity="center" android:id="@+id/later" android:layout_width="match_parent" android:layout_height="45dp" android:text="@string/take_measurement_later" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" android:textAllCaps="false" android:layout_alignParentStart="true"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,7 @@
+INSERT INTO "fitness_category_body_part" VALUES('Core',1);
+INSERT INTO "fitness_category_body_part" VALUES('Lower Body',2);
+INSERT INTO "fitness_category_body_part" VALUES('Arms',3);
+INSERT INTO "fitness_category_body_part" VALUES('Shoulders',4);
+INSERT INTO "fitness_category_body_part" VALUES('Back',5);
+INSERT INTO "fitness_category_body_part" VALUES('Chest',6);
+INSERT INTO "fitness_category_body_part" VALUES('Other',7);

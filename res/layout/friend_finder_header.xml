@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="72dp">
+        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_toLeftOf="@+id/friend_finder_header_icon" android:layout_above="@+id/view2" android:layout_alignParentTop="true" android:layout_toStartOf="@+id/friend_finder_header_icon">
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="18sp" android:textColor="#ff283154" android:id="@+id/friend_finder_header_textview_top" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/global_left_right_padding" android:layout_marginRight="@dimen/global_left_right_padding" android:text="Invite via Email" app:typeface="@string/font_path_roboto_regular"/>
+            <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="14sp" android:textColor="#ff7f8a8f" android:id="@+id/friend_finder_header_textview_bottom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/global_left_right_padding" android:layout_marginRight="@dimen/global_left_right_padding" app:typeface="@string/font_path_roboto_regular"/>
+        </LinearLayout>
+        <ImageView android:id="@+id/friend_finder_header_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/global_left_right_padding" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+        <View android:id="@+id/view2" android:background="#ffbfbfbf" android:layout_width="match_parent" android:layout_height="1px" android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+    <View android:layout_width="match_parent" android:layout_height="17dp"/>
+</LinearLayout>

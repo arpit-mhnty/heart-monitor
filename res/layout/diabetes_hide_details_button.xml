@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" style="@style/show_hide_details_container_style">
+    <com.azumio.android.argus.view.XMLTypefaceTextView android:id="@+id/hideDetailsTextView" android:text="@string/hide_details" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toStartOf="@+id/hideDetailsIcon" app:layout_constraintStart_toStartOf="0" app:layout_constraintTop_toTopOf="0" app:typeface="@string/font_path_roboto_medium" style="@style/show_hide_details_button_style"/>
+    <ImageView android:id="@+id/hideDetailsIcon" android:src="@drawable/ic_expand_less_blue" app:layout_constraintBottom_toBottomOf="0" app:layout_constraintEnd_toEndOf="0" app:layout_constraintStart_toEndOf="@+id/hideDetailsTextView" app:layout_constraintTop_toTopOf="0" style="@style/show_hide_details_icon_style"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

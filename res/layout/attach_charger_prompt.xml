@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <View android:id="@+id/border_top" android:background="@color/prompt_sheet_border_background" android:layout_width="match_parent" android:layout_height="1px"/>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@+id/sheet_container" android:background="@color/prompt_sheet_background" android:paddingLeft="20dp" android:paddingTop="4dp" android:paddingRight="10dp" android:paddingBottom="4dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <com.azumio.android.argus.view.XMLTypefaceTextView android:textSize="16sp" android:textColor="#ffbfbfbf" android:id="@+id/charger_prompt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/for_optimal" android:minLines="2" app:typeface="@string/font_path_roboto_light"/>
+        <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <com.azumio.android.argus.view.BatteryIndicator android:layout_gravity="center_vertical" android:id="@+id/a_night_batt" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <Space android:layout_width="8dp" android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <View android:id="@+id/border_bottom" android:background="@color/prompt_sheet_border_background" android:layout_width="match_parent" android:layout_height="1px"/>
+</LinearLayout>

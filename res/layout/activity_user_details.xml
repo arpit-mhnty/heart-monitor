@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@android:color/white" android:layout_width="match_parent" android:layout_height="match_parent">
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <hell.views.CollectionView android:scrollbarStyle="outsideOverlay" android:id="@+id/collection_view" android:clipToPadding="false" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:id="@+id/user_details_root" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <fragment android:name="com.azumio.android.argus.settings.UserProfileFragment" android:id="@+id/fragment_user_profile" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+            <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="horizontal" android:id="@+id/activity_user_details_two_buttons" android:layout_width="match_parent" android:layout_height="34dp" android:layout_marginTop="6dp" android:baselineAligned="false" android:weightSum="2">
+                <com.azumio.android.argus.view.CenteredCustomFontViewWithText android:gravity="center" android:id="@+id/activity_user_details_left_button" android:background="@drawable/activity_user_details_oval" android:layout_width="125dp" android:layout_height="wrap_content" android:layout_marginLeft="25dp" android:layout_marginRight="15dp" app:wt_icon_color="@color/user_details_button_active" app:wt_icon_color_checked="@color/user_details_button_selected" app:wt_icon_size="40dp" app:wt_text="Add friend" app:wt_text_checked="Friend" app:wt_text_color="@color/user_details_button_active" app:wt_text_color_checked="@color/user_details_button_selected" app:wt_text_size="12dp"/>
+                <com.azumio.android.argus.view.CenteredCustomFontViewWithText android:gravity="center" android:id="@+id/activity_user_details_right_button" android:background="@drawable/activity_user_details_oval" android:layout_width="125dp" android:layout_height="wrap_content" android:layout_marginLeft="15dp" android:layout_marginRight="25dp" app:wt_icon_color="@color/user_details_button_active" app:wt_icon_color_checked="@color/user_details_button_selected" app:wt_icon_size="40dp" app:wt_text="Follow" app:wt_text_checked="Following" app:wt_text_color="@color/user_details_button_active" app:wt_text_color_checked="@color/user_details_button_selected" app:wt_text_size="12dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@+id/user_details_toolbar_background" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <View android:background="@color/colorPrimary" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"/>
+            <View android:background="@drawable/bottom_shadow" android:layout_width="match_parent" android:layout_height="6dp"/>
+        </LinearLayout>
+        <androidx.appcompat.widget.Toolbar android:id="@+id/user_details_toolbar" android:background="@null" android:layout_width="match_parent" android:layout_height="?attr/actionBarSize" android:minHeight="?attr/actionBarSize">
+            <TextView android:textSize="20dp" android:textColor="@color/settings_activity_toolbar_text_color" android:ellipsize="end" android:gravity="center_vertical" android:id="@+id/user_details_title" android:layout_width="match_parent" android:layout_height="match_parent" android:singleLine="true"/>
+        </androidx.appcompat.widget.Toolbar>
+    </FrameLayout>
+</RelativeLayout>

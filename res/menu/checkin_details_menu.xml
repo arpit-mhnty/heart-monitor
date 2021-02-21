@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
+    <item android:id="@+id/action_edit" android:title="Edit" app:showAsAction="never"/>
+    <item android:id="@+id/action_delete" android:title="Delete" app:showAsAction="never"/>
+    <item android:id="@+id/action_report_a_problem" android:title="Report a problem" app:showAsAction="never"/>
+    <item android:id="@+id/action_edit_calories_goal" android:visible="false" android:title="Change calorie goals" app:showAsAction="never"/>
+</menu>
